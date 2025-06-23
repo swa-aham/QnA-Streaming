@@ -16,15 +16,15 @@ public class EventController {
     @Autowired
     private KafkaMessagePublisher publisher;
 
-    @GetMapping("/publish/{message}")
-    public ResponseEntity<?> publishMessage(@PathVariable String message) {
-
-        try {
-            publisher.publishMessage(message);
-            return ResponseEntity.ok("Message published successfully...");
-        } catch (Exception e) {
-            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
-                    .build();
-        }
-    }
+//    @GetMapping("/publish/{message}")
+//    public ResponseEntity<?> publishMessage(@PathVariable String message) {
+//
+//        try {
+//            publisher.publishMessage(message);
+//            return ResponseEntity.ok("Message published successfully...");
+//        } catch (Exception e) {
+//            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
+//                    .build();
+//        }
+//    }
 }

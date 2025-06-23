@@ -1,5 +1,8 @@
 package com.kafka.consumer.service;
 
+import com.kafka.consumer.entity.QnA;
+import com.kafka.consumer.repository.QnARepository;
+import org.apache.kafka.clients.consumer.ConsumerRecord;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.stereotype.Service;
@@ -8,18 +11,29 @@ import org.springframework.stereotype.Service;
 public class KafkaMessageListener {
 
     @Autowired
-    private ProcessingService processingService;
+    private QnARepository qnaRepository;
 
-    @KafkaListener(topics = "practice3", groupId = "group1")
-    public void consumeMessage(String message) {
+    /*
+    @KafkaListener(topics = "practice4", groupId = "qna-consumer-group")
+    public void consumeQnAMessage(@Payload QnA qna, @Header(KafkaHeaders.OFFSET) long offset) {
 
-        try {
-            System.out.println("Consumed message : " + message);
-            processingService.processMessage(message);
-        } catch (Exception e) {
-            System.out.println("Failed to process message. Exception: ");
-            e.printStackTrace();
-            throw new RuntimeException(e);
-        }
+        System.out.println("Received Message = " + qna.getQuestion() + " by consumer1");
+    }
+    */
+
+    @KafkaListener(topics = "practice4", groupId = "qna-consumer-group-auto", containerFactory = "kafkaListenerContainerFactory")
+    public void consumeQnAMessageAuto(ConsumerRecord<String, QnA> record) {
+
+        QnA qna = record.value();
+        System.out.println("Received Message = " + qna.getQuestion() + " by consumer2");
+
+//        try {
+//            // Process the message
+//            System.out.println("QnA processed and saved successfully");
+//
+//        } catch (Exception e) {
+//            System.err.println("Error in auto-acknowledge consumer: " + e.getMessage());
+//            throw e; // Re-throw to trigger retry mechanism
+//        }
     }
 }

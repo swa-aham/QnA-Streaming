@@ -28,7 +28,7 @@ public class GeminiService {
     public String generateQuestion() {
 
         try {
-            String prompt = "Generate a single history question which can be answered in one or two words.";
+            String prompt = "Generate a single question which can be answered in one or two words. Question should related to some field or subject like history or science or politics. .";
 
             // Query the AI model API
             Map<String, Object> requestBody = Map.of(
