@@ -25,19 +25,21 @@ public class KafkaMessagePublisher {
 
     private AtomicLong counter = new AtomicLong(1);
 
-//    public void publishMessage(String message) {
-//
-//        CompletableFuture<SendResult<String, Object>> response = template.send("practice", message);
-//        response.whenComplete((result, ex) -> {
-//            if(ex == null) {
-//                System.out.println("Sent message = [" + message + "] with offset = [" + result.getRecordMetadata().offset() + "]");
-//            } else {
-//                System.out.println("Unable to publish message = [" + message + "] due to: " + ex.getMessage());
-//            }
-//        });
-//    }
+    /*
+    public void publishMessage(String message) {
 
-    @Scheduled(fixedRate = 5000)
+        CompletableFuture<SendResult<String, Object>> response = template.send("practice", message);
+        response.whenComplete((result, ex) -> {
+            if(ex == null) {
+                System.out.println("Sent message = [" + message + "] with offset = [" + result.getRecordMetadata().offset() + "]");
+            } else {
+                System.out.println("Unable to publish message = [" + message + "] due to: " + ex.getMessage());
+            }
+        });
+    }
+    */
+
+    @Scheduled(fixedRate = 1500)
     public void publishMessageAfterEvery10Secs() {
 
         Long id = counter.getAndIncrement();
