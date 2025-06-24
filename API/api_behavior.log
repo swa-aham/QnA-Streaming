@@ -1,0 +1,108 @@
+request 1 successful at 0.00s
+request 2 successful at 1.67s
+request 3 successful at 4.38s
+request 4 successful at 5.74s
+request 5 successful at 8.17s
+request 6 successful at 9.54s
+request 7 successful at 10.90s
+request 8 successful at 12.07s
+request 9 successful at 13.39s
+request 10 successful at 15.72s
+request 11 successful at 17.01s
+request 12 successful at 18.18s
+request 13 successful at 20.50s
+request 14 successful at 22.96s
+request 15 successful at 24.10s
+request 16 successful at 26.77s
+request 17 failed due to rate limit at 27.96s and retrydelay is 50s
+request 17 successful at 30.17s
+request 18 failed due to rate limit at 32.55s and retrydelay is 46s
+request 18 failed due to rate limit at 33.29s and retrydelay is 46s
+request 18 failed due to rate limit at 34.04s and retrydelay is 44s
+request 18 failed due to rate limit at 36.06s and retrydelay is 43s
+request 18 failed due to rate limit at 36.82s and retrydelay is 42s
+request 18 failed due to rate limit at 37.57s and retrydelay is 41s
+request 18 failed due to rate limit at 38.31s and retrydelay is 41s
+request 18 failed due to rate limit at 39.14s and retrydelay is 40s
+request 18 failed due to rate limit at 39.88s and retrydelay is 39s
+request 18 failed due to rate limit at 40.70s and retrydelay is 37s
+request 18 failed due to rate limit at 42.70s and retrydelay is 35s
+request 18 failed due to rate limit at 44.70s and retrydelay is 34s
+request 18 failed due to rate limit at 45.81s and retrydelay is 33s
+request 18 failed due to rate limit at 46.55s and retrydelay is 31s
+request 18 failed due to rate limit at 48.56s and retrydelay is 30s
+request 18 failed due to rate limit at 49.32s and retrydelay is 28s
+request 18 failed due to rate limit at 51.35s and retrydelay is 28s
+request 18 failed due to rate limit at 52.11s and retrydelay is 27s
+request 18 failed due to rate limit at 52.86s and retrydelay is 26s
+request 18 failed due to rate limit at 53.62s and retrydelay is 25s
+request 18 failed due to rate limit at 54.35s and retrydelay is 24s
+request 18 failed due to rate limit at 55.44s and retrydelay is 23s
+request 18 failed due to rate limit at 56.19s and retrydelay is 23s
+request 18 failed due to rate limit at 56.94s and retrydelay is 21s
+request 18 failed due to rate limit at 58.94s and retrydelay is 19s
+request 18 successful at 60.94s
+request 19 successful at 62.41s
+request 20 successful at 63.56s
+request 21 successful at 66.01s
+request 22 successful at 68.56s
+request 23 successful at 69.86s
+request 24 successful at 71.05s
+request 25 successful at 72.30s
+request 26 successful at 73.52s
+request 27 successful at 74.80s
+request 28 successful at 76.17s
+request 29 successful at 77.40s
+request 30 successful at 78.50s
+request 31 successful at 79.69s
+request 32 successful at 81.12s
+request 33 successful at 82.42s
+request 34 failed due to rate limit at 83.66s and retrydelay is 54s
+request 34 failed due to rate limit at 85.69s and retrydelay is 53s
+request 34 successful at 86.45s
+request 35 failed due to rate limit at 87.79s and retrydelay is 51s
+request 35 failed due to rate limit at 88.53s and retrydelay is 50s
+request 35 failed due to rate limit at 89.29s and retrydelay is 50s
+request 35 failed due to rate limit at 90.06s and retrydelay is 48s
+request 35 failed due to rate limit at 92.06s and retrydelay is 47s
+request 35 failed due to rate limit at 92.81s and retrydelay is 45s
+request 35 failed due to rate limit at 94.81s and retrydelay is 43s
+request 35 failed due to rate limit at 96.91s and retrydelay is 42s
+request 35 failed due to rate limit at 97.66s and retrydelay is 41s
+request 35 failed due to rate limit at 98.43s and retrydelay is 40s
+request 35 failed due to rate limit at 99.18s and retrydelay is 40s
+request 35 failed due to rate limit at 99.92s and retrydelay is 39s
+request 35 failed due to rate limit at 100.75s and retrydelay is 37s
+request 35 failed due to rate limit at 102.74s and retrydelay is 36s
+request 35 failed due to rate limit at 103.50s and retrydelay is 35s
+request 35 failed due to rate limit at 104.25s and retrydelay is 35s
+request 35 failed due to rate limit at 105.00s and retrydelay is 33s
+request 35 failed due to rate limit at 107.03s and retrydelay is 31s
+request 35 failed due to rate limit at 109.04s and retrydelay is 29s
+request 35 failed due to rate limit at 111.04s and retrydelay is 28s
+request 35 failed due to rate limit at 111.79s and retrydelay is 27s
+request 35 failed due to rate limit at 112.54s and retrydelay is 26s
+request 35 failed due to rate limit at 113.29s and retrydelay is 26s
+request 35 failed due to rate limit at 114.03s and retrydelay is 24s
+request 35 failed due to rate limit at 116.02s and retrydelay is 23s
+request 35 failed due to rate limit at 116.78s and retrydelay is 21s
+request 35 failed due to rate limit at 118.78s and retrydelay is 19s
+request 35 successful at 120.80s
+request 36 successful at 122.06s
+request 37 successful at 124.61s
+request 38 successful at 127.12s
+request 39 successful at 129.54s
+request 40 successful at 130.93s
+request 41 successful at 132.21s
+request 42 successful at 134.59s
+request 43 successful at 135.78s
+request 44 successful at 138.35s
+request 45 successful at 139.65s
+request 46 successful at 140.83s
+request 47 successful at 142.24s
+request 48 successful at 143.63s
+request 49 successful at 146.07s
+request 50 failed due to rate limit at 148.73s and retrydelay is 49s
+request 50 successful at 150.86s
+request 51 failed due to rate limit at 153.25s and retrydelay is 46s
+request 51 failed due to rate limit at 154.03s and retrydelay is 45s

@@ -49,7 +49,7 @@ public class KafkaMessagePublisher {
         qna.setQuestion(question);
         qnaRepository.save(qna);
         System.out.println("Question: " + question + " added to database");
-        CompletableFuture<SendResult<String, QnA>> response = template.send("practice4", qna);
+        CompletableFuture<SendResult<String, QnA>> response = template.send("practice5", qna);
         response.whenComplete((result, ex) -> {
             if(ex == null) {
                 System.out.println("Sent message = [" + question + "] with offset = [" + result.getRecordMetadata().offset() + "]");
