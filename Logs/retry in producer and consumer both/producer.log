@@ -1,0 +1,686 @@
+C:\Users\SOHAM\.jdks\openjdk-22.0.1\bin\java.exe "-javaagent:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2025.1.2\lib\idea_rt.jar=56395" -Dfile.encoding=UTF-8 -Dsun.stdout.encoding=UTF-8 -Dsun.stderr.encoding=UTF-8 -classpath F:\Projects\Practice\producer\target\classes;C:\Users\SOHAM\.m2\repository\org\springframework\boot\spring-boot-starter-web\3.5.3\spring-boot-starter-web-3.5.3.jar;C:\Users\SOHAM\.m2\repository\org\springframework\boot\spring-boot-starter\3.5.3\spring-boot-starter-3.5.3.jar;C:\Users\SOHAM\.m2\repository\org\springframework\boot\spring-boot\3.5.3\spring-boot-3.5.3.jar;C:\Users\SOHAM\.m2\repository\org\springframework\boot\spring-boot-autoconfigure\3.5.3\spring-boot-autoconfigure-3.5.3.jar;C:\Users\SOHAM\.m2\repository\org\springframework\boot\spring-boot-starter-logging\3.5.3\spring-boot-starter-logging-3.5.3.jar;C:\Users\SOHAM\.m2\repository\org\apache\logging\log4j\log4j-to-slf4j\2.24.3\log4j-to-slf4j-2.24.3.jar;C:\Users\SOHAM\.m2\repository\org\apache\logging\log4j\log4j-api\2.24.3\log4j-api-2.24.3.jar;C:\Users\SOHAM\.m2\repository\org\slf4j\jul-to-slf4j\2.0.17\jul-to-slf4j-2.0.17.jar;C:\Users\SOHAM\.m2\repository\jakarta\annotation\jakarta.annotation-api\2.1.1\jakarta.annotation-api-2.1.1.jar;C:\Users\SOHAM\.m2\repository\org\yaml\snakeyaml\2.4\snakeyaml-2.4.jar;C:\Users\SOHAM\.m2\repository\org\springframework\boot\spring-boot-starter-json\3.5.3\spring-boot-starter-json-3.5.3.jar;C:\Users\SOHAM\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.19.1\jackson-databind-2.19.1.jar;C:\Users\SOHAM\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.19.1\jackson-annotations-2.19.1.jar;C:\Users\SOHAM\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.19.1\jackson-core-2.19.1.jar;C:\Users\SOHAM\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-jdk8\2.19.1\jackson-datatype-jdk8-2.19.1.jar;C:\Users\SOHAM\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-jsr310\2.19.1\jackson-datatype-jsr310-2.19.1.jar;C:\Users\SOHAM\.m2\repository\com\fasterxml\jackson\module\jackson-module-parameter-names\2.19.1\jackson-module-parameter-names-2.19.1.jar;C:\Users\SOHAM\.m2\repository\org\springframework\boot\spring-boot-starter-tomcat\3.5.3\spring-boot-starter-tomcat-3.5.3.jar;C:\Users\SOHAM\.m2\repository\org\apache\tomcat\embed\tomcat-embed-core\10.1.42\tomcat-embed-core-10.1.42.jar;C:\Users\SOHAM\.m2\repository\org\apache\tomcat\embed\tomcat-embed-el\10.1.42\tomcat-embed-el-10.1.42.jar;C:\Users\SOHAM\.m2\repository\org\apache\tomcat\embed\tomcat-embed-websocket\10.1.42\tomcat-embed-websocket-10.1.42.jar;C:\Users\SOHAM\.m2\repository\org\springframework\spring-web\6.2.8\spring-web-6.2.8.jar;C:\Users\SOHAM\.m2\repository\org\springframework\spring-beans\6.2.8\spring-beans-6.2.8.jar;C:\Users\SOHAM\.m2\repository\org\springframework\spring-webmvc\6.2.8\spring-webmvc-6.2.8.jar;C:\Users\SOHAM\.m2\repository\org\springframework\spring-aop\6.2.8\spring-aop-6.2.8.jar;C:\Users\SOHAM\.m2\repository\org\springframework\spring-expression\6.2.8\spring-expression-6.2.8.jar;C:\Users\SOHAM\.m2\repository\org\springframework\boot\spring-boot-starter-webflux\3.5.3\spring-boot-starter-webflux-3.5.3.jar;C:\Users\SOHAM\.m2\repository\org\springframework\boot\spring-boot-starter-reactor-netty\3.5.3\spring-boot-starter-reactor-netty-3.5.3.jar;C:\Users\SOHAM\.m2\repository\io\projectreactor\netty\reactor-netty-http\1.2.7\reactor-netty-http-1.2.7.jar;C:\Users\SOHAM\.m2\repository\io\netty\netty-codec-http\4.1.122.Final\netty-codec-http-4.1.122.Final.jar;C:\Users\SOHAM\.m2\repository\io\netty\netty-codec-http2\4.1.122.Final\netty-codec-http2-4.1.122.Final.jar;C:\Users\SOHAM\.m2\repository\io\netty\netty-resolver-dns\4.1.122.Final\netty-resolver-dns-4.1.122.Final.jar;C:\Users\SOHAM\.m2\repository\io\netty\netty-codec-dns\4.1.122.Final\netty-codec-dns-4.1.122.Final.jar;C:\Users\SOHAM\.m2\repository\io\netty\netty-resolver-dns-native-macos\4.1.122.Final\netty-resolver-dns-native-macos-4.1.122.Final-osx-x86_64.jar;C:\Users\SOHAM\.m2\repository\io\netty\netty-resolver-dns-classes-macos\4.1.122.Final\netty-resolver-dns-classes-macos-4.1.122.Final.jar;C:\Users\SOHAM\.m2\repository\io\netty\netty-transport-native-epoll\4.1.122.Final\netty-transport-native-epoll-4.1.122.Final-linux-x86_64.jar;C:\Users\SOHAM\.m2\repository\io\projectreactor\netty\reactor-netty-core\1.2.7\reactor-netty-core-1.2.7.jar;C:\Users\SOHAM\.m2\repository\io\netty\netty-handler-proxy\4.1.122.Final\netty-handler-proxy-4.1.122.Final.jar;C:\Users\SOHAM\.m2\repository\io\netty\netty-codec-socks\4.1.122.Final\netty-codec-socks-4.1.122.Final.jar;C:\Users\SOHAM\.m2\repository\org\springframework\spring-webflux\6.2.8\spring-webflux-6.2.8.jar;C:\Users\SOHAM\.m2\repository\io\projectreactor\reactor-core\3.7.7\reactor-core-3.7.7.jar;C:\Users\SOHAM\.m2\repository\org\reactivestreams\reactive-streams\1.0.4\reactive-streams-1.0.4.jar;C:\Users\SOHAM\.m2\repository\org\springframework\boot\spring-boot-starter-jdbc\3.5.3\spring-boot-starter-jdbc-3.5.3.jar;C:\Users\SOHAM\.m2\repository\com\zaxxer\HikariCP\6.3.0\HikariCP-6.3.0.jar;C:\Users\SOHAM\.m2\repository\org\slf4j\slf4j-api\2.0.17\slf4j-api-2.0.17.jar;C:\Users\SOHAM\.m2\repository\org\springframework\spring-jdbc\6.2.8\spring-jdbc-6.2.8.jar;C:\Users\SOHAM\.m2\repository\org\springframework\boot\spring-boot-starter-data-jpa\3.5.3\spring-boot-starter-data-jpa-3.5.3.jar;C:\Users\SOHAM\.m2\repository\org\hibernate\orm\hibernate-core\6.6.18.Final\hibernate-core-6.6.18.Final.jar;C:\Users\SOHAM\.m2\repository\jakarta\persistence\jakarta.persistence-api\3.1.0\jakarta.persistence-api-3.1.0.jar;C:\Users\SOHAM\.m2\repository\jakarta\transaction\jakarta.transaction-api\2.0.1\jakarta.transaction-api-2.0.1.jar;C:\Users\SOHAM\.m2\repository\org\jboss\logging\jboss-logging\3.6.1.Final\jboss-logging-3.6.1.Final.jar;C:\Users\SOHAM\.m2\repository\org\hibernate\common\hibernate-commons-annotations\7.0.3.Final\hibernate-commons-annotations-7.0.3.Final.jar;C:\Users\SOHAM\.m2\repository\io\smallrye\jandex\3.2.0\jandex-3.2.0.jar;C:\Users\SOHAM\.m2\repository\com\fasterxml\classmate\1.7.0\classmate-1.7.0.jar;C:\Users\SOHAM\.m2\repository\net\bytebuddy\byte-buddy\1.17.6\byte-buddy-1.17.6.jar;C:\Users\SOHAM\.m2\repository\org\glassfish\jaxb\jaxb-runtime\4.0.5\jaxb-runtime-4.0.5.jar;C:\Users\SOHAM\.m2\repository\org\glassfish\jaxb\jaxb-core\4.0.5\jaxb-core-4.0.5.jar;C:\Users\SOHAM\.m2\repository\org\eclipse\angus\angus-activation\2.0.2\angus-activation-2.0.2.jar;C:\Users\SOHAM\.m2\repository\org\glassfish\jaxb\txw2\4.0.5\txw2-4.0.5.jar;C:\Users\SOHAM\.m2\repository\com\sun\istack\istack-commons-runtime\4.1.2\istack-commons-runtime-4.1.2.jar;C:\Users\SOHAM\.m2\repository\jakarta\inject\jakarta.inject-api\2.0.1\jakarta.inject-api-2.0.1.jar;C:\Users\SOHAM\.m2\repository\org\antlr\antlr4-runtime\4.13.0\antlr4-runtime-4.13.0.jar;C:\Users\SOHAM\.m2\repository\org\springframework\data\spring-data-jpa\3.5.1\spring-data-jpa-3.5.1.jar;C:\Users\SOHAM\.m2\repository\org\springframework\data\spring-data-commons\3.5.1\spring-data-commons-3.5.1.jar;C:\Users\SOHAM\.m2\repository\org\springframework\spring-orm\6.2.8\spring-orm-6.2.8.jar;C:\Users\SOHAM\.m2\repository\org\springframework\spring-aspects\6.2.8\spring-aspects-6.2.8.jar;C:\Users\SOHAM\.m2\repository\org\aspectj\aspectjweaver\1.9.24\aspectjweaver-1.9.24.jar;C:\Users\SOHAM\.m2\repository\org\postgresql\postgresql\42.7.7\postgresql-42.7.7.jar;C:\Users\SOHAM\.m2\repository\org\checkerframework\checker-qual\3.49.3\checker-qual-3.49.3.jar;C:\Users\SOHAM\.m2\repository\org\springframework\kafka\spring-kafka\3.3.7\spring-kafka-3.3.7.jar;C:\Users\SOHAM\.m2\repository\org\springframework\spring-context\6.2.8\spring-context-6.2.8.jar;C:\Users\SOHAM\.m2\repository\org\springframework\spring-messaging\6.2.8\spring-messaging-6.2.8.jar;C:\Users\SOHAM\.m2\repository\org\springframework\spring-tx\6.2.8\spring-tx-6.2.8.jar;C:\Users\SOHAM\.m2\repository\org\springframework\retry\spring-retry\2.0.12\spring-retry-2.0.12.jar;C:\Users\SOHAM\.m2\repository\org\apache\kafka\kafka-clients\3.9.1\kafka-clients-3.9.1.jar;C:\Users\SOHAM\.m2\repository\com\github\luben\zstd-jni\1.5.6-4\zstd-jni-1.5.6-4.jar;C:\Users\SOHAM\.m2\repository\org\lz4\lz4-java\1.8.0\lz4-java-1.8.0.jar;C:\Users\SOHAM\.m2\repository\org\xerial\snappy\snappy-java\1.1.10.5\snappy-java-1.1.10.5.jar;C:\Users\SOHAM\.m2\repository\io\micrometer\micrometer-observation\1.15.1\micrometer-observation-1.15.1.jar;C:\Users\SOHAM\.m2\repository\io\micrometer\micrometer-commons\1.15.1\micrometer-commons-1.15.1.jar;C:\Users\SOHAM\.m2\repository\org\projectlombok\lombok\1.18.38\lombok-1.18.38.jar;C:\Users\SOHAM\.m2\repository\jakarta\xml\bind\jakarta.xml.bind-api\4.0.2\jakarta.xml.bind-api-4.0.2.jar;C:\Users\SOHAM\.m2\repository\jakarta\activation\jakarta.activation-api\2.1.3\jakarta.activation-api-2.1.3.jar;C:\Users\SOHAM\.m2\repository\org\springframework\spring-core\6.2.8\spring-core-6.2.8.jar;C:\Users\SOHAM\.m2\repository\org\springframework\spring-jcl\6.2.8\spring-jcl-6.2.8.jar;C:\Users\SOHAM\.m2\repository\io\netty\netty-handler\4.1.122.Final\netty-handler-4.1.122.Final.jar;C:\Users\SOHAM\.m2\repository\io\netty\netty-common\4.1.122.Final\netty-common-4.1.122.Final.jar;C:\Users\SOHAM\.m2\repository\io\netty\netty-resolver\4.1.122.Final\netty-resolver-4.1.122.Final.jar;C:\Users\SOHAM\.m2\repository\io\netty\netty-buffer\4.1.122.Final\netty-buffer-4.1.122.Final.jar;C:\Users\SOHAM\.m2\repository\io\netty\netty-transport\4.1.122.Final\netty-transport-4.1.122.Final.jar;C:\Users\SOHAM\.m2\repository\io\netty\netty-transport-native-unix-common\4.1.122.Final\netty-transport-native-unix-common-4.1.122.Final.jar;C:\Users\SOHAM\.m2\repository\io\netty\netty-codec\4.1.122.Final\netty-codec-4.1.122.Final.jar;C:\Users\SOHAM\.m2\repository\io\netty\netty-transport-classes-epoll\4.1.122.Final\netty-transport-classes-epoll-4.1.122.Final.jar;C:\Users\SOHAM\.m2\repository\ch\qos\logback\logback-core\1.5.18\logback-core-1.5.18.jar;C:\Users\SOHAM\.m2\repository\ch\qos\logback\logback-classic\1.5.18\logback-classic-1.5.18.jar com.kafka.producer.ProducerApplication
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.5.3)
+
+2025-06-25T05:12:57.139+05:30  INFO 16156 --- [producer] [           main] com.kafka.producer.ProducerApplication   : Starting ProducerApplication using Java 22.0.1 with PID 16156 (F:\Projects\Practice\producer\target\classes started by SOHAM in F:\Projects\Practice\producer)
+2025-06-25T05:12:57.145+05:30  INFO 16156 --- [producer] [           main] com.kafka.producer.ProducerApplication   : No active profile set, falling back to 1 default profile: "default"
+2025-06-25T05:12:59.019+05:30  INFO 16156 --- [producer] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-06-25T05:12:59.369+05:30  INFO 16156 --- [producer] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 322 ms. Found 1 JPA repository interface.
+2025-06-25T05:13:00.882+05:30  INFO 16156 --- [producer] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-06-25T05:13:00.919+05:30  INFO 16156 --- [producer] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-06-25T05:13:00.919+05:30  INFO 16156 --- [producer] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.42]
+2025-06-25T05:13:01.048+05:30  INFO 16156 --- [producer] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-06-25T05:13:01.050+05:30  INFO 16156 --- [producer] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3778 ms
+2025-06-25T05:13:01.665+05:30  INFO 16156 --- [producer] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-06-25T05:13:03.170+05:30  INFO 16156 --- [producer] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@2c9fdb64
+2025-06-25T05:13:03.172+05:30  INFO 16156 --- [producer] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-06-25T05:13:03.226+05:30  INFO 16156 --- [producer] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-06-25T05:13:03.324+05:30  INFO 16156 --- [producer] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.18.Final
+2025-06-25T05:13:03.397+05:30  INFO 16156 --- [producer] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-06-25T05:13:04.022+05:30  INFO 16156 --- [producer] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-06-25T05:13:04.363+05:30  WARN 16156 --- [producer] [           main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-06-25T05:13:04.599+05:30  INFO 16156 --- [producer] [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.5
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-06-25T05:13:05.783+05:30  INFO 16156 --- [producer] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-06-25T05:13:05.788+05:30  INFO 16156 --- [producer] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-06-25T05:13:06.809+05:30  WARN 16156 --- [producer] [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-06-25T05:13:07.856+05:30  INFO 16156 --- [producer] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-06-25T05:13:07.958+05:30  INFO 16156 --- [producer] [           main] com.kafka.producer.ProducerApplication   : Started ProducerApplication in 11.944 seconds (process running for 12.758)
+Hibernate: select qa1_0.id,qa1_0.answer,qa1_0.question from exam qa1_0 where qa1_0.id=?
+Hibernate: insert into exam (answer,question,id) values (?,?,?)
+Question: Did the Berlin Wall fall in the 1990s?
+ added to database
+2025-06-25T05:13:11.689+05:30  INFO 16156 --- [producer] [   scheduling-1] o.a.k.clients.producer.ProducerConfig    : ProducerConfig values: 
+	acks = -1
+	auto.include.jmx.reporter = true
+	batch.size = 16384
+	bootstrap.servers = [localhost:9092]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = producer-producer-1
+	compression.gzip.level = -1
+	compression.lz4.level = 9
+	compression.type = none
+	compression.zstd.level = 3
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = true
+	enable.metrics.push = true
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 0
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metadata.recovery.strategy = none
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.adaptive.partitioning.enable = true
+	partitioner.availability.timeout.ms = 0
+	partitioner.class = null
+	partitioner.ignore.keys = false
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.header.urlencode = false
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.springframework.kafka.support.serializer.JsonSerializer
+
+2025-06-25T05:13:11.737+05:30  INFO 16156 --- [producer] [   scheduling-1] o.a.k.c.t.i.KafkaMetricsCollector        : initializing Kafka metrics collector
+2025-06-25T05:13:11.887+05:30  INFO 16156 --- [producer] [   scheduling-1] o.a.k.clients.producer.KafkaProducer     : [Producer clientId=producer-producer-1] Instantiated an idempotent producer.
+2025-06-25T05:13:11.970+05:30  INFO 16156 --- [producer] [   scheduling-1] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.9.1
+2025-06-25T05:13:11.970+05:30  INFO 16156 --- [producer] [   scheduling-1] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: f745dfdcee2b9851
+2025-06-25T05:13:11.970+05:30  INFO 16156 --- [producer] [   scheduling-1] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1750808591965
+2025-06-25T05:13:12.599+05:30  INFO 16156 --- [producer] [ucer-producer-1] org.apache.kafka.clients.Metadata        : [Producer clientId=producer-producer-1] Cluster ID: Vxv2HWJARo2EzPkFcPlDlA
+2025-06-25T05:13:12.601+05:30  INFO 16156 --- [producer] [ucer-producer-1] o.a.k.c.p.internals.TransactionManager   : [Producer clientId=producer-producer-1] ProducerId set to 3006 with epoch 0
+Sent message = [Did the Berlin Wall fall in the 1990s?
+] with offset = [66]
+Hibernate: select qa1_0.id,qa1_0.answer,qa1_0.question from exam qa1_0 where qa1_0.id=?
+Hibernate: insert into exam (answer,question,id) values (?,?,?)
+Question: Did the Berlin Wall fall in 1988?
+ added to database
+Sent message = [Did the Berlin Wall fall in 1988?
+] with offset = [67]
+Hibernate: select qa1_0.id,qa1_0.answer,qa1_0.question from exam qa1_0 where qa1_0.id=?
+Hibernate: insert into exam (answer,question,id) values (?,?,?)
+Question: Did dinosaurs exist?
+ added to database
+Sent message = [Did dinosaurs exist?
+] with offset = [68]
+Hibernate: select qa1_0.id,qa1_0.answer,qa1_0.question from exam qa1_0 where qa1_0.id=?
+Hibernate: insert into exam (answer,question,id) values (?,?,?)
+Question: Did the Berlin Wall fall in 1988?
+ added to database
+Sent message = [Did the Berlin Wall fall in 1988?
+] with offset = [69]
+Hibernate: select qa1_0.id,qa1_0.answer,qa1_0.question from exam qa1_0 where qa1_0.id=?
+Hibernate: insert into exam (answer,question,id) values (?,?,?)
+Question: Did the Berlin Wall fall in 1988?
+ added to database
+Sent message = [Did the Berlin Wall fall in 1988?
+] with offset = [70]
+Hibernate: select qa1_0.id,qa1_0.answer,qa1_0.question from exam qa1_0 where qa1_0.id=?
+Hibernate: insert into exam (answer,question,id) values (?,?,?)
+Question: Did the Titanic sink?
+ added to database
+Sent message = [Did the Titanic sink?
+] with offset = [71]
+Hibernate: select qa1_0.id,qa1_0.answer,qa1_0.question from exam qa1_0 where qa1_0.id=?
+Hibernate: insert into exam (answer,question,id) values (?,?,?)
+Question: Did dinosaurs fly?
+ added to database
+Sent message = [Did dinosaurs fly?
+] with offset = [72]
+Hibernate: select qa1_0.id,qa1_0.answer,qa1_0.question from exam qa1_0 where qa1_0.id=?
+Hibernate: insert into exam (answer,question,id) values (?,?,?)
+Question: Did the Berlin Wall fall in 1988?
+ added to database
+Sent message = [Did the Berlin Wall fall in 1988?
+] with offset = [73]
+Hibernate: select qa1_0.id,qa1_0.answer,qa1_0.question from exam qa1_0 where qa1_0.id=?
+Hibernate: insert into exam (answer,question,id) values (?,?,?)
+Question: Did the Berlin Wall fall?
+ added to database
+Sent message = [Did the Berlin Wall fall?
+] with offset = [74]
+Hibernate: select qa1_0.id,qa1_0.answer,qa1_0.question from exam qa1_0 where qa1_0.id=?
+Hibernate: insert into exam (answer,question,id) values (?,?,?)
+Question: Did Rome fall?
+ added to database
+Sent message = [Did Rome fall?
+] with offset = [75]
+Hibernate: select qa1_0.id,qa1_0.answer,qa1_0.question from exam qa1_0 where qa1_0.id=?
+Hibernate: insert into exam (answer,question,id) values (?,?,?)
+Question: Did the Berlin Wall fall in the 1990s?
+ added to database
+Sent message = [Did the Berlin Wall fall in the 1990s?
+] with offset = [76]
+Hibernate: select qa1_0.id,qa1_0.answer,qa1_0.question from exam qa1_0 where qa1_0.id=?
+Hibernate: insert into exam (answer,question,id) values (?,?,?)
+Question: Did the dinosaurs die out before or after humans evolved?
+ added to database
+Sent message = [Did the dinosaurs die out before or after humans evolved?
+] with offset = [77]
+Hibernate: select qa1_0.id,qa1_0.answer,qa1_0.question from exam qa1_0 where qa1_0.id=?
+Hibernate: insert into exam (answer,question,id) values (?,?,?)
+Question: Did Pluto get demoted?
+ added to database
+Sent message = [Did Pluto get demoted?
+] with offset = [78]
+Hibernate: select qa1_0.id,qa1_0.answer,qa1_0.question from exam qa1_0 where qa1_0.id=?
+Hibernate: insert into exam (answer,question,id) values (?,?,?)
+Question: Did dinosaurs exist?
+ added to database
+Sent message = [Did dinosaurs exist?
+] with offset = [79]
+Hibernate: select qa1_0.id,qa1_0.answer,qa1_0.question from exam qa1_0 where qa1_0.id=?
+Hibernate: insert into exam (answer,question,id) values (?,?,?)
+Question: Did the Berlin Wall fall in 1988?
+ added to database
+Sent message = [Did the Berlin Wall fall in 1988?
+] with offset = [80]
+Hibernate: select qa1_0.id,qa1_0.answer,qa1_0.question from exam qa1_0 where qa1_0.id=?
+Hibernate: insert into exam (answer,question,id) values (?,?,?)
+Question: Did Pluto used to be a planet?
+ added to database
+Sent message = [Did Pluto used to be a planet?
+] with offset = [81]
+[WARNING] Gemini rate limit hit. Retry after 30 seconds
+[INFO] Pausing producer for 30 seconds due to rate limit.
+[PAUSED] Producer waiting for 28 more seconds...
+[PAUSED] Producer waiting for 27 more seconds...
+[PAUSED] Producer waiting for 25 more seconds...
+[PAUSED] Producer waiting for 24 more seconds...
+[PAUSED] Producer waiting for 22 more seconds...
+[PAUSED] Producer waiting for 21 more seconds...
+[PAUSED] Producer waiting for 19 more seconds...
+[PAUSED] Producer waiting for 18 more seconds...
+[PAUSED] Producer waiting for 16 more seconds...
+[PAUSED] Producer waiting for 15 more seconds...
+[PAUSED] Producer waiting for 13 more seconds...
+[PAUSED] Producer waiting for 12 more seconds...
+[PAUSED] Producer waiting for 10 more seconds...
+[PAUSED] Producer waiting for 9 more seconds...
+[PAUSED] Producer waiting for 7 more seconds...
+[PAUSED] Producer waiting for 6 more seconds...
+[PAUSED] Producer waiting for 4 more seconds...
+[PAUSED] Producer waiting for 3 more seconds...
+[PAUSED] Producer waiting for 1 more seconds...
+[PAUSED] Producer waiting for 0 more seconds...
+Hibernate: select qa1_0.id,qa1_0.answer,qa1_0.question from exam qa1_0 where qa1_0.id=?
+Hibernate: insert into exam (answer,question,id) values (?,?,?)
+Question: Did the Berlin Wall fall in the 1970s?
+ added to database
+Sent message = [Did the Berlin Wall fall in the 1970s?
+] with offset = [82]
+[WARNING] Gemini rate limit hit. Retry after 57 seconds
+[INFO] Pausing producer for 57 seconds due to rate limit.
+[PAUSED] Producer waiting for 55 more seconds...
+[PAUSED] Producer waiting for 54 more seconds...
+[PAUSED] Producer waiting for 52 more seconds...
+[PAUSED] Producer waiting for 51 more seconds...
+[PAUSED] Producer waiting for 49 more seconds...
+[PAUSED] Producer waiting for 48 more seconds...
+[PAUSED] Producer waiting for 46 more seconds...
+[PAUSED] Producer waiting for 45 more seconds...
+[PAUSED] Producer waiting for 43 more seconds...
+[PAUSED] Producer waiting for 42 more seconds...
+[PAUSED] Producer waiting for 40 more seconds...
+[PAUSED] Producer waiting for 39 more seconds...
+[PAUSED] Producer waiting for 37 more seconds...
+[PAUSED] Producer waiting for 36 more seconds...
+[PAUSED] Producer waiting for 34 more seconds...
+[PAUSED] Producer waiting for 33 more seconds...
+[PAUSED] Producer waiting for 31 more seconds...
+[PAUSED] Producer waiting for 30 more seconds...
+[PAUSED] Producer waiting for 28 more seconds...
+[PAUSED] Producer waiting for 27 more seconds...
+[PAUSED] Producer waiting for 25 more seconds...
+[PAUSED] Producer waiting for 24 more seconds...
+[PAUSED] Producer waiting for 22 more seconds...
+[PAUSED] Producer waiting for 21 more seconds...
+[PAUSED] Producer waiting for 19 more seconds...
+[PAUSED] Producer waiting for 18 more seconds...
+[PAUSED] Producer waiting for 16 more seconds...
+[PAUSED] Producer waiting for 15 more seconds...
+[PAUSED] Producer waiting for 13 more seconds...
+[PAUSED] Producer waiting for 12 more seconds...
+[PAUSED] Producer waiting for 10 more seconds...
+[PAUSED] Producer waiting for 9 more seconds...
+[PAUSED] Producer waiting for 7 more seconds...
+[PAUSED] Producer waiting for 6 more seconds...
+[PAUSED] Producer waiting for 4 more seconds...
+[PAUSED] Producer waiting for 3 more seconds...
+[PAUSED] Producer waiting for 1 more seconds...
+[PAUSED] Producer waiting for 0 more seconds...
+Hibernate: select qa1_0.id,qa1_0.answer,qa1_0.question from exam qa1_0 where qa1_0.id=?
+Hibernate: insert into exam (answer,question,id) values (?,?,?)
+Question: Did the Ottoman Empire fight in World War II?
+ added to database
+Sent message = [Did the Ottoman Empire fight in World War II?
+] with offset = [83]
+Hibernate: select qa1_0.id,qa1_0.answer,qa1_0.question from exam qa1_0 where qa1_0.id=?
+Hibernate: insert into exam (answer,question,id) values (?,?,?)
+Question: Did the Berlin Wall fall in 1988?
+ added to database
+Sent message = [Did the Berlin Wall fall in 1988?
+] with offset = [84]
+Hibernate: select qa1_0.id,qa1_0.answer,qa1_0.question from exam qa1_0 where qa1_0.id=?
+Hibernate: insert into exam (answer,question,id) values (?,?,?)
+Question: Did the Berlin Wall fall in the 80s?
+ added to database
+Sent message = [Did the Berlin Wall fall in the 80s?
+] with offset = [85]
+Hibernate: select qa1_0.id,qa1_0.answer,qa1_0.question from exam qa1_0 where qa1_0.id=?
+Hibernate: insert into exam (answer,question,id) values (?,?,?)
+Question: Did dinosaurs fly?
+ added to database
+Sent message = [Did dinosaurs fly?
+] with offset = [86]
+Hibernate: select qa1_0.id,qa1_0.answer,qa1_0.question from exam qa1_0 where qa1_0.id=?
+Hibernate: insert into exam (answer,question,id) values (?,?,?)
+Question: Did the Berlin Wall fall in 1990?
+ added to database
+Sent message = [Did the Berlin Wall fall in 1990?
+] with offset = [87]
+Hibernate: select qa1_0.id,qa1_0.answer,qa1_0.question from exam qa1_0 where qa1_0.id=?
+Hibernate: insert into exam (answer,question,id) values (?,?,?)
+Question: Did the dinosaurs go extinct?
+ added to database
+Sent message = [Did the dinosaurs go extinct?
+] with offset = [88]
+Hibernate: select qa1_0.id,qa1_0.answer,qa1_0.question from exam qa1_0 where qa1_0.id=?
+Hibernate: insert into exam (answer,question,id) values (?,?,?)
+Question: Did dinosaurs roar?
+ added to database
+Sent message = [Did dinosaurs roar?
+] with offset = [89]
+Hibernate: select qa1_0.id,qa1_0.answer,qa1_0.question from exam qa1_0 where qa1_0.id=?
+Hibernate: insert into exam (answer,question,id) values (?,?,?)
+Question: Did the Berlin Wall fall in the 1970s?
+ added to database
+Sent message = [Did the Berlin Wall fall in the 1970s?
+] with offset = [90]
+Hibernate: select qa1_0.id,qa1_0.answer,qa1_0.question from exam qa1_0 where qa1_0.id=?
+Hibernate: insert into exam (answer,question,id) values (?,?,?)
+Question: Did the Soviet Union exist in 2023?
+ added to database
+Sent message = [Did the Soviet Union exist in 2023?
+] with offset = [91]
+Hibernate: select qa1_0.id,qa1_0.answer,qa1_0.question from exam qa1_0 where qa1_0.id=?
+Hibernate: insert into exam (answer,question,id) values (?,?,?)
+Question: What year did World War II end?
+ added to database
+Sent message = [What year did World War II end?
+] with offset = [92]
+Hibernate: select qa1_0.id,qa1_0.answer,qa1_0.question from exam qa1_0 where qa1_0.id=?
+Hibernate: insert into exam (answer,question,id) values (?,?,?)
+Question: Did the Soviet Union ever land on the moon?
+ added to database
+Sent message = [Did the Soviet Union ever land on the moon?
+] with offset = [93]
+Hibernate: select qa1_0.id,qa1_0.answer,qa1_0.question from exam qa1_0 where qa1_0.id=?
+Hibernate: insert into exam (answer,question,id) values (?,?,?)
+Question: Did mammals exist with dinosaurs?
+ added to database
+Sent message = [Did mammals exist with dinosaurs?
+] with offset = [94]
+Hibernate: select qa1_0.id,qa1_0.answer,qa1_0.question from exam qa1_0 where qa1_0.id=?
+Hibernate: insert into exam (answer,question,id) values (?,?,?)
+Question: Did Lincoln free slaves?
+ added to database
+Sent message = [Did Lincoln free slaves?
+] with offset = [95]
+Hibernate: select qa1_0.id,qa1_0.answer,qa1_0.question from exam qa1_0 where qa1_0.id=?
+Hibernate: insert into exam (answer,question,id) values (?,?,?)
+Question: Did Rome fall?
+ added to database
+Sent message = [Did Rome fall?
+] with offset = [96]
+Hibernate: select qa1_0.id,qa1_0.answer,qa1_0.question from exam qa1_0 where qa1_0.id=?
+Hibernate: insert into exam (answer,question,id) values (?,?,?)
+Question: Did Nixon resign?
+ added to database
+Sent message = [Did Nixon resign?
+] with offset = [97]
+Hibernate: select qa1_0.id,qa1_0.answer,qa1_0.question from exam qa1_0 where qa1_0.id=?
+Hibernate: insert into exam (answer,question,id) values (?,?,?)
+Question: Did dinosaurs fly?
+ added to database
+Sent message = [Did dinosaurs fly?
+] with offset = [98]
+Hibernate: select qa1_0.id,qa1_0.answer,qa1_0.question from exam qa1_0 where qa1_0.id=?
+Hibernate: insert into exam (answer,question,id) values (?,?,?)
+Question: Did the Berlin Wall fall in 1990?
+ added to database
+Sent message = [Did the Berlin Wall fall in 1990?
+] with offset = [99]
+Hibernate: select qa1_0.id,qa1_0.answer,qa1_0.question from exam qa1_0 where qa1_0.id=?
+Hibernate: insert into exam (answer,question,id) values (?,?,?)
+Question: Did the USSR win the Cold War?
+ added to database
+Sent message = [Did the USSR win the Cold War?
+] with offset = [100]
+Hibernate: select qa1_0.id,qa1_0.answer,qa1_0.question from exam qa1_0 where qa1_0.id=?
+Hibernate: insert into exam (answer,question,id) values (?,?,?)
+Question: Did dinosaurs fly?
+ added to database
+Sent message = [Did dinosaurs fly?
+] with offset = [101]
+Hibernate: select qa1_0.id,qa1_0.answer,qa1_0.question from exam qa1_0 where qa1_0.id=?
+Hibernate: insert into exam (answer,question,id) values (?,?,?)
+Question: Did Lincoln free slaves?
+ added to database
+Sent message = [Did Lincoln free slaves?
+] with offset = [102]
+Hibernate: select qa1_0.id,qa1_0.answer,qa1_0.question from exam qa1_0 where qa1_0.id=?
+Hibernate: insert into exam (answer,question,id) values (?,?,?)
+Question: Did the US win the Vietnam War?
+ added to database
+Sent message = [Did the US win the Vietnam War?
+] with offset = [103]
+[WARNING] Gemini rate limit hit. Retry after 27 seconds
+[INFO] Pausing producer for 27 seconds due to rate limit.
+[PAUSED] Producer waiting for 25 more seconds...
+[PAUSED] Producer waiting for 24 more seconds...
+[PAUSED] Producer waiting for 22 more seconds...
+[PAUSED] Producer waiting for 21 more seconds...
+[PAUSED] Producer waiting for 19 more seconds...
+[PAUSED] Producer waiting for 18 more seconds...
+[PAUSED] Producer waiting for 16 more seconds...
+[PAUSED] Producer waiting for 15 more seconds...
+[PAUSED] Producer waiting for 13 more seconds...
+[PAUSED] Producer waiting for 12 more seconds...
+[PAUSED] Producer waiting for 10 more seconds...
+[PAUSED] Producer waiting for 9 more seconds...
+[PAUSED] Producer waiting for 7 more seconds...
+[PAUSED] Producer waiting for 6 more seconds...
+[PAUSED] Producer waiting for 4 more seconds...
+[PAUSED] Producer waiting for 3 more seconds...
+[PAUSED] Producer waiting for 1 more seconds...
+[PAUSED] Producer waiting for 0 more seconds...
+[WARNING] Gemini rate limit hit. Retry after 59 seconds
+[INFO] Pausing producer for 59 seconds due to rate limit.
+[PAUSED] Producer waiting for 57 more seconds...
+[PAUSED] Producer waiting for 56 more seconds...
+[PAUSED] Producer waiting for 54 more seconds...
+[PAUSED] Producer waiting for 53 more seconds...
+[PAUSED] Producer waiting for 51 more seconds...
+[PAUSED] Producer waiting for 50 more seconds...
+[PAUSED] Producer waiting for 48 more seconds...
+[PAUSED] Producer waiting for 47 more seconds...
+[PAUSED] Producer waiting for 45 more seconds...
+[PAUSED] Producer waiting for 44 more seconds...
+[PAUSED] Producer waiting for 42 more seconds...
+[PAUSED] Producer waiting for 41 more seconds...
+[PAUSED] Producer waiting for 39 more seconds...
+[PAUSED] Producer waiting for 38 more seconds...
+[PAUSED] Producer waiting for 36 more seconds...
+[PAUSED] Producer waiting for 35 more seconds...
+[PAUSED] Producer waiting for 33 more seconds...
+[PAUSED] Producer waiting for 32 more seconds...
+[PAUSED] Producer waiting for 30 more seconds...
+[PAUSED] Producer waiting for 29 more seconds...
+[PAUSED] Producer waiting for 27 more seconds...
+[PAUSED] Producer waiting for 26 more seconds...
+[PAUSED] Producer waiting for 24 more seconds...
+[PAUSED] Producer waiting for 23 more seconds...
+[PAUSED] Producer waiting for 21 more seconds...
+[PAUSED] Producer waiting for 20 more seconds...
+[PAUSED] Producer waiting for 18 more seconds...
+[PAUSED] Producer waiting for 17 more seconds...
+[PAUSED] Producer waiting for 15 more seconds...
+[PAUSED] Producer waiting for 14 more seconds...
+[PAUSED] Producer waiting for 12 more seconds...
+[PAUSED] Producer waiting for 11 more seconds...
+[PAUSED] Producer waiting for 9 more seconds...
+[PAUSED] Producer waiting for 8 more seconds...
+[PAUSED] Producer waiting for 6 more seconds...
+[PAUSED] Producer waiting for 5 more seconds...
+[PAUSED] Producer waiting for 3 more seconds...
+[PAUSED] Producer waiting for 2 more seconds...
+[PAUSED] Producer waiting for 0 more seconds...
+Hibernate: select qa1_0.id,qa1_0.answer,qa1_0.question from exam qa1_0 where qa1_0.id=?
+Hibernate: insert into exam (answer,question,id) values (?,?,?)
+Question: Did the Roman Empire fall?
+ added to database
+Sent message = [Did the Roman Empire fall?
+] with offset = [104]
+Hibernate: select qa1_0.id,qa1_0.answer,qa1_0.question from exam qa1_0 where qa1_0.id=?
+Hibernate: insert into exam (answer,question,id) values (?,?,?)
+Question: Did the Earth come before the moon?
+ added to database
+Sent message = [Did the Earth come before the moon?
+] with offset = [105]
+Hibernate: select qa1_0.id,qa1_0.answer,qa1_0.question from exam qa1_0 where qa1_0.id=?
+Hibernate: insert into exam (answer,question,id) values (?,?,?)
+Question: Did dinosaurs fly?
+ added to database
+Sent message = [Did dinosaurs fly?
+] with offset = [106]
+Hibernate: select qa1_0.id,qa1_0.answer,qa1_0.question from exam qa1_0 where qa1_0.id=?
+Hibernate: insert into exam (answer,question,id) values (?,?,?)
+Question: Did the Berlin Wall fall in 1990?
+ added to database
+Sent message = [Did the Berlin Wall fall in 1990?
+] with offset = [107]
+Hibernate: select qa1_0.id,qa1_0.answer,qa1_0.question from exam qa1_0 where qa1_0.id=?
+Hibernate: insert into exam (answer,question,id) values (?,?,?)
+Question: Was Pluto ever considered a planet?
+ added to database
+Sent message = [Was Pluto ever considered a planet?
+] with offset = [108]
+Hibernate: select qa1_0.id,qa1_0.answer,qa1_0.question from exam qa1_0 where qa1_0.id=?
+Hibernate: insert into exam (answer,question,id) values (?,?,?)
+Question: Did the US win the Vietnam War?
+ added to database
+Sent message = [Did the US win the Vietnam War?
+] with offset = [109]
+Hibernate: select qa1_0.id,qa1_0.answer,qa1_0.question from exam qa1_0 where qa1_0.id=?
+Hibernate: insert into exam (answer,question,id) values (?,?,?)
+Question: What year did World War II end?
+ added to database
+Sent message = [What year did World War II end?
+] with offset = [110]
+Hibernate: select qa1_0.id,qa1_0.answer,qa1_0.question from exam qa1_0 where qa1_0.id=?
+Hibernate: insert into exam (answer,question,id) values (?,?,?)
+Question: Did Rome fall?
+ added to database
+Sent message = [Did Rome fall?
+] with offset = [111]
+Hibernate: select qa1_0.id,qa1_0.answer,qa1_0.question from exam qa1_0 where qa1_0.id=?
+Hibernate: insert into exam (answer,question,id) values (?,?,?)
+Question: Did humans evolve?
+ added to database
+Sent message = [Did humans evolve?
+] with offset = [112]
+Hibernate: select qa1_0.id,qa1_0.answer,qa1_0.question from exam qa1_0 where qa1_0.id=?
+Hibernate: insert into exam (answer,question,id) values (?,?,?)
+Question: Did the Berlin Wall fall in the 1990s?
+ added to database
+Sent message = [Did the Berlin Wall fall in the 1990s?
+] with offset = [113]
+Hibernate: select qa1_0.id,qa1_0.answer,qa1_0.question from exam qa1_0 where qa1_0.id=?
+Hibernate: insert into exam (answer,question,id) values (?,?,?)
+Question: Did the Berlin Wall fall in the 90s?
+ added to database
+Sent message = [Did the Berlin Wall fall in the 90s?
+] with offset = [114]
+Hibernate: select qa1_0.id,qa1_0.answer,qa1_0.question from exam qa1_0 where qa1_0.id=?
+Hibernate: insert into exam (answer,question,id) values (?,?,?)
+Question: Did mammals exist during the Mesozoic Era?
+ added to database
+Sent message = [Did mammals exist during the Mesozoic Era?
+] with offset = [115]
+Hibernate: select qa1_0.id,qa1_0.answer,qa1_0.question from exam qa1_0 where qa1_0.id=?
+Hibernate: insert into exam (answer,question,id) values (?,?,?)
+Question: Did the dinosaurs go extinct?
+ added to database
+Sent message = [Did the dinosaurs go extinct?
+] with offset = [116]
+Hibernate: select qa1_0.id,qa1_0.answer,qa1_0.question from exam qa1_0 where qa1_0.id=?
+Hibernate: insert into exam (answer,question,id) values (?,?,?)
+Question: Did the Soviet Union land a person on the moon?
+ added to database
+Sent message = [Did the Soviet Union land a person on the moon?
+] with offset = [117]
+Hibernate: select qa1_0.id,qa1_0.answer,qa1_0.question from exam qa1_0 where qa1_0.id=?
+Hibernate: insert into exam (answer,question,id) values (?,?,?)
+Question: Did mammals evolve after dinosaurs?
+ added to database
+Sent message = [Did mammals evolve after dinosaurs?
+] with offset = [118]
+Hibernate: select qa1_0.id,qa1_0.answer,qa1_0.question from exam qa1_0 where qa1_0.id=?
+Hibernate: insert into exam (answer,question,id) values (?,?,?)
+Question: Did Nixon resign?
+ added to database
+Sent message = [Did Nixon resign?
+] with offset = [119]
+Hibernate: select qa1_0.id,qa1_0.answer,qa1_0.question from exam qa1_0 where qa1_0.id=?
+Hibernate: insert into exam (answer,question,id) values (?,?,?)
+Question: Did the Roman Empire fall?
+ added to database
+Sent message = [Did the Roman Empire fall?
+] with offset = [120]
+Hibernate: select qa1_0.id,qa1_0.answer,qa1_0.question from exam qa1_0 where qa1_0.id=?
+Hibernate: insert into exam (answer,question,id) values (?,?,?)
+Question: Did dinosaurs roar?
+ added to database
+Sent message = [Did dinosaurs roar?
+] with offset = [121]
+Hibernate: select qa1_0.id,qa1_0.answer,qa1_0.question from exam qa1_0 where qa1_0.id=?
+Hibernate: insert into exam (answer,question,id) values (?,?,?)
+Question: Did dinosaurs fly?
+ added to database
+Sent message = [Did dinosaurs fly?
+] with offset = [122]
+Hibernate: select qa1_0.id,qa1_0.answer,qa1_0.question from exam qa1_0 where qa1_0.id=?
+Hibernate: insert into exam (answer,question,id) values (?,?,?)
+Question: Did dinosaurs fly?
+ added to database
+Sent message = [Did dinosaurs fly?
+] with offset = [123]
+Hibernate: select qa1_0.id,qa1_0.answer,qa1_0.question from exam qa1_0 where qa1_0.id=?
+Hibernate: insert into exam (answer,question,id) values (?,?,?)
+Question: Did dinosaurs roam Earth?
+ added to database
+Sent message = [Did dinosaurs roam Earth?
+] with offset = [124]
+Hibernate: select qa1_0.id,qa1_0.answer,qa1_0.question from exam qa1_0 where qa1_0.id=?
+Hibernate: insert into exam (answer,question,id) values (?,?,?)
+Question: Did dinosaurs have feathers?
+ added to database
+Sent message = [Did dinosaurs have feathers?
+] with offset = [125]
+[WARNING] Gemini rate limit hit. Retry after 26 seconds
+[INFO] Pausing producer for 26 seconds due to rate limit.
+[PAUSED] Producer waiting for 24 more seconds...
+[PAUSED] Producer waiting for 23 more seconds...
+[PAUSED] Producer waiting for 21 more seconds...
+[PAUSED] Producer waiting for 20 more seconds...
+[PAUSED] Producer waiting for 18 more seconds...
+[PAUSED] Producer waiting for 17 more seconds...
+[PAUSED] Producer waiting for 15 more seconds...
+[PAUSED] Producer waiting for 14 more seconds...
+[PAUSED] Producer waiting for 12 more seconds...
+[PAUSED] Producer waiting for 11 more seconds...
+[PAUSED] Producer waiting for 9 more seconds...
+[PAUSED] Producer waiting for 8 more seconds...
+[PAUSED] Producer waiting for 6 more seconds...
+[PAUSED] Producer waiting for 5 more seconds...
+[PAUSED] Producer waiting for 3 more seconds...
+[PAUSED] Producer waiting for 2 more seconds...
+[PAUSED] Producer waiting for 0 more seconds...
+[WARNING] Gemini rate limit hit. Retry after 59 seconds
+[INFO] Pausing producer for 59 seconds due to rate limit.
+[PAUSED] Producer waiting for 57 more seconds...
+[PAUSED] Producer waiting for 56 more seconds...
+[PAUSED] Producer waiting for 54 more seconds...
+[PAUSED] Producer waiting for 53 more seconds...
+[PAUSED] Producer waiting for 51 more seconds...
+[PAUSED] Producer waiting for 50 more seconds...
+[PAUSED] Producer waiting for 48 more seconds...
+[PAUSED] Producer waiting for 47 more seconds...
+[PAUSED] Producer waiting for 45 more seconds...
+[PAUSED] Producer waiting for 44 more seconds...
+[PAUSED] Producer waiting for 42 more seconds...
+[PAUSED] Producer waiting for 41 more seconds...
+[PAUSED] Producer waiting for 39 more seconds...
+[PAUSED] Producer waiting for 38 more seconds...
+[PAUSED] Producer waiting for 36 more seconds...
+[PAUSED] Producer waiting for 35 more seconds...
+[PAUSED] Producer waiting for 33 more seconds...
+[PAUSED] Producer waiting for 32 more seconds...
+[PAUSED] Producer waiting for 30 more seconds...
+[PAUSED] Producer waiting for 29 more seconds...
+[PAUSED] Producer waiting for 27 more seconds...
+[PAUSED] Producer waiting for 26 more seconds...
+[PAUSED] Producer waiting for 24 more seconds...
+[PAUSED] Producer waiting for 23 more seconds...
+2025-06-25T05:18:39.472+05:30  INFO 16156 --- [producer] [ionShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-06-25T05:18:39.495+05:30  INFO 16156 --- [producer] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-06-25T05:18:41.522+05:30  INFO 16156 --- [producer] [ionShutdownHook] o.a.k.clients.producer.KafkaProducer     : [Producer clientId=producer-producer-1] Closing the Kafka producer with timeoutMillis = 30000 ms.
+2025-06-25T05:18:41.538+05:30  INFO 16156 --- [producer] [ionShutdownHook] o.apache.kafka.common.metrics.Metrics    : Metrics scheduler closed
+2025-06-25T05:18:41.538+05:30  INFO 16156 --- [producer] [ionShutdownHook] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2025-06-25T05:18:41.538+05:30  INFO 16156 --- [producer] [ionShutdownHook] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.telemetry.internals.ClientTelemetryReporter
+2025-06-25T05:18:41.538+05:30  INFO 16156 --- [producer] [ionShutdownHook] o.apache.kafka.common.metrics.Metrics    : Metrics reporters closed
+2025-06-25T05:18:41.538+05:30  INFO 16156 --- [producer] [ionShutdownHook] o.a.kafka.common.utils.AppInfoParser     : App info kafka.producer for producer-producer-1 unregistered
+2025-06-25T05:18:41.538+05:30  INFO 16156 --- [producer] [ionShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-06-25T05:18:41.548+05:30  INFO 16156 --- [producer] [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-06-25T05:18:42.257+05:30  INFO 16156 --- [producer] [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+
+Process finished with exit code 130
