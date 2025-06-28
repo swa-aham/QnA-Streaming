@@ -1,112 +1,119 @@
-package com.kafka.consumer.service;//package com.kafka.consumer.service;
-//
-//import com.kafka.consumer.entity.QnA;
-//import com.kafka.consumer.exception.RateLimitException;
-//import org.apache.kafka.clients.consumer.ConsumerRecord;
-//import org.springframework.beans.factory.annotation.Autowired;
-//import org.springframework.kafka.annotation.KafkaListener;
-//import org.springframework.kafka.config.KafkaListenerEndpointRegistry;
-//import org.springframework.kafka.listener.MessageListenerContainer;
-//import org.springframework.stereotype.Service;
-//
-//@Service
-//public class KafkaMessageListener {
-//
-//    @Autowired
-//    private ProcessingService processingService;
-//
-//    @Autowired
-//    private KafkaListenerEndpointRegistry registry;
-//
-//    private static final String LISTENER_ID = "qna-listener";
-//
-//    /*
-//    @KafkaListener(topics = "practice4", groupId = "qna-consumer-group")
-//    public void consumeQnAMessage(@Payload QnA qna, @Header(KafkaHeaders.OFFSET) long offset) {
-//
-//        System.out.println("Received Message = " + qna.getQuestion() + " by consumer1");
-//    }
-//    */
-//
-//    @KafkaListener(topics = "practice4", groupId = "qna-consumer-group-auto", containerFactory = "kafkaListenerContainerFactory")
-//    public void consumeAndProcessMessage(ConsumerRecord<String, QnA> record) {
-//
-//        QnA qna = record.value();
-//        System.out.println("Received Message = " + qna.getQuestion() + " by consumer2");
-//
-//        try {
-//            processingService.processMessage(qna);
-//            System.out.println("QnA processed and saved successfully");
-//        } catch (RateLimitException e) {
-//            System.err.println("Rate limit hit. Pausing consumer for " + e.getRetryAfterSeconds() + " seconds.");
-//            pauseConsumerTemporarily(e.getRetryAfterSeconds());
-//        } catch (Exception e) {
-//            System.err.println("Error in auto-acknowledge consumer: " + e.getMessage());
-//            throw e;
-//        }
-//    }
-//
-//    private void pauseConsumerTemporarily(int seconds) {
-//        MessageListenerContainer container = registry.getListenerContainer(LISTENER_ID);
-//        if (container != null && container.isRunning()) {
-//            container.pause();
-//            new Thread(() -> {
-//                try {
-//                    Thread.sleep(seconds * 1000L);
-//                    container.resume();
-//                    System.out.println("Consumer resumed after rate limit delay.");
-//                } catch (InterruptedException e) {
-//                    Thread.currentThread().interrupt();
-//                }
-//            }).start();
-//        }
-//    }
-//}
-
-
-
-
-
-
-
+package com.kafka.consumer.service;
 
 import com.kafka.consumer.entity.QnA;
 import com.kafka.consumer.exception.RateLimitException;
-import com.kafka.consumer.service.ProcessingService;
 import org.apache.kafka.clients.consumer.ConsumerRecord;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.kafka.annotation.KafkaListener;
-//import org.springframework.kafka.;
 import org.springframework.kafka.config.KafkaListenerEndpointRegistry;
+import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.kafka.listener.MessageListenerContainer;
+import org.springframework.kafka.support.SendResult;
 import org.springframework.stereotype.Service;
+
+import java.util.concurrent.CompletableFuture;
 
 @Service
 public class KafkaMessageListener {
+
+    private static final Logger logger = LoggerFactory.getLogger(KafkaMessageListener.class);
+    private static final String LISTENER_ID = "qna-listener";
+    private static final String LISTENER_ID2 = "qna-listener2";
 
     @Autowired
     private ProcessingService processingService;
 
     @Autowired
+    private KafkaTemplate<String, QnA> template;
+
+    @Autowired
     private KafkaListenerEndpointRegistry registry;
 
-    private static final String LISTENER_ID = "qna-listener";
-
-    @KafkaListener(id = LISTENER_ID, topics = "practice5", groupId = "qna-consumer-group-auto", containerFactory = "kafkaListenerContainerFactory")
+    @KafkaListener(id = LISTENER_ID, topics = "practice7", groupId = "qna-consumer-group-auto", containerFactory = "kafkaListenerContainerFactory")
     public void consumeAndProcessMessage(ConsumerRecord<String, QnA> record) {
-
         QnA qna = record.value();
-        System.out.println("[INFO] Received Message: \"" + qna.getQuestion() + "\"");
+
+        if (qna == null) {
+            logger.error("Skipping message due to deserialization error or null content. Raw record: {}", record);
+            return;
+        }
+
+        logger.info("Received Message: \"{}\"", qna.getQuestion());
 
         try {
-            processingService.processMessage(qna);
-            System.out.println("[INFO] QnA processed and saved successfully.");
+            processingService.processMessage(qna, false);
+            logger.info("QnA with id:{} processed and saved successfully.", qna.getId());
         } catch (RateLimitException e) {
-            System.out.println("[WARNING] Rate limit hit: " + e.getMessage());
-            System.out.println("[INFO] Pausing consumer for " + e.getRetryAfterSeconds() + " seconds...");
+            logger.warn("Rate limit hit: {}", e.getMessage());
+
+            CompletableFuture<SendResult<String, QnA>> response = template.send("level1-retry", qna);
+            response.whenComplete((result, ex) -> {
+                if (ex == null) {
+                    logger.info("Message sent to retry topic. Id:{}, Question: {}, Offset: {}",
+                            qna.getId(), qna.getQuestion(), result.getRecordMetadata().offset());
+                } else {
+                    logger.error("Failed to publish message to retry topic. ID : {}, Question: {}, Error: {}",
+                            qna.getId(), qna.getQuestion(), ex.getMessage(), ex);
+                }
+            });
+
+            logger.info("Pausing consumer for {} seconds...", e.getRetryAfterSeconds());
             pauseConsumerTemporarily(e.getRetryAfterSeconds());
         } catch (Exception e) {
-            System.err.println("[ERROR] Unexpected error during processing: " + e.getMessage());
+            logger.error("Unexpected error during processing: {}", e.getMessage(), e);
+            CompletableFuture<SendResult<String, QnA>> response = template.send("practice3.DLT", qna);
+            response.whenComplete((result, ex) -> {
+                if (ex == null) {
+                    logger.info("Message sent to Dead Letter Topic. Id:{}, Question: {}, Offset: {}",
+                            qna.getId(), qna.getQuestion(), result.getRecordMetadata().offset());
+                } else {
+                    logger.error("Failed to publish message to Dead Letter Topic. ID : {}, Question: {}, Error: {}",
+                            qna.getId(), qna.getQuestion(), ex.getMessage(), ex);
+                }
+            });
+            throw e;
+        }
+    }
+
+    @KafkaListener(id = LISTENER_ID2, topics = "level1-retry", groupId = "qna-consumer-group-auto", containerFactory = "kafkaListenerContainerFactory")
+    public void consumeFromRetryTopic(ConsumerRecord<String, QnA> record) {
+        QnA qna = record.value();
+
+        logger.info("In retry consumer, received Message: \"{}\"", qna.getQuestion());
+
+        try {
+            processingService.processMessage(qna, true);
+            logger.info("{Retry topic} QnA with id:{} processed and saved successfully.", qna.getId());
+        } catch (RateLimitException e) {
+            logger.warn("{Retry topic} Rate limit hit: {}", e.getMessage());
+
+            CompletableFuture<SendResult<String, QnA>> response = template.send("level1-retry", qna);
+            response.whenComplete((result, ex) -> {
+                if (ex == null) {
+                    logger.info("{Retry topic} Message sent to retry topic. Id:{}, Question: {}, Offset: {}",
+                            qna.getId(), qna.getQuestion(), result.getRecordMetadata().offset());
+                } else {
+                    logger.error("{Retry topic} Failed to publish message to retry topic. ID : {}, Question: {}, Error: {}",
+                            qna.getId(), qna.getQuestion(), ex.getMessage(), ex);
+                }
+            });
+
+            logger.info("{Retry topic} Pausing consumer for {} seconds...", e.getRetryAfterSeconds());
+            pauseConsumerTemporarily(e.getRetryAfterSeconds());
+        } catch (Exception e) {
+            logger.error("{Retry topic} Unexpected error during processing: {}", e.getMessage(), e);
+            CompletableFuture<SendResult<String, QnA>> response = template.send("practice3.DLT", qna);
+            response.whenComplete((result, ex) -> {
+                if (ex == null) {
+                    logger.info("{Retry topic} Message sent to Dead Letter Topic. Id:{}, Question: {}, Offset: {}",
+                            qna.getId(), qna.getQuestion(), result.getRecordMetadata().offset());
+                } else {
+                    logger.error("{Retry topic} Failed to publish message to Dead Letter Topic. ID : {}, Question: {}, Error: {}",
+                            qna.getId(), qna.getQuestion(), ex.getMessage(), ex);
+                }
+            });
             throw e;
         }
     }
@@ -115,24 +122,26 @@ public class KafkaMessageListener {
         MessageListenerContainer container = registry.getListenerContainer(LISTENER_ID);
         if (container != null && container.isRunning()) {
             container.pause();
-            System.out.println("[INFO] Kafka consumer paused.");
+            logger.info("Kafka consumer paused.");
 
             new Thread(() -> {
                 try {
                     for (int i = seconds; i > 0; i--) {
-                        System.out.print("\r[WAITING] Resuming in " + i + " seconds...");
+                        if (i % 10 == 0) { // Log only every 10 seconds to reduce noise
+                            logger.info("Consumer will resume in {} seconds", i);
+                        }
                         Thread.sleep(1000);
                     }
-                    System.out.println("\n[INFO] Resuming Kafka consumer now.");
+                    logger.info("Resuming Kafka consumer now.");
                     container.resume();
-                    System.out.println("[INFO] Kafka consumer resumed.");
+                    logger.info("Kafka consumer resumed.");
                 } catch (InterruptedException e) {
                     Thread.currentThread().interrupt();
-                    System.err.println("[ERROR] Resume delay interrupted.");
+                    logger.error("Resume delay interrupted", e);
                 }
             }).start();
         } else {
-            System.err.println("[ERROR] Kafka consumer container not available or not running.");
+            logger.error("Kafka consumer container not available or not running.");
         }
     }
 }
