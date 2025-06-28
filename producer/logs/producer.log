@@ -1,0 +1,978 @@
+2025-06-28 14:41:39.620 [main] INFO  c.kafka.producer.ProducerApplication - Starting ProducerApplication using Java 22.0.1 with PID 2692 (F:\Projects\Practice\producer\target\classes started by SOHAM in F:\Projects\Practice\producer)
+2025-06-28 14:41:39.624 [main] DEBUG c.kafka.producer.ProducerApplication - Running with Spring Boot v3.5.3, Spring v6.2.8
+2025-06-28 14:41:39.626 [main] INFO  c.kafka.producer.ProducerApplication - No active profile set, falling back to 1 default profile: "default"
+2025-06-28 14:41:44.444 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-06-28 14:41:44.898 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 420 ms. Found 1 JPA repository interface.
+2025-06-28 14:41:46.975 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-06-28 14:41:47.023 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-06-28 14:41:47.023 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.42]
+2025-06-28 14:41:47.207 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-06-28 14:41:47.207 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 7376 ms
+2025-06-28 14:41:47.686 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-06-28 14:41:49.532 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@35563e4c
+2025-06-28 14:41:49.536 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-06-28 14:41:49.650 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-06-28 14:41:49.808 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.18.Final
+2025-06-28 14:41:49.916 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-06-28 14:41:51.006 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-06-28 14:41:51.390 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-06-28 14:41:51.699 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.5
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-06-28 14:41:53.169 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-06-28 14:41:53.181 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-06-28 14:41:54.399 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-06-28 14:41:55.497 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-06-28 14:41:55.543 [main] INFO  c.kafka.producer.ProducerApplication - Started ProducerApplication in 17.867 seconds (process running for 19.559)
+2025-06-28 14:41:55.615 [scheduling-1] DEBUG c.k.p.service.KafkaMessagePublisher - Generating question with ID: 1
+2025-06-28 14:41:55.617 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generating a new question
+2025-06-28 14:41:58.019 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generated question: Who won?
+
+2025-06-28 14:41:58.650 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Question saved to database: Who won?
+
+2025-06-28 14:42:00.193 [scheduling-1] DEBUG c.k.p.service.KafkaMessagePublisher - Generating question with ID: 2
+2025-06-28 14:42:00.193 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generating a new question
+2025-06-28 14:42:00.342 [kafka-producer-network-thread | producer-producer-1] INFO  c.k.p.service.KafkaMessagePublisher - Message sent successfully. Question: Who won?
+, Offset: 5
+2025-06-28 14:42:00.898 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generated question: Did dinosaurs exist?
+
+2025-06-28 14:42:01.275 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Question saved to database: Did dinosaurs exist?
+
+2025-06-28 14:42:01.275 [scheduling-1] DEBUG c.k.p.service.KafkaMessagePublisher - Generating question with ID: 3
+2025-06-28 14:42:01.275 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generating a new question
+2025-06-28 14:42:01.291 [kafka-producer-network-thread | producer-producer-1] INFO  c.k.p.service.KafkaMessagePublisher - Message sent successfully. Question: Did dinosaurs exist?
+, Offset: 6
+2025-06-28 14:42:02.148 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generated question: Did Lincoln free the slaves?
+
+2025-06-28 14:42:02.514 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Question saved to database: Did Lincoln free the slaves?
+
+2025-06-28 14:42:02.521 [scheduling-1] DEBUG c.k.p.service.KafkaMessagePublisher - Generating question with ID: 4
+2025-06-28 14:42:02.521 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generating a new question
+2025-06-28 14:42:02.529 [kafka-producer-network-thread | producer-producer-1] INFO  c.k.p.service.KafkaMessagePublisher - Message sent successfully. Question: Did Lincoln free the slaves?
+, Offset: 7
+2025-06-28 14:42:03.238 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generated question: Did dinosaurs exist?
+
+2025-06-28 14:42:03.594 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Question saved to database: Did dinosaurs exist?
+
+2025-06-28 14:42:03.594 [scheduling-1] DEBUG c.k.p.service.KafkaMessagePublisher - Generating question with ID: 5
+2025-06-28 14:42:03.594 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generating a new question
+2025-06-28 14:42:03.613 [kafka-producer-network-thread | producer-producer-1] INFO  c.k.p.service.KafkaMessagePublisher - Message sent successfully. Question: Did dinosaurs exist?
+, Offset: 8
+2025-06-28 14:42:04.549 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generated question: Did the dinosaurs die out?
+
+2025-06-28 14:42:04.887 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Question saved to database: Did the dinosaurs die out?
+
+2025-06-28 14:42:04.896 [scheduling-1] DEBUG c.k.p.service.KafkaMessagePublisher - Generating question with ID: 6
+2025-06-28 14:42:04.896 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generating a new question
+2025-06-28 14:42:04.908 [kafka-producer-network-thread | producer-producer-1] INFO  c.k.p.service.KafkaMessagePublisher - Message sent successfully. Question: Did the dinosaurs die out?
+, Offset: 9
+2025-06-28 14:42:05.691 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generated question: Was Pluto ever a planet?
+
+2025-06-28 14:42:06.005 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Question saved to database: Was Pluto ever a planet?
+
+2025-06-28 14:42:06.005 [scheduling-1] DEBUG c.k.p.service.KafkaMessagePublisher - Generating question with ID: 7
+2025-06-28 14:42:06.005 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generating a new question
+2025-06-28 14:42:06.019 [kafka-producer-network-thread | producer-producer-1] INFO  c.k.p.service.KafkaMessagePublisher - Message sent successfully. Question: Was Pluto ever a planet?
+, Offset: 10
+2025-06-28 14:42:06.891 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generated question: Did dinosaurs exist?
+
+2025-06-28 14:42:07.267 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Question saved to database: Did dinosaurs exist?
+
+2025-06-28 14:42:07.269 [scheduling-1] DEBUG c.k.p.service.KafkaMessagePublisher - Generating question with ID: 8
+2025-06-28 14:42:07.269 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generating a new question
+2025-06-28 14:42:07.414 [kafka-producer-network-thread | producer-producer-1] INFO  c.k.p.service.KafkaMessagePublisher - Message sent successfully. Question: Did dinosaurs exist?
+, Offset: 11
+2025-06-28 14:42:07.969 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generated question: Did dinosaurs exist?
+
+2025-06-28 14:42:08.315 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Question saved to database: Did dinosaurs exist?
+
+2025-06-28 14:42:08.315 [scheduling-1] DEBUG c.k.p.service.KafkaMessagePublisher - Generating question with ID: 9
+2025-06-28 14:42:08.319 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generating a new question
+2025-06-28 14:42:08.353 [kafka-producer-network-thread | producer-producer-1] INFO  c.k.p.service.KafkaMessagePublisher - Message sent successfully. Question: Did dinosaurs exist?
+, Offset: 12
+2025-06-28 14:42:09.271 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generated question: What element is represented by Au?
+
+2025-06-28 14:42:09.608 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Question saved to database: What element is represented by Au?
+
+2025-06-28 14:42:09.611 [scheduling-1] DEBUG c.k.p.service.KafkaMessagePublisher - Generating question with ID: 10
+2025-06-28 14:42:09.613 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generating a new question
+2025-06-28 14:42:09.665 [kafka-producer-network-thread | producer-producer-1] INFO  c.k.p.service.KafkaMessagePublisher - Message sent successfully. Question: What element is represented by Au?
+, Offset: 13
+2025-06-28 14:42:10.336 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generated question: What killed the dinosaurs?
+
+2025-06-28 14:42:10.623 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Question saved to database: What killed the dinosaurs?
+
+2025-06-28 14:42:10.626 [scheduling-1] DEBUG c.k.p.service.KafkaMessagePublisher - Generating question with ID: 11
+2025-06-28 14:42:10.626 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generating a new question
+2025-06-28 14:42:10.644 [kafka-producer-network-thread | producer-producer-1] INFO  c.k.p.service.KafkaMessagePublisher - Message sent successfully. Question: What killed the dinosaurs?
+, Offset: 14
+2025-06-28 14:42:11.616 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generated question: Did the asteroid kill the dinosaurs?
+
+2025-06-28 14:42:11.978 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Question saved to database: Did the asteroid kill the dinosaurs?
+
+2025-06-28 14:42:11.987 [kafka-producer-network-thread | producer-producer-1] INFO  c.k.p.service.KafkaMessagePublisher - Message sent successfully. Question: Did the asteroid kill the dinosaurs?
+, Offset: 15
+2025-06-28 14:42:12.041 [scheduling-1] DEBUG c.k.p.service.KafkaMessagePublisher - Generating question with ID: 12
+2025-06-28 14:42:12.041 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generating a new question
+2025-06-28 14:42:12.773 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generated question: Did dinosaurs exist?
+
+2025-06-28 14:42:13.113 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Question saved to database: Did dinosaurs exist?
+
+2025-06-28 14:42:13.127 [kafka-producer-network-thread | producer-producer-1] INFO  c.k.p.service.KafkaMessagePublisher - Message sent successfully. Question: Did dinosaurs exist?
+, Offset: 16
+2025-06-28 14:42:13.554 [scheduling-1] DEBUG c.k.p.service.KafkaMessagePublisher - Generating question with ID: 13
+2025-06-28 14:42:13.554 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generating a new question
+2025-06-28 14:42:14.265 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generated question: Did the dinosaurs die out?
+
+2025-06-28 14:42:14.611 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Question saved to database: Did the dinosaurs die out?
+
+2025-06-28 14:42:14.625 [kafka-producer-network-thread | producer-producer-1] INFO  c.k.p.service.KafkaMessagePublisher - Message sent successfully. Question: Did the dinosaurs die out?
+, Offset: 17
+2025-06-28 14:42:15.041 [scheduling-1] DEBUG c.k.p.service.KafkaMessagePublisher - Generating question with ID: 14
+2025-06-28 14:42:15.041 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generating a new question
+2025-06-28 14:42:15.754 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generated question: Did dinosaurs exist?
+
+2025-06-28 14:42:16.108 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Question saved to database: Did dinosaurs exist?
+
+2025-06-28 14:42:16.123 [kafka-producer-network-thread | producer-producer-1] INFO  c.k.p.service.KafkaMessagePublisher - Message sent successfully. Question: Did dinosaurs exist?
+, Offset: 18
+2025-06-28 14:42:16.542 [scheduling-1] DEBUG c.k.p.service.KafkaMessagePublisher - Generating question with ID: 15
+2025-06-28 14:42:16.542 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generating a new question
+2025-06-28 14:42:17.252 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generated question: What year was penicillin discovered?
+
+2025-06-28 14:42:17.601 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Question saved to database: What year was penicillin discovered?
+
+2025-06-28 14:42:17.609 [kafka-producer-network-thread | producer-producer-1] INFO  c.k.p.service.KafkaMessagePublisher - Message sent successfully. Question: What year was penicillin discovered?
+, Offset: 19
+2025-06-28 14:42:18.044 [scheduling-1] DEBUG c.k.p.service.KafkaMessagePublisher - Generating question with ID: 16
+2025-06-28 14:42:18.044 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generating a new question
+2025-06-28 14:42:18.717 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generated question: What year did World War II end?
+
+2025-06-28 14:42:19.002 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Question saved to database: What year did World War II end?
+
+2025-06-28 14:42:19.012 [kafka-producer-network-thread | producer-producer-1] INFO  c.k.p.service.KafkaMessagePublisher - Message sent successfully. Question: What year did World War II end?
+, Offset: 20
+2025-06-28 14:42:19.540 [scheduling-1] DEBUG c.k.p.service.KafkaMessagePublisher - Generating question with ID: 17
+2025-06-28 14:42:19.540 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generating a new question
+2025-06-28 14:42:19.833 [reactor-http-nio-2] WARN  c.k.producer.service.GeminiService - Gemini rate limit hit. Retry after 43 seconds
+2025-06-28 14:42:19.867 [scheduling-1] ERROR c.k.producer.service.GeminiService - Rate limit exceeded while generating question
+2025-06-28 14:42:19.877 [scheduling-1] WARN  c.k.p.service.KafkaMessagePublisher - Rate limit hit. Pausing producer for 43 seconds
+2025-06-28 14:42:21.210 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Producer paused. Resuming in 41 seconds
+2025-06-28 14:42:22.588 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Producer paused. Resuming in 40 seconds
+2025-06-28 14:42:24.264 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Producer paused. Resuming in 38 seconds
+2025-06-28 14:42:25.551 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Producer paused. Resuming in 37 seconds
+2025-06-28 14:42:27.049 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Producer paused. Resuming in 35 seconds
+2025-06-28 14:42:28.554 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Producer paused. Resuming in 34 seconds
+2025-06-28 14:42:30.046 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Producer paused. Resuming in 32 seconds
+2025-06-28 14:42:31.553 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Producer paused. Resuming in 31 seconds
+2025-06-28 14:42:33.079 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Producer paused. Resuming in 29 seconds
+2025-06-28 14:42:34.551 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Producer paused. Resuming in 28 seconds
+2025-06-28 14:42:36.046 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Producer paused. Resuming in 26 seconds
+2025-06-28 14:42:37.555 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Producer paused. Resuming in 25 seconds
+2025-06-28 14:42:39.052 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Producer paused. Resuming in 23 seconds
+2025-06-28 14:42:40.598 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Producer paused. Resuming in 22 seconds
+2025-06-28 14:42:42.053 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Producer paused. Resuming in 20 seconds
+2025-06-28 14:42:43.548 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Producer paused. Resuming in 19 seconds
+2025-06-28 14:42:45.046 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Producer paused. Resuming in 17 seconds
+2025-06-28 14:42:46.543 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Producer paused. Resuming in 16 seconds
+2025-06-28 14:42:48.042 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Producer paused. Resuming in 14 seconds
+2025-06-28 14:42:49.545 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Producer paused. Resuming in 13 seconds
+2025-06-28 14:42:51.075 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Producer paused. Resuming in 11 seconds
+2025-06-28 14:42:52.555 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Producer paused. Resuming in 10 seconds
+2025-06-28 14:42:54.042 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Producer paused. Resuming in 8 seconds
+2025-06-28 14:42:55.540 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Producer paused. Resuming in 7 seconds
+2025-06-28 14:42:57.062 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Producer paused. Resuming in 5 seconds
+2025-06-28 14:42:58.541 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Producer paused. Resuming in 4 seconds
+2025-06-28 14:43:00.048 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Producer paused. Resuming in 2 seconds
+2025-06-28 14:43:01.541 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Producer paused. Resuming in 1 seconds
+2025-06-28 14:43:03.159 [scheduling-1] DEBUG c.k.p.service.KafkaMessagePublisher - Generating question with ID: 18
+2025-06-28 14:43:03.194 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generating a new question
+2025-06-28 14:43:03.906 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generated question: Was Pluto a planet?
+
+2025-06-28 14:43:04.191 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Question saved to database: Was Pluto a planet?
+
+2025-06-28 14:43:04.205 [kafka-producer-network-thread | producer-producer-1] INFO  c.k.p.service.KafkaMessagePublisher - Message sent successfully. Question: Was Pluto a planet?
+, Offset: 21
+2025-06-28 14:43:04.546 [scheduling-1] DEBUG c.k.p.service.KafkaMessagePublisher - Generating question with ID: 19
+2025-06-28 14:43:04.546 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generating a new question
+2025-06-28 14:43:05.259 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generated question: Who painted the Mona Lisa?
+
+2025-06-28 14:43:05.571 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Question saved to database: Who painted the Mona Lisa?
+
+2025-06-28 14:43:05.581 [kafka-producer-network-thread | producer-producer-1] INFO  c.k.p.service.KafkaMessagePublisher - Message sent successfully. Question: Who painted the Mona Lisa?
+, Offset: 22
+2025-06-28 14:43:06.040 [scheduling-1] DEBUG c.k.p.service.KafkaMessagePublisher - Generating question with ID: 20
+2025-06-28 14:43:06.040 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generating a new question
+2025-06-28 14:43:07.621 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generated question: Did dinosaurs exist?
+
+2025-06-28 14:43:07.894 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Question saved to database: Did dinosaurs exist?
+
+2025-06-28 14:43:07.894 [scheduling-1] DEBUG c.k.p.service.KafkaMessagePublisher - Generating question with ID: 21
+2025-06-28 14:43:07.894 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generating a new question
+2025-06-28 14:43:07.912 [kafka-producer-network-thread | producer-producer-1] INFO  c.k.p.service.KafkaMessagePublisher - Message sent successfully. Question: Did dinosaurs exist?
+, Offset: 23
+2025-06-28 14:43:08.558 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generated question: Did humans evolve?
+
+2025-06-28 14:43:08.865 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Question saved to database: Did humans evolve?
+
+2025-06-28 14:43:08.875 [kafka-producer-network-thread | producer-producer-1] INFO  c.k.p.service.KafkaMessagePublisher - Message sent successfully. Question: Did humans evolve?
+, Offset: 24
+2025-06-28 14:43:09.054 [scheduling-1] DEBUG c.k.p.service.KafkaMessagePublisher - Generating question with ID: 22
+2025-06-28 14:43:09.054 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generating a new question
+2025-06-28 14:43:09.986 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generated question: Did the Berlin Wall fall?
+
+2025-06-28 14:43:10.280 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Question saved to database: Did the Berlin Wall fall?
+
+2025-06-28 14:43:10.289 [kafka-producer-network-thread | producer-producer-1] INFO  c.k.p.service.KafkaMessagePublisher - Message sent successfully. Question: Did the Berlin Wall fall?
+, Offset: 25
+2025-06-28 14:43:10.553 [scheduling-1] DEBUG c.k.p.service.KafkaMessagePublisher - Generating question with ID: 23
+2025-06-28 14:43:10.553 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generating a new question
+2025-06-28 14:43:11.223 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generated question: Who won?
+
+2025-06-28 14:43:11.538 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Question saved to database: Who won?
+
+2025-06-28 14:43:11.574 [kafka-producer-network-thread | producer-producer-1] INFO  c.k.p.service.KafkaMessagePublisher - Message sent successfully. Question: Who won?
+, Offset: 26
+2025-06-28 14:43:12.049 [scheduling-1] DEBUG c.k.p.service.KafkaMessagePublisher - Generating question with ID: 24
+2025-06-28 14:43:12.049 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generating a new question
+2025-06-28 14:43:12.742 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generated question: Did dinosaurs exist?
+
+2025-06-28 14:43:13.017 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Question saved to database: Did dinosaurs exist?
+
+2025-06-28 14:43:13.047 [kafka-producer-network-thread | producer-producer-1] INFO  c.k.p.service.KafkaMessagePublisher - Message sent successfully. Question: Did dinosaurs exist?
+, Offset: 27
+2025-06-28 14:43:13.547 [scheduling-1] DEBUG c.k.p.service.KafkaMessagePublisher - Generating question with ID: 25
+2025-06-28 14:43:13.547 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generating a new question
+2025-06-28 14:43:14.205 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generated question: Did mammals evolve from reptiles?
+
+2025-06-28 14:43:14.488 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Question saved to database: Did mammals evolve from reptiles?
+
+2025-06-28 14:43:14.506 [kafka-producer-network-thread | producer-producer-1] INFO  c.k.p.service.KafkaMessagePublisher - Message sent successfully. Question: Did mammals evolve from reptiles?
+, Offset: 28
+2025-06-28 14:43:15.053 [scheduling-1] DEBUG c.k.p.service.KafkaMessagePublisher - Generating question with ID: 26
+2025-06-28 14:43:15.053 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generating a new question
+2025-06-28 14:43:15.735 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generated question: What year did World War II end?
+
+2025-06-28 14:43:16.004 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Question saved to database: What year did World War II end?
+
+2025-06-28 14:43:16.025 [kafka-producer-network-thread | producer-producer-1] INFO  c.k.p.service.KafkaMessagePublisher - Message sent successfully. Question: What year did World War II end?
+, Offset: 29
+2025-06-28 14:43:16.547 [scheduling-1] DEBUG c.k.p.service.KafkaMessagePublisher - Generating question with ID: 27
+2025-06-28 14:43:16.547 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generating a new question
+2025-06-28 14:43:17.210 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generated question: What year did World War II end?
+
+2025-06-28 14:43:17.495 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Question saved to database: What year did World War II end?
+
+2025-06-28 14:43:17.502 [kafka-producer-network-thread | producer-producer-1] INFO  c.k.p.service.KafkaMessagePublisher - Message sent successfully. Question: What year did World War II end?
+, Offset: 30
+2025-06-28 14:43:18.049 [scheduling-1] DEBUG c.k.p.service.KafkaMessagePublisher - Generating question with ID: 28
+2025-06-28 14:43:18.049 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generating a new question
+2025-06-28 14:43:18.730 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generated question: Was Pluto reclassified?
+
+2025-06-28 14:43:19.056 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Question saved to database: Was Pluto reclassified?
+
+2025-06-28 14:43:19.078 [kafka-producer-network-thread | producer-producer-1] INFO  c.k.p.service.KafkaMessagePublisher - Message sent successfully. Question: Was Pluto reclassified?
+, Offset: 31
+2025-06-28 14:43:19.545 [scheduling-1] DEBUG c.k.p.service.KafkaMessagePublisher - Generating question with ID: 29
+2025-06-28 14:43:19.545 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generating a new question
+2025-06-28 14:43:20.269 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generated question: Did life evolve?
+
+2025-06-28 14:43:20.579 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Question saved to database: Did life evolve?
+
+2025-06-28 14:43:20.586 [kafka-producer-network-thread | producer-producer-1] INFO  c.k.p.service.KafkaMessagePublisher - Message sent successfully. Question: Did life evolve?
+, Offset: 32
+2025-06-28 14:43:21.044 [scheduling-1] DEBUG c.k.p.service.KafkaMessagePublisher - Generating question with ID: 30
+2025-06-28 14:43:21.045 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generating a new question
+2025-06-28 14:43:21.859 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generated question: Did the dinosaurs die out?
+
+2025-06-28 14:43:22.158 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Question saved to database: Did the dinosaurs die out?
+
+2025-06-28 14:43:22.169 [kafka-producer-network-thread | producer-producer-1] INFO  c.k.p.service.KafkaMessagePublisher - Message sent successfully. Question: Did the dinosaurs die out?
+, Offset: 33
+2025-06-28 14:43:22.547 [scheduling-1] DEBUG c.k.p.service.KafkaMessagePublisher - Generating question with ID: 31
+2025-06-28 14:43:22.547 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generating a new question
+2025-06-28 14:43:23.364 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generated question: Did Rome fall?
+
+2025-06-28 14:43:23.661 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Question saved to database: Did Rome fall?
+
+2025-06-28 14:43:23.750 [kafka-producer-network-thread | producer-producer-1] INFO  c.k.p.service.KafkaMessagePublisher - Message sent successfully. Question: Did Rome fall?
+, Offset: 34
+2025-06-28 14:43:24.049 [scheduling-1] DEBUG c.k.p.service.KafkaMessagePublisher - Generating question with ID: 32
+2025-06-28 14:43:24.049 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generating a new question
+2025-06-28 14:43:24.781 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generated question: Was Lincoln assassinated?
+
+2025-06-28 14:43:25.064 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Question saved to database: Was Lincoln assassinated?
+
+2025-06-28 14:43:25.076 [kafka-producer-network-thread | producer-producer-1] INFO  c.k.p.service.KafkaMessagePublisher - Message sent successfully. Question: Was Lincoln assassinated?
+, Offset: 35
+2025-06-28 14:43:25.550 [scheduling-1] DEBUG c.k.p.service.KafkaMessagePublisher - Generating question with ID: 33
+2025-06-28 14:43:25.550 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generating a new question
+2025-06-28 14:43:26.226 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generated question: Did the Berlin Wall fall in 1990?
+
+2025-06-28 14:43:26.492 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Question saved to database: Did the Berlin Wall fall in 1990?
+
+2025-06-28 14:43:26.503 [kafka-producer-network-thread | producer-producer-1] INFO  c.k.p.service.KafkaMessagePublisher - Message sent successfully. Question: Did the Berlin Wall fall in 1990?
+, Offset: 36
+2025-06-28 14:43:27.052 [scheduling-1] DEBUG c.k.p.service.KafkaMessagePublisher - Generating question with ID: 34
+2025-06-28 14:43:27.052 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generating a new question
+2025-06-28 14:43:28.162 [reactor-http-nio-2] WARN  c.k.producer.service.GeminiService - Gemini rate limit hit. Retry after 35 seconds
+2025-06-28 14:43:28.162 [scheduling-1] ERROR c.k.producer.service.GeminiService - Rate limit exceeded while generating question
+2025-06-28 14:43:28.162 [scheduling-1] WARN  c.k.p.service.KafkaMessagePublisher - Rate limit hit. Pausing producer for 35 seconds
+2025-06-28 14:43:28.543 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Producer paused. Resuming in 34 seconds
+2025-06-28 14:43:30.289 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Producer paused. Resuming in 32 seconds
+2025-06-28 14:43:31.542 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Producer paused. Resuming in 31 seconds
+2025-06-28 14:43:33.046 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Producer paused. Resuming in 30 seconds
+2025-06-28 14:43:34.543 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Producer paused. Resuming in 28 seconds
+2025-06-28 14:43:36.047 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Producer paused. Resuming in 27 seconds
+2025-06-28 14:43:37.547 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Producer paused. Resuming in 25 seconds
+2025-06-28 14:43:39.044 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Producer paused. Resuming in 24 seconds
+2025-06-28 14:43:40.558 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Producer paused. Resuming in 22 seconds
+2025-06-28 14:43:42.050 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Producer paused. Resuming in 21 seconds
+2025-06-28 14:43:43.541 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Producer paused. Resuming in 19 seconds
+2025-06-28 14:43:45.049 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Producer paused. Resuming in 18 seconds
+2025-06-28 14:43:46.548 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Producer paused. Resuming in 16 seconds
+2025-06-28 14:43:48.049 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Producer paused. Resuming in 15 seconds
+2025-06-28 14:43:49.540 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Producer paused. Resuming in 13 seconds
+2025-06-28 14:43:51.043 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Producer paused. Resuming in 12 seconds
+2025-06-28 14:43:52.543 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Producer paused. Resuming in 10 seconds
+2025-06-28 14:43:54.048 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Producer paused. Resuming in 9 seconds
+2025-06-28 14:43:55.553 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Producer paused. Resuming in 7 seconds
+2025-06-28 14:43:57.043 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Producer paused. Resuming in 6 seconds
+2025-06-28 14:43:58.541 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Producer paused. Resuming in 4 seconds
+2025-06-28 14:44:00.049 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Producer paused. Resuming in 3 seconds
+2025-06-28 14:44:01.553 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Producer paused. Resuming in 1 seconds
+2025-06-28 14:44:03.043 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Producer paused. Resuming in 0 seconds
+2025-06-28 14:44:04.549 [scheduling-1] DEBUG c.k.p.service.KafkaMessagePublisher - Generating question with ID: 35
+2025-06-28 14:44:04.549 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generating a new question
+2025-06-28 14:44:05.226 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generated question: What is water's chemical formula?
+
+2025-06-28 14:44:05.516 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Question saved to database: What is water's chemical formula?
+
+2025-06-28 14:44:05.523 [kafka-producer-network-thread | producer-producer-1] INFO  c.k.p.service.KafkaMessagePublisher - Message sent successfully. Question: What is water's chemical formula?
+, Offset: 37
+2025-06-28 14:44:06.051 [scheduling-1] DEBUG c.k.p.service.KafkaMessagePublisher - Generating question with ID: 36
+2025-06-28 14:44:06.051 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generating a new question
+2025-06-28 14:44:06.771 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generated question: Did Lincoln free slaves?
+
+2025-06-28 14:44:07.047 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Question saved to database: Did Lincoln free slaves?
+
+2025-06-28 14:44:07.055 [kafka-producer-network-thread | producer-producer-1] INFO  c.k.p.service.KafkaMessagePublisher - Message sent successfully. Question: Did Lincoln free slaves?
+, Offset: 38
+2025-06-28 14:44:07.541 [scheduling-1] DEBUG c.k.p.service.KafkaMessagePublisher - Generating question with ID: 37
+2025-06-28 14:44:07.541 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generating a new question
+2025-06-28 14:44:08.186 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generated question: Who won?
+
+2025-06-28 14:44:08.471 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Question saved to database: Who won?
+
+2025-06-28 14:44:08.490 [kafka-producer-network-thread | producer-producer-1] INFO  c.k.p.service.KafkaMessagePublisher - Message sent successfully. Question: Who won?
+, Offset: 39
+2025-06-28 14:44:09.046 [scheduling-1] DEBUG c.k.p.service.KafkaMessagePublisher - Generating question with ID: 38
+2025-06-28 14:44:09.046 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generating a new question
+2025-06-28 14:44:09.755 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generated question: Did the dinosaurs go extinct?
+
+2025-06-28 14:44:10.042 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Question saved to database: Did the dinosaurs go extinct?
+
+2025-06-28 14:44:10.053 [kafka-producer-network-thread | producer-producer-1] INFO  c.k.p.service.KafkaMessagePublisher - Message sent successfully. Question: Did the dinosaurs go extinct?
+, Offset: 40
+2025-06-28 14:44:10.541 [scheduling-1] DEBUG c.k.p.service.KafkaMessagePublisher - Generating question with ID: 39
+2025-06-28 14:44:10.541 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generating a new question
+2025-06-28 14:44:11.308 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generated question: Was Pluto reclassified?
+
+2025-06-28 14:44:11.586 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Question saved to database: Was Pluto reclassified?
+
+2025-06-28 14:44:11.608 [kafka-producer-network-thread | producer-producer-1] INFO  c.k.p.service.KafkaMessagePublisher - Message sent successfully. Question: Was Pluto reclassified?
+, Offset: 41
+2025-06-28 14:44:12.042 [scheduling-1] DEBUG c.k.p.service.KafkaMessagePublisher - Generating question with ID: 40
+2025-06-28 14:44:12.042 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generating a new question
+2025-06-28 14:44:12.785 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generated question: Did the dinosaurs die out?
+
+2025-06-28 14:44:13.068 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Question saved to database: Did the dinosaurs die out?
+
+2025-06-28 14:44:13.092 [kafka-producer-network-thread | producer-producer-1] INFO  c.k.p.service.KafkaMessagePublisher - Message sent successfully. Question: Did the dinosaurs die out?
+, Offset: 42
+2025-06-28 14:44:13.541 [scheduling-1] DEBUG c.k.p.service.KafkaMessagePublisher - Generating question with ID: 41
+2025-06-28 14:44:13.541 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generating a new question
+2025-06-28 14:44:14.249 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generated question: Who won WWII?
+
+2025-06-28 14:44:14.525 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Question saved to database: Who won WWII?
+
+2025-06-28 14:44:14.532 [kafka-producer-network-thread | producer-producer-1] INFO  c.k.p.service.KafkaMessagePublisher - Message sent successfully. Question: Who won WWII?
+, Offset: 43
+2025-06-28 14:44:15.045 [scheduling-1] DEBUG c.k.p.service.KafkaMessagePublisher - Generating question with ID: 42
+2025-06-28 14:44:15.045 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generating a new question
+2025-06-28 14:44:15.724 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generated question: Did the dinosaurs survive?
+
+2025-06-28 14:44:16.001 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Question saved to database: Did the dinosaurs survive?
+
+2025-06-28 14:44:16.035 [kafka-producer-network-thread | producer-producer-1] INFO  c.k.p.service.KafkaMessagePublisher - Message sent successfully. Question: Did the dinosaurs survive?
+, Offset: 44
+2025-06-28 14:44:16.539 [scheduling-1] DEBUG c.k.p.service.KafkaMessagePublisher - Generating question with ID: 43
+2025-06-28 14:44:16.539 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generating a new question
+2025-06-28 14:44:17.216 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generated question: Did the dinosaurs survive?
+
+2025-06-28 14:44:17.506 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Question saved to database: Did the dinosaurs survive?
+
+2025-06-28 14:44:17.516 [kafka-producer-network-thread | producer-producer-1] INFO  c.k.p.service.KafkaMessagePublisher - Message sent successfully. Question: Did the dinosaurs survive?
+, Offset: 45
+2025-06-28 14:44:18.133 [scheduling-1] DEBUG c.k.p.service.KafkaMessagePublisher - Generating question with ID: 44
+2025-06-28 14:44:18.134 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generating a new question
+2025-06-28 14:44:18.830 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generated question: Did Lincoln free slaves?
+
+2025-06-28 14:44:19.139 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Question saved to database: Did Lincoln free slaves?
+
+2025-06-28 14:44:19.175 [kafka-producer-network-thread | producer-producer-1] INFO  c.k.p.service.KafkaMessagePublisher - Message sent successfully. Question: Did Lincoln free slaves?
+, Offset: 46
+2025-06-28 14:44:19.547 [scheduling-1] DEBUG c.k.p.service.KafkaMessagePublisher - Generating question with ID: 45
+2025-06-28 14:44:19.551 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generating a new question
+2025-06-28 14:44:20.288 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generated question: Did Rome fall?
+
+2025-06-28 14:44:20.558 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Question saved to database: Did Rome fall?
+
+2025-06-28 14:44:20.577 [kafka-producer-network-thread | producer-producer-1] INFO  c.k.p.service.KafkaMessagePublisher - Message sent successfully. Question: Did Rome fall?
+, Offset: 47
+2025-06-28 14:44:21.046 [scheduling-1] DEBUG c.k.p.service.KafkaMessagePublisher - Generating question with ID: 46
+2025-06-28 14:44:21.047 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generating a new question
+2025-06-28 14:44:21.795 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generated question: Did Lincoln free slaves?
+
+2025-06-28 14:44:22.069 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Question saved to database: Did Lincoln free slaves?
+
+2025-06-28 14:44:22.077 [kafka-producer-network-thread | producer-producer-1] INFO  c.k.p.service.KafkaMessagePublisher - Message sent successfully. Question: Did Lincoln free slaves?
+, Offset: 48
+2025-06-28 14:44:22.547 [scheduling-1] DEBUG c.k.p.service.KafkaMessagePublisher - Generating question with ID: 47
+2025-06-28 14:44:22.547 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generating a new question
+2025-06-28 14:44:23.272 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generated question: Did the Berlin Wall fall in 1988?
+
+2025-06-28 14:44:23.554 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Question saved to database: Did the Berlin Wall fall in 1988?
+
+2025-06-28 14:44:23.562 [kafka-producer-network-thread | producer-producer-1] INFO  c.k.p.service.KafkaMessagePublisher - Message sent successfully. Question: Did the Berlin Wall fall in 1988?
+, Offset: 49
+2025-06-28 14:44:24.045 [scheduling-1] DEBUG c.k.p.service.KafkaMessagePublisher - Generating question with ID: 48
+2025-06-28 14:44:24.045 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generating a new question
+2025-06-28 14:44:24.721 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generated question: Did the Roman Empire fall?
+
+2025-06-28 14:44:24.983 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Question saved to database: Did the Roman Empire fall?
+
+2025-06-28 14:44:24.989 [kafka-producer-network-thread | producer-producer-1] INFO  c.k.p.service.KafkaMessagePublisher - Message sent successfully. Question: Did the Roman Empire fall?
+, Offset: 50
+2025-06-28 14:44:25.546 [scheduling-1] DEBUG c.k.p.service.KafkaMessagePublisher - Generating question with ID: 49
+2025-06-28 14:44:25.546 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generating a new question
+2025-06-28 14:44:26.239 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generated question: Did dinosaurs exist?
+
+2025-06-28 14:44:26.489 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Question saved to database: Did dinosaurs exist?
+
+2025-06-28 14:44:26.510 [kafka-producer-network-thread | producer-producer-1] INFO  c.k.p.service.KafkaMessagePublisher - Message sent successfully. Question: Did dinosaurs exist?
+, Offset: 51
+2025-06-28 14:44:27.045 [scheduling-1] DEBUG c.k.p.service.KafkaMessagePublisher - Generating question with ID: 50
+2025-06-28 14:44:27.045 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generating a new question
+2025-06-28 14:44:27.872 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generated question: Did the Berlin Wall fall in 1988?
+
+2025-06-28 14:44:28.132 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Question saved to database: Did the Berlin Wall fall in 1988?
+
+2025-06-28 14:44:28.162 [kafka-producer-network-thread | producer-producer-1] INFO  c.k.p.service.KafkaMessagePublisher - Message sent successfully. Question: Did the Berlin Wall fall in 1988?
+, Offset: 52
+2025-06-28 14:44:28.544 [scheduling-1] DEBUG c.k.p.service.KafkaMessagePublisher - Generating question with ID: 51
+2025-06-28 14:44:28.545 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generating a new question
+2025-06-28 14:44:28.837 [reactor-http-nio-2] WARN  c.k.producer.service.GeminiService - Gemini rate limit hit. Retry after 34 seconds
+2025-06-28 14:44:28.839 [scheduling-1] ERROR c.k.producer.service.GeminiService - Rate limit exceeded while generating question
+2025-06-28 14:44:28.839 [scheduling-1] WARN  c.k.p.service.KafkaMessagePublisher - Rate limit hit. Pausing producer for 34 seconds
+2025-06-28 14:44:30.045 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Producer paused. Resuming in 32 seconds
+2025-06-28 14:44:31.543 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Producer paused. Resuming in 31 seconds
+2025-06-28 14:44:33.045 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Producer paused. Resuming in 29 seconds
+2025-06-28 14:44:34.547 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Producer paused. Resuming in 28 seconds
+2025-06-28 14:44:36.055 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Producer paused. Resuming in 26 seconds
+2025-06-28 14:44:37.548 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Producer paused. Resuming in 25 seconds
+2025-06-28 14:44:39.051 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Producer paused. Resuming in 23 seconds
+2025-06-28 14:44:40.544 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Producer paused. Resuming in 22 seconds
+2025-06-28 14:44:42.045 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Producer paused. Resuming in 20 seconds
+2025-06-28 14:44:43.542 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Producer paused. Resuming in 19 seconds
+2025-06-28 14:44:45.042 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Producer paused. Resuming in 17 seconds
+2025-06-28 14:44:46.541 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Producer paused. Resuming in 16 seconds
+2025-06-28 14:44:48.044 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Producer paused. Resuming in 14 seconds
+2025-06-28 14:44:49.554 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Producer paused. Resuming in 13 seconds
+2025-06-28 14:44:51.040 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Producer paused. Resuming in 11 seconds
+2025-06-28 14:44:52.541 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Producer paused. Resuming in 10 seconds
+2025-06-28 14:44:54.049 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Producer paused. Resuming in 8 seconds
+2025-06-28 14:44:55.548 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Producer paused. Resuming in 7 seconds
+2025-06-28 14:44:57.043 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Producer paused. Resuming in 5 seconds
+2025-06-28 14:44:58.547 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Producer paused. Resuming in 4 seconds
+2025-06-28 14:45:00.048 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Producer paused. Resuming in 2 seconds
+2025-06-28 14:45:01.541 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Producer paused. Resuming in 1 seconds
+2025-06-28 14:45:03.051 [scheduling-1] DEBUG c.k.p.service.KafkaMessagePublisher - Generating question with ID: 52
+2025-06-28 14:45:03.051 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generating a new question
+2025-06-28 14:45:03.721 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generated question: What causes tides?
+
+2025-06-28 14:45:04.002 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Question saved to database: What causes tides?
+
+2025-06-28 14:45:04.055 [kafka-producer-network-thread | producer-producer-1] INFO  c.k.p.service.KafkaMessagePublisher - Message sent successfully. Question: What causes tides?
+, Offset: 53
+2025-06-28 14:45:04.543 [scheduling-1] DEBUG c.k.p.service.KafkaMessagePublisher - Generating question with ID: 53
+2025-06-28 14:45:04.543 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generating a new question
+2025-06-28 14:45:05.239 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generated question: Did life exist before Earth?
+
+2025-06-28 14:45:05.527 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Question saved to database: Did life exist before Earth?
+
+2025-06-28 14:45:05.533 [kafka-producer-network-thread | producer-producer-1] INFO  c.k.p.service.KafkaMessagePublisher - Message sent successfully. Question: Did life exist before Earth?
+, Offset: 54
+2025-06-28 14:45:06.050 [scheduling-1] DEBUG c.k.p.service.KafkaMessagePublisher - Generating question with ID: 54
+2025-06-28 14:45:06.051 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generating a new question
+2025-06-28 14:45:06.741 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generated question: What's water's chemical formula?
+
+2025-06-28 14:45:07.060 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Question saved to database: What's water's chemical formula?
+
+2025-06-28 14:45:07.080 [kafka-producer-network-thread | producer-producer-1] INFO  c.k.p.service.KafkaMessagePublisher - Message sent successfully. Question: What's water's chemical formula?
+, Offset: 55
+2025-06-28 14:45:07.545 [scheduling-1] DEBUG c.k.p.service.KafkaMessagePublisher - Generating question with ID: 55
+2025-06-28 14:45:07.545 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generating a new question
+2025-06-28 14:45:08.247 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generated question: Did Lincoln free slaves?
+
+2025-06-28 14:45:08.532 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Question saved to database: Did Lincoln free slaves?
+
+2025-06-28 14:45:08.538 [kafka-producer-network-thread | producer-producer-1] INFO  c.k.p.service.KafkaMessagePublisher - Message sent successfully. Question: Did Lincoln free slaves?
+, Offset: 56
+2025-06-28 14:45:09.042 [scheduling-1] DEBUG c.k.p.service.KafkaMessagePublisher - Generating question with ID: 56
+2025-06-28 14:45:09.042 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generating a new question
+2025-06-28 14:45:09.724 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generated question: Did the dinosaurs survive?
+
+2025-06-28 14:45:10.021 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Question saved to database: Did the dinosaurs survive?
+
+2025-06-28 14:45:10.039 [kafka-producer-network-thread | producer-producer-1] INFO  c.k.p.service.KafkaMessagePublisher - Message sent successfully. Question: Did the dinosaurs survive?
+, Offset: 57
+2025-06-28 14:45:10.544 [scheduling-1] DEBUG c.k.p.service.KafkaMessagePublisher - Generating question with ID: 57
+2025-06-28 14:45:10.544 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generating a new question
+2025-06-28 14:45:11.264 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generated question: Did dinosaurs exist?
+
+2025-06-28 14:45:11.547 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Question saved to database: Did dinosaurs exist?
+
+2025-06-28 14:45:11.555 [kafka-producer-network-thread | producer-producer-1] INFO  c.k.p.service.KafkaMessagePublisher - Message sent successfully. Question: Did dinosaurs exist?
+, Offset: 58
+2025-06-28 14:45:12.039 [scheduling-1] DEBUG c.k.p.service.KafkaMessagePublisher - Generating question with ID: 58
+2025-06-28 14:45:12.039 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generating a new question
+2025-06-28 14:45:12.791 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generated question: Did the Berlin Wall fall in 1988?
+
+2025-06-28 14:45:13.056 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Question saved to database: Did the Berlin Wall fall in 1988?
+
+2025-06-28 14:45:13.065 [kafka-producer-network-thread | producer-producer-1] INFO  c.k.p.service.KafkaMessagePublisher - Message sent successfully. Question: Did the Berlin Wall fall in 1988?
+, Offset: 59
+2025-06-28 14:45:13.540 [scheduling-1] DEBUG c.k.p.service.KafkaMessagePublisher - Generating question with ID: 59
+2025-06-28 14:45:13.540 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generating a new question
+2025-06-28 14:45:14.199 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generated question: What killed the dinosaurs?
+
+2025-06-28 14:45:14.479 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Question saved to database: What killed the dinosaurs?
+
+2025-06-28 14:45:14.488 [kafka-producer-network-thread | producer-producer-1] INFO  c.k.p.service.KafkaMessagePublisher - Message sent successfully. Question: What killed the dinosaurs?
+, Offset: 60
+2025-06-28 14:45:15.045 [scheduling-1] DEBUG c.k.p.service.KafkaMessagePublisher - Generating question with ID: 60
+2025-06-28 14:45:15.045 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generating a new question
+2025-06-28 14:45:15.774 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generated question: Who won?
+
+2025-06-28 14:45:16.046 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Question saved to database: Who won?
+
+2025-06-28 14:45:16.052 [kafka-producer-network-thread | producer-producer-1] INFO  c.k.p.service.KafkaMessagePublisher - Message sent successfully. Question: Who won?
+, Offset: 61
+2025-06-28 14:45:16.544 [scheduling-1] DEBUG c.k.p.service.KafkaMessagePublisher - Generating question with ID: 61
+2025-06-28 14:45:16.544 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generating a new question
+2025-06-28 14:45:17.288 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generated question: Did life exist before oxygen?
+
+2025-06-28 14:45:17.609 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Question saved to database: Did life exist before oxygen?
+
+2025-06-28 14:45:17.619 [kafka-producer-network-thread | producer-producer-1] INFO  c.k.p.service.KafkaMessagePublisher - Message sent successfully. Question: Did life exist before oxygen?
+, Offset: 62
+2025-06-28 14:45:18.042 [scheduling-1] DEBUG c.k.p.service.KafkaMessagePublisher - Generating question with ID: 62
+2025-06-28 14:45:18.042 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generating a new question
+2025-06-28 14:45:18.698 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generated question: Who won?
+
+2025-06-28 14:45:19.018 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Question saved to database: Who won?
+
+2025-06-28 14:45:19.024 [kafka-producer-network-thread | producer-producer-1] INFO  c.k.p.service.KafkaMessagePublisher - Message sent successfully. Question: Who won?
+, Offset: 63
+2025-06-28 14:45:19.544 [scheduling-1] DEBUG c.k.p.service.KafkaMessagePublisher - Generating question with ID: 63
+2025-06-28 14:45:19.544 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generating a new question
+2025-06-28 14:45:20.277 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generated question: Did the US win the Vietnam War?
+
+2025-06-28 14:45:20.544 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Question saved to database: Did the US win the Vietnam War?
+
+2025-06-28 14:45:20.553 [kafka-producer-network-thread | producer-producer-1] INFO  c.k.p.service.KafkaMessagePublisher - Message sent successfully. Question: Did the US win the Vietnam War?
+, Offset: 64
+2025-06-28 14:45:21.044 [scheduling-1] DEBUG c.k.p.service.KafkaMessagePublisher - Generating question with ID: 64
+2025-06-28 14:45:21.044 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generating a new question
+2025-06-28 14:45:21.930 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generated question: Who won?
+
+2025-06-28 14:45:22.253 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Question saved to database: Who won?
+
+2025-06-28 14:45:22.264 [kafka-producer-network-thread | producer-producer-1] INFO  c.k.p.service.KafkaMessagePublisher - Message sent successfully. Question: Who won?
+, Offset: 65
+2025-06-28 14:45:22.540 [scheduling-1] DEBUG c.k.p.service.KafkaMessagePublisher - Generating question with ID: 65
+2025-06-28 14:45:22.540 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generating a new question
+2025-06-28 14:45:23.289 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generated question: Was Pluto ever a planet?
+
+2025-06-28 14:45:23.559 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Question saved to database: Was Pluto ever a planet?
+
+2025-06-28 14:45:23.566 [kafka-producer-network-thread | producer-producer-1] INFO  c.k.p.service.KafkaMessagePublisher - Message sent successfully. Question: Was Pluto ever a planet?
+, Offset: 66
+2025-06-28 14:45:24.055 [scheduling-1] DEBUG c.k.p.service.KafkaMessagePublisher - Generating question with ID: 66
+2025-06-28 14:45:24.055 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generating a new question
+2025-06-28 14:45:24.757 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generated question: Was Pluto demoted?
+
+2025-06-28 14:45:25.058 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Question saved to database: Was Pluto demoted?
+
+2025-06-28 14:45:25.068 [kafka-producer-network-thread | producer-producer-1] INFO  c.k.p.service.KafkaMessagePublisher - Message sent successfully. Question: Was Pluto demoted?
+, Offset: 67
+2025-06-28 14:45:25.543 [scheduling-1] DEBUG c.k.p.service.KafkaMessagePublisher - Generating question with ID: 67
+2025-06-28 14:45:25.543 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generating a new question
+2025-06-28 14:45:26.248 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generated question: Did the Berlin Wall fall?
+
+2025-06-28 14:45:26.515 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Question saved to database: Did the Berlin Wall fall?
+
+2025-06-28 14:45:26.524 [kafka-producer-network-thread | producer-producer-1] INFO  c.k.p.service.KafkaMessagePublisher - Message sent successfully. Question: Did the Berlin Wall fall?
+, Offset: 68
+2025-06-28 14:45:27.048 [scheduling-1] DEBUG c.k.p.service.KafkaMessagePublisher - Generating question with ID: 68
+2025-06-28 14:45:27.048 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generating a new question
+2025-06-28 14:45:27.334 [reactor-http-nio-2] WARN  c.k.producer.service.GeminiService - Gemini rate limit hit. Retry after 35 seconds
+2025-06-28 14:45:27.334 [scheduling-1] ERROR c.k.producer.service.GeminiService - Rate limit exceeded while generating question
+2025-06-28 14:45:27.334 [scheduling-1] WARN  c.k.p.service.KafkaMessagePublisher - Rate limit hit. Pausing producer for 35 seconds
+2025-06-28 14:45:28.553 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Producer paused. Resuming in 33 seconds
+2025-06-28 14:45:30.039 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Producer paused. Resuming in 32 seconds
+2025-06-28 14:45:31.554 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Producer paused. Resuming in 30 seconds
+2025-06-28 14:45:33.049 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Producer paused. Resuming in 29 seconds
+2025-06-28 14:45:34.554 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Producer paused. Resuming in 27 seconds
+2025-06-28 14:45:36.050 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Producer paused. Resuming in 26 seconds
+2025-06-28 14:45:37.552 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Producer paused. Resuming in 24 seconds
+2025-06-28 14:45:39.039 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Producer paused. Resuming in 23 seconds
+2025-06-28 14:45:40.539 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Producer paused. Resuming in 21 seconds
+2025-06-28 14:45:42.043 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Producer paused. Resuming in 20 seconds
+2025-06-28 14:45:43.543 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Producer paused. Resuming in 18 seconds
+2025-06-28 14:45:45.050 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Producer paused. Resuming in 17 seconds
+2025-06-28 14:45:46.541 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Producer paused. Resuming in 15 seconds
+2025-06-28 14:45:48.047 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Producer paused. Resuming in 14 seconds
+2025-06-28 14:45:49.552 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Producer paused. Resuming in 12 seconds
+2025-06-28 14:45:51.040 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Producer paused. Resuming in 11 seconds
+2025-06-28 14:45:52.542 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Producer paused. Resuming in 9 seconds
+2025-06-28 14:45:54.051 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Producer paused. Resuming in 8 seconds
+2025-06-28 14:45:55.541 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Producer paused. Resuming in 6 seconds
+2025-06-28 14:45:57.053 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Producer paused. Resuming in 5 seconds
+2025-06-28 14:45:58.541 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Producer paused. Resuming in 3 seconds
+2025-06-28 14:46:00.045 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Producer paused. Resuming in 2 seconds
+2025-06-28 14:46:01.553 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Producer paused. Resuming in 0 seconds
+2025-06-28 14:46:03.052 [scheduling-1] DEBUG c.k.p.service.KafkaMessagePublisher - Generating question with ID: 69
+2025-06-28 14:46:03.052 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generating a new question
+2025-06-28 14:46:03.823 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generated question: Did the South secede?
+
+2025-06-28 14:46:04.111 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Question saved to database: Did the South secede?
+
+2025-06-28 14:46:04.128 [kafka-producer-network-thread | producer-producer-1] INFO  c.k.p.service.KafkaMessagePublisher - Message sent successfully. Question: Did the South secede?
+, Offset: 69
+2025-06-28 14:46:04.547 [scheduling-1] DEBUG c.k.p.service.KafkaMessagePublisher - Generating question with ID: 70
+2025-06-28 14:46:04.547 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generating a new question
+2025-06-28 14:46:05.242 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generated question: Who won?
+
+2025-06-28 14:46:05.559 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Question saved to database: Who won?
+
+2025-06-28 14:46:05.570 [kafka-producer-network-thread | producer-producer-1] INFO  c.k.p.service.KafkaMessagePublisher - Message sent successfully. Question: Who won?
+, Offset: 70
+2025-06-28 14:46:06.041 [scheduling-1] DEBUG c.k.p.service.KafkaMessagePublisher - Generating question with ID: 71
+2025-06-28 14:46:06.041 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generating a new question
+2025-06-28 14:46:06.705 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generated question: Who discovered penicillin?
+
+2025-06-28 14:46:07.002 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Question saved to database: Who discovered penicillin?
+
+2025-06-28 14:46:07.017 [kafka-producer-network-thread | producer-producer-1] INFO  c.k.p.service.KafkaMessagePublisher - Message sent successfully. Question: Who discovered penicillin?
+, Offset: 71
+2025-06-28 14:46:07.541 [scheduling-1] DEBUG c.k.p.service.KafkaMessagePublisher - Generating question with ID: 72
+2025-06-28 14:46:07.543 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generating a new question
+2025-06-28 14:46:08.277 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generated question: Did dinosaurs exist?
+
+2025-06-28 14:46:08.571 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Question saved to database: Did dinosaurs exist?
+
+2025-06-28 14:46:08.589 [kafka-producer-network-thread | producer-producer-1] INFO  c.k.p.service.KafkaMessagePublisher - Message sent successfully. Question: Did dinosaurs exist?
+, Offset: 72
+2025-06-28 14:46:09.048 [scheduling-1] DEBUG c.k.p.service.KafkaMessagePublisher - Generating question with ID: 73
+2025-06-28 14:46:09.049 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generating a new question
+2025-06-28 14:46:09.688 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generated question: Who invented the lightbulb?
+
+2025-06-28 14:46:10.002 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Question saved to database: Who invented the lightbulb?
+
+2025-06-28 14:46:10.007 [kafka-producer-network-thread | producer-producer-1] INFO  c.k.p.service.KafkaMessagePublisher - Message sent successfully. Question: Who invented the lightbulb?
+, Offset: 73
+2025-06-28 14:46:10.550 [scheduling-1] DEBUG c.k.p.service.KafkaMessagePublisher - Generating question with ID: 74
+2025-06-28 14:46:10.550 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generating a new question
+2025-06-28 14:46:11.374 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generated question: Was Pluto ever a planet?
+
+2025-06-28 14:46:11.711 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Question saved to database: Was Pluto ever a planet?
+
+2025-06-28 14:46:11.722 [kafka-producer-network-thread | producer-producer-1] INFO  c.k.p.service.KafkaMessagePublisher - Message sent successfully. Question: Was Pluto ever a planet?
+, Offset: 74
+2025-06-28 14:46:12.040 [scheduling-1] DEBUG c.k.p.service.KafkaMessagePublisher - Generating question with ID: 75
+2025-06-28 14:46:12.040 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generating a new question
+2025-06-28 14:46:12.778 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generated question: Did the Titanic sink?
+
+2025-06-28 14:46:13.060 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Question saved to database: Did the Titanic sink?
+
+2025-06-28 14:46:13.069 [kafka-producer-network-thread | producer-producer-1] INFO  c.k.p.service.KafkaMessagePublisher - Message sent successfully. Question: Did the Titanic sink?
+, Offset: 75
+2025-06-28 14:46:13.548 [scheduling-1] DEBUG c.k.p.service.KafkaMessagePublisher - Generating question with ID: 76
+2025-06-28 14:46:13.548 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generating a new question
+2025-06-28 14:46:14.299 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generated question: Did the Berlin Wall fall in 1988?
+
+2025-06-28 14:46:14.575 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Question saved to database: Did the Berlin Wall fall in 1988?
+
+2025-06-28 14:46:14.581 [kafka-producer-network-thread | producer-producer-1] INFO  c.k.p.service.KafkaMessagePublisher - Message sent successfully. Question: Did the Berlin Wall fall in 1988?
+, Offset: 76
+2025-06-28 14:46:15.055 [scheduling-1] DEBUG c.k.p.service.KafkaMessagePublisher - Generating question with ID: 77
+2025-06-28 14:46:15.055 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generating a new question
+2025-06-28 14:46:15.697 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generated question: Did the South secede?
+
+2025-06-28 14:46:15.991 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Question saved to database: Did the South secede?
+
+2025-06-28 14:46:16.000 [kafka-producer-network-thread | producer-producer-1] INFO  c.k.p.service.KafkaMessagePublisher - Message sent successfully. Question: Did the South secede?
+, Offset: 77
+2025-06-28 14:46:16.540 [scheduling-1] DEBUG c.k.p.service.KafkaMessagePublisher - Generating question with ID: 78
+2025-06-28 14:46:16.540 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generating a new question
+2025-06-28 14:46:17.213 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generated question: Did dinosaurs exist?
+
+2025-06-28 14:46:17.473 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Question saved to database: Did dinosaurs exist?
+
+2025-06-28 14:46:17.484 [kafka-producer-network-thread | producer-producer-1] INFO  c.k.p.service.KafkaMessagePublisher - Message sent successfully. Question: Did dinosaurs exist?
+, Offset: 78
+2025-06-28 14:46:18.040 [scheduling-1] DEBUG c.k.p.service.KafkaMessagePublisher - Generating question with ID: 79
+2025-06-28 14:46:18.040 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generating a new question
+2025-06-28 14:46:18.762 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generated question: Who invented the telephone?
+
+2025-06-28 14:46:19.029 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Question saved to database: Who invented the telephone?
+
+2025-06-28 14:46:19.047 [kafka-producer-network-thread | producer-producer-1] INFO  c.k.p.service.KafkaMessagePublisher - Message sent successfully. Question: Who invented the telephone?
+, Offset: 79
+2025-06-28 14:46:19.543 [scheduling-1] DEBUG c.k.p.service.KafkaMessagePublisher - Generating question with ID: 80
+2025-06-28 14:46:19.543 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generating a new question
+2025-06-28 14:46:20.224 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generated question: Who won?
+
+2025-06-28 14:46:20.519 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Question saved to database: Who won?
+
+2025-06-28 14:46:20.526 [kafka-producer-network-thread | producer-producer-1] INFO  c.k.p.service.KafkaMessagePublisher - Message sent successfully. Question: Who won?
+, Offset: 80
+2025-06-28 14:46:21.040 [scheduling-1] DEBUG c.k.p.service.KafkaMessagePublisher - Generating question with ID: 81
+2025-06-28 14:46:21.040 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generating a new question
+2025-06-28 14:46:21.767 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generated question: Did dinosaurs fly?
+
+2025-06-28 14:46:22.083 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Question saved to database: Did dinosaurs fly?
+
+2025-06-28 14:46:22.090 [kafka-producer-network-thread | producer-producer-1] INFO  c.k.p.service.KafkaMessagePublisher - Message sent successfully. Question: Did dinosaurs fly?
+, Offset: 81
+2025-06-28 14:46:22.544 [scheduling-1] DEBUG c.k.p.service.KafkaMessagePublisher - Generating question with ID: 82
+2025-06-28 14:46:22.560 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generating a new question
+2025-06-28 14:46:23.436 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generated question: Was Pluto ever a planet?
+
+2025-06-28 14:46:23.778 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Question saved to database: Was Pluto ever a planet?
+
+2025-06-28 14:46:23.800 [kafka-producer-network-thread | producer-producer-1] INFO  c.k.p.service.KafkaMessagePublisher - Message sent successfully. Question: Was Pluto ever a planet?
+, Offset: 82
+2025-06-28 14:46:24.046 [scheduling-1] DEBUG c.k.p.service.KafkaMessagePublisher - Generating question with ID: 83
+2025-06-28 14:46:24.047 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generating a new question
+2025-06-28 14:46:24.707 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generated question: Did Nixon resign?
+
+2025-06-28 14:46:25.122 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Question saved to database: Did Nixon resign?
+
+2025-06-28 14:46:25.132 [kafka-producer-network-thread | producer-producer-1] INFO  c.k.p.service.KafkaMessagePublisher - Message sent successfully. Question: Did Nixon resign?
+, Offset: 83
+2025-06-28 14:46:25.541 [scheduling-1] DEBUG c.k.p.service.KafkaMessagePublisher - Generating question with ID: 84
+2025-06-28 14:46:25.541 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generating a new question
+2025-06-28 14:46:26.246 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generated question: Did the Berlin Wall fall in 1988?
+
+2025-06-28 14:46:26.616 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Question saved to database: Did the Berlin Wall fall in 1988?
+
+2025-06-28 14:46:26.624 [kafka-producer-network-thread | producer-producer-1] INFO  c.k.p.service.KafkaMessagePublisher - Message sent successfully. Question: Did the Berlin Wall fall in 1988?
+, Offset: 84
+2025-06-28 14:46:27.050 [scheduling-1] DEBUG c.k.p.service.KafkaMessagePublisher - Generating question with ID: 85
+2025-06-28 14:46:27.050 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generating a new question
+2025-06-28 14:46:27.348 [reactor-http-nio-2] WARN  c.k.producer.service.GeminiService - Gemini rate limit hit. Retry after 35 seconds
+2025-06-28 14:46:27.348 [scheduling-1] ERROR c.k.producer.service.GeminiService - Rate limit exceeded while generating question
+2025-06-28 14:46:27.348 [scheduling-1] WARN  c.k.p.service.KafkaMessagePublisher - Rate limit hit. Pausing producer for 35 seconds
+2025-06-28 14:46:28.540 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Producer paused. Resuming in 33 seconds
+2025-06-28 14:46:30.047 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Producer paused. Resuming in 32 seconds
+2025-06-28 14:46:31.544 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Producer paused. Resuming in 30 seconds
+2025-06-28 14:46:33.081 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Producer paused. Resuming in 29 seconds
+2025-06-28 14:46:34.547 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Producer paused. Resuming in 27 seconds
+2025-06-28 14:46:36.044 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Producer paused. Resuming in 26 seconds
+2025-06-28 14:46:37.550 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Producer paused. Resuming in 24 seconds
+2025-06-28 14:46:39.050 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Producer paused. Resuming in 23 seconds
+2025-06-28 14:46:40.540 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Producer paused. Resuming in 21 seconds
+2025-06-28 14:46:42.051 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Producer paused. Resuming in 20 seconds
+2025-06-28 14:46:43.548 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Producer paused. Resuming in 18 seconds
+2025-06-28 14:46:45.041 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Producer paused. Resuming in 17 seconds
+2025-06-28 14:46:46.548 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Producer paused. Resuming in 15 seconds
+2025-06-28 14:46:48.048 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Producer paused. Resuming in 14 seconds
+2025-06-28 14:46:49.543 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Producer paused. Resuming in 12 seconds
+2025-06-28 14:46:51.042 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Producer paused. Resuming in 11 seconds
+2025-06-28 14:46:52.547 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Producer paused. Resuming in 9 seconds
+2025-06-28 14:46:54.041 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Producer paused. Resuming in 8 seconds
+2025-06-28 14:46:55.545 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Producer paused. Resuming in 6 seconds
+2025-06-28 14:46:57.047 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Producer paused. Resuming in 5 seconds
+2025-06-28 14:46:58.547 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Producer paused. Resuming in 3 seconds
+2025-06-28 14:47:00.042 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Producer paused. Resuming in 2 seconds
+2025-06-28 14:47:01.542 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Producer paused. Resuming in 0 seconds
+2025-06-28 14:47:03.047 [scheduling-1] DEBUG c.k.p.service.KafkaMessagePublisher - Generating question with ID: 86
+2025-06-28 14:47:03.047 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generating a new question
+2025-06-28 14:47:03.738 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generated question: Did Rome fall?
+
+2025-06-28 14:47:04.089 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Question saved to database: Did Rome fall?
+
+2025-06-28 14:47:04.098 [kafka-producer-network-thread | producer-producer-1] INFO  c.k.p.service.KafkaMessagePublisher - Message sent successfully. Question: Did Rome fall?
+, Offset: 85
+2025-06-28 14:47:04.546 [scheduling-1] DEBUG c.k.p.service.KafkaMessagePublisher - Generating question with ID: 87
+2025-06-28 14:47:04.546 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generating a new question
+2025-06-28 14:47:05.257 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generated question: Did the Allies win?
+
+2025-06-28 14:47:05.524 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Question saved to database: Did the Allies win?
+
+2025-06-28 14:47:05.532 [kafka-producer-network-thread | producer-producer-1] INFO  c.k.p.service.KafkaMessagePublisher - Message sent successfully. Question: Did the Allies win?
+, Offset: 86
+2025-06-28 14:47:06.049 [scheduling-1] DEBUG c.k.p.service.KafkaMessagePublisher - Generating question with ID: 88
+2025-06-28 14:47:06.049 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generating a new question
+2025-06-28 14:47:06.722 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generated question: Did dinosaurs roam Earth?
+
+2025-06-28 14:47:07.007 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Question saved to database: Did dinosaurs roam Earth?
+
+2025-06-28 14:47:07.074 [kafka-producer-network-thread | producer-producer-1] INFO  c.k.p.service.KafkaMessagePublisher - Message sent successfully. Question: Did dinosaurs roam Earth?
+, Offset: 87
+2025-06-28 14:47:07.545 [scheduling-1] DEBUG c.k.p.service.KafkaMessagePublisher - Generating question with ID: 89
+2025-06-28 14:47:07.545 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generating a new question
+2025-06-28 14:47:08.175 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generated question: Who won?
+
+2025-06-28 14:47:08.474 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Question saved to database: Who won?
+
+2025-06-28 14:47:08.485 [kafka-producer-network-thread | producer-producer-1] INFO  c.k.p.service.KafkaMessagePublisher - Message sent successfully. Question: Who won?
+, Offset: 88
+2025-06-28 14:47:09.050 [scheduling-1] DEBUG c.k.p.service.KafkaMessagePublisher - Generating question with ID: 90
+2025-06-28 14:47:09.050 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generating a new question
+2025-06-28 14:47:09.851 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generated question: Did the Berlin Wall fall in 1988?
+
+2025-06-28 14:47:10.144 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Question saved to database: Did the Berlin Wall fall in 1988?
+
+2025-06-28 14:47:10.150 [kafka-producer-network-thread | producer-producer-1] INFO  c.k.p.service.KafkaMessagePublisher - Message sent successfully. Question: Did the Berlin Wall fall in 1988?
+, Offset: 89
+2025-06-28 14:47:10.544 [scheduling-1] DEBUG c.k.p.service.KafkaMessagePublisher - Generating question with ID: 91
+2025-06-28 14:47:10.544 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generating a new question
+2025-06-28 14:47:11.221 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generated question: Did life originate on Earth?
+
+2025-06-28 14:47:11.501 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Question saved to database: Did life originate on Earth?
+
+2025-06-28 14:47:11.517 [kafka-producer-network-thread | producer-producer-1] INFO  c.k.p.service.KafkaMessagePublisher - Message sent successfully. Question: Did life originate on Earth?
+, Offset: 90
+2025-06-28 14:47:12.044 [scheduling-1] DEBUG c.k.p.service.KafkaMessagePublisher - Generating question with ID: 92
+2025-06-28 14:47:12.044 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generating a new question
+2025-06-28 14:47:12.731 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generated question: Was Pluto ever considered a planet?
+
+2025-06-28 14:47:13.066 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Question saved to database: Was Pluto ever considered a planet?
+
+2025-06-28 14:47:13.075 [kafka-producer-network-thread | producer-producer-1] INFO  c.k.p.service.KafkaMessagePublisher - Message sent successfully. Question: Was Pluto ever considered a planet?
+, Offset: 91
+2025-06-28 14:47:13.541 [scheduling-1] DEBUG c.k.p.service.KafkaMessagePublisher - Generating question with ID: 93
+2025-06-28 14:47:13.541 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generating a new question
+2025-06-28 14:47:14.249 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generated question: Did the dinosaurs die out suddenly?
+
+2025-06-28 14:47:14.522 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Question saved to database: Did the dinosaurs die out suddenly?
+
+2025-06-28 14:47:14.534 [kafka-producer-network-thread | producer-producer-1] INFO  c.k.p.service.KafkaMessagePublisher - Message sent successfully. Question: Did the dinosaurs die out suddenly?
+, Offset: 92
+2025-06-28 14:47:15.040 [scheduling-1] DEBUG c.k.p.service.KafkaMessagePublisher - Generating question with ID: 94
+2025-06-28 14:47:15.040 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generating a new question
+2025-06-28 14:47:15.723 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generated question: Was Pluto ever a planet?
+
+2025-06-28 14:47:15.992 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Question saved to database: Was Pluto ever a planet?
+
+2025-06-28 14:47:16.005 [kafka-producer-network-thread | producer-producer-1] INFO  c.k.p.service.KafkaMessagePublisher - Message sent successfully. Question: Was Pluto ever a planet?
+, Offset: 93
+2025-06-28 14:47:16.553 [scheduling-1] DEBUG c.k.p.service.KafkaMessagePublisher - Generating question with ID: 95
+2025-06-28 14:47:16.553 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generating a new question
+2025-06-28 14:47:17.175 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generated question: Did the Titanic sink?
+
+2025-06-28 14:47:17.487 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Question saved to database: Did the Titanic sink?
+
+2025-06-28 14:47:17.498 [kafka-producer-network-thread | producer-producer-1] INFO  c.k.p.service.KafkaMessagePublisher - Message sent successfully. Question: Did the Titanic sink?
+, Offset: 94
+2025-06-28 14:47:18.053 [scheduling-1] DEBUG c.k.p.service.KafkaMessagePublisher - Generating question with ID: 96
+2025-06-28 14:47:18.053 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generating a new question
+2025-06-28 14:47:18.772 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generated question: Did dinosaurs have feathers?
+
+2025-06-28 14:47:19.105 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Question saved to database: Did dinosaurs have feathers?
+
+2025-06-28 14:47:19.118 [kafka-producer-network-thread | producer-producer-1] INFO  c.k.p.service.KafkaMessagePublisher - Message sent successfully. Question: Did dinosaurs have feathers?
+, Offset: 95
+2025-06-28 14:47:19.541 [scheduling-1] DEBUG c.k.p.service.KafkaMessagePublisher - Generating question with ID: 97
+2025-06-28 14:47:19.541 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generating a new question
+2025-06-28 14:47:20.212 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generated question: Did the dinosaurs become extinct?
+
+2025-06-28 14:47:20.500 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Question saved to database: Did the dinosaurs become extinct?
+
+2025-06-28 14:47:20.508 [kafka-producer-network-thread | producer-producer-1] INFO  c.k.p.service.KafkaMessagePublisher - Message sent successfully. Question: Did the dinosaurs become extinct?
+, Offset: 96
+2025-06-28 14:47:21.052 [scheduling-1] DEBUG c.k.p.service.KafkaMessagePublisher - Generating question with ID: 98
+2025-06-28 14:47:21.052 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generating a new question
+2025-06-28 14:47:21.750 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generated question: Did the U.S. win the Vietnam War?
+
+2025-06-28 14:47:22.013 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Question saved to database: Did the U.S. win the Vietnam War?
+
+2025-06-28 14:47:22.021 [kafka-producer-network-thread | producer-producer-1] INFO  c.k.p.service.KafkaMessagePublisher - Message sent successfully. Question: Did the U.S. win the Vietnam War?
+, Offset: 97
+2025-06-28 14:47:22.549 [scheduling-1] DEBUG c.k.p.service.KafkaMessagePublisher - Generating question with ID: 99
+2025-06-28 14:47:22.549 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generating a new question
+2025-06-28 14:47:23.167 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generated question: Who discovered penicillin?
+
+2025-06-28 14:47:23.430 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Question saved to database: Who discovered penicillin?
+
+2025-06-28 14:47:23.450 [kafka-producer-network-thread | producer-producer-1] INFO  c.k.p.service.KafkaMessagePublisher - Message sent successfully. Question: Who discovered penicillin?
+, Offset: 98
+2025-06-28 14:47:24.052 [scheduling-1] DEBUG c.k.p.service.KafkaMessagePublisher - Generating question with ID: 100
+2025-06-28 14:47:24.053 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generating a new question
+2025-06-28 14:47:24.803 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generated question: Did mammals evolve from reptiles?
+
+2025-06-28 14:47:25.081 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Question saved to database: Did mammals evolve from reptiles?
+
+2025-06-28 14:47:25.091 [kafka-producer-network-thread | producer-producer-1] INFO  c.k.p.service.KafkaMessagePublisher - Message sent successfully. Question: Did mammals evolve from reptiles?
+, Offset: 99
+2025-06-28 14:47:25.542 [scheduling-1] DEBUG c.k.p.service.KafkaMessagePublisher - Generating question with ID: 101
+2025-06-28 14:47:25.542 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generating a new question
+2025-06-28 14:47:26.192 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generated question: Who won?
+
+2025-06-28 14:47:26.463 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Question saved to database: Who won?
+
+2025-06-28 14:47:26.474 [kafka-producer-network-thread | producer-producer-1] INFO  c.k.p.service.KafkaMessagePublisher - Message sent successfully. Question: Who won?
+, Offset: 100
+2025-06-28 14:47:27.051 [scheduling-1] DEBUG c.k.p.service.KafkaMessagePublisher - Generating question with ID: 102
+2025-06-28 14:47:27.051 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generating a new question
+2025-06-28 14:47:27.710 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generated question: Did Pluto get reclassified?
+
+2025-06-28 14:47:27.971 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Question saved to database: Did Pluto get reclassified?
+
+2025-06-28 14:47:27.976 [kafka-producer-network-thread | producer-producer-1] INFO  c.k.p.service.KafkaMessagePublisher - Message sent successfully. Question: Did Pluto get reclassified?
+, Offset: 101
+2025-06-28 14:47:28.540 [scheduling-1] DEBUG c.k.p.service.KafkaMessagePublisher - Generating question with ID: 103
+2025-06-28 14:47:28.540 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generating a new question
+2025-06-28 14:47:29.220 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generated question: Did the dinosaurs go extinct?
+
+2025-06-28 14:47:29.492 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Question saved to database: Did the dinosaurs go extinct?
+
+2025-06-28 14:47:29.511 [kafka-producer-network-thread | producer-producer-1] INFO  c.k.p.service.KafkaMessagePublisher - Message sent successfully. Question: Did the dinosaurs go extinct?
+, Offset: 102
+2025-06-28 14:47:30.054 [scheduling-1] DEBUG c.k.p.service.KafkaMessagePublisher - Generating question with ID: 104
+2025-06-28 14:47:30.054 [scheduling-1] DEBUG c.k.producer.service.GeminiService - Generating a new question
+2025-06-28 14:47:30.352 [reactor-http-nio-2] WARN  c.k.producer.service.GeminiService - Gemini rate limit hit. Retry after 32 seconds
+2025-06-28 14:47:30.353 [scheduling-1] ERROR c.k.producer.service.GeminiService - Rate limit exceeded while generating question
+2025-06-28 14:47:30.353 [scheduling-1] WARN  c.k.p.service.KafkaMessagePublisher - Rate limit hit. Pausing producer for 32 seconds
+2025-06-28 14:47:31.544 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Producer paused. Resuming in 30 seconds
+2025-06-28 14:47:33.046 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Producer paused. Resuming in 29 seconds
+2025-06-28 14:47:34.554 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Producer paused. Resuming in 27 seconds
+2025-06-28 14:47:36.052 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Producer paused. Resuming in 26 seconds
+2025-06-28 14:47:37.545 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Producer paused. Resuming in 24 seconds
+2025-06-28 14:47:39.049 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Producer paused. Resuming in 23 seconds
+2025-06-28 14:47:40.548 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Producer paused. Resuming in 21 seconds
+2025-06-28 14:47:42.053 [scheduling-1] INFO  c.k.p.service.KafkaMessagePublisher - Producer paused. Resuming in 20 seconds
+2025-06-28 14:47:42.415 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-06-28 14:47:42.433 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-06-28 14:47:44.570 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-06-28 14:47:44.584 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-06-28 14:47:45.400 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.

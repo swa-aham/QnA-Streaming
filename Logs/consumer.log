@@ -1,0 +1,1229 @@
+2025-06-28 14:40:20.367 [main] INFO  c.kafka.consumer.ConsumerApplication - Starting ConsumerApplication using Java 22.0.1 with PID 16312 (F:\Projects\Practice\consumer\target\classes started by SOHAM in F:\Projects\Practice\consumer)
+2025-06-28 14:40:20.502 [main] DEBUG c.kafka.consumer.ConsumerApplication - Running with Spring Boot v3.5.3, Spring v6.2.8
+2025-06-28 14:40:20.504 [main] INFO  c.kafka.consumer.ConsumerApplication - No active profile set, falling back to 1 default profile: "default"
+2025-06-28 14:40:23.313 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-06-28 14:40:23.742 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 397 ms. Found 1 JPA repository interface.
+2025-06-28 14:40:25.586 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8081 (http)
+2025-06-28 14:40:25.636 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-06-28 14:40:25.637 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.42]
+2025-06-28 14:40:25.870 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-06-28 14:40:25.870 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 5161 ms
+2025-06-28 14:40:26.326 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-06-28 14:40:29.197 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@7911cc15
+2025-06-28 14:40:29.202 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-06-28 14:40:29.333 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-06-28 14:40:29.548 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.18.Final
+2025-06-28 14:40:29.701 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-06-28 14:40:32.529 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-06-28 14:40:33.031 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-06-28 14:40:33.500 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.5
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-06-28 14:40:42.444 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-06-28 14:40:42.450 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-06-28 14:40:48.917 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-06-28 14:40:56.597 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8081 (http) with context path '/'
+2025-06-28 14:40:58.139 [main] INFO  c.kafka.consumer.ConsumerApplication - Started ConsumerApplication in 40.389 seconds (process running for 42.601)
+2025-06-28 14:41:02.285 [qna-listener-0-C-1] INFO  o.s.k.l.KafkaMessageListenerContainer - qna-consumer-group-auto: partitions assigned: [practice5-0]
+2025-06-28 14:42:00.421 [qna-listener-0-C-1] INFO  c.k.c.service.KafkaMessageListener - Received Message: "Who won?
+"
+2025-06-28 14:42:00.422 [qna-listener-0-C-1] DEBUG c.k.c.service.ProcessingService - Processing question: Who won?
+
+2025-06-28 14:42:00.422 [qna-listener-0-C-1] DEBUG c.k.consumer.service.GeminiService - Generating answer for question: Who won?
+
+2025-06-28 14:42:02.689 [qna-listener-0-C-1] DEBUG c.k.consumer.service.GeminiService - Generated answer for question: Who won?
+, Answer: The victor depends on the conflict.
+
+2025-06-28 14:42:03.520 [qna-listener-0-C-1] INFO  c.k.c.service.ProcessingService - Successfully processed and saved Q&A. Question: Who won?
+
+2025-06-28 14:42:03.521 [qna-listener-0-C-1] INFO  c.k.c.service.KafkaMessageListener - QnA processed and saved successfully.
+2025-06-28 14:42:03.566 [qna-listener-0-C-1] INFO  c.k.c.service.KafkaMessageListener - Received Message: "Did dinosaurs exist?
+"
+2025-06-28 14:42:03.567 [qna-listener-0-C-1] DEBUG c.k.c.service.ProcessingService - Processing question: Did dinosaurs exist?
+
+2025-06-28 14:42:03.567 [qna-listener-0-C-1] DEBUG c.k.consumer.service.GeminiService - Generating answer for question: Did dinosaurs exist?
+
+2025-06-28 14:42:04.173 [qna-listener-0-C-1] DEBUG c.k.consumer.service.GeminiService - Generated answer for question: Did dinosaurs exist?
+, Answer: Yes, dinosaurs existed.
+
+2025-06-28 14:42:04.574 [qna-listener-0-C-1] INFO  c.k.c.service.ProcessingService - Successfully processed and saved Q&A. Question: Did dinosaurs exist?
+
+2025-06-28 14:42:04.576 [qna-listener-0-C-1] INFO  c.k.c.service.KafkaMessageListener - QnA processed and saved successfully.
+2025-06-28 14:42:04.576 [qna-listener-0-C-1] INFO  c.k.c.service.KafkaMessageListener - Received Message: "Did Lincoln free the slaves?
+"
+2025-06-28 14:42:04.576 [qna-listener-0-C-1] DEBUG c.k.c.service.ProcessingService - Processing question: Did Lincoln free the slaves?
+
+2025-06-28 14:42:04.576 [qna-listener-0-C-1] DEBUG c.k.consumer.service.GeminiService - Generating answer for question: Did Lincoln free the slaves?
+
+2025-06-28 14:42:05.535 [qna-listener-0-C-1] DEBUG c.k.consumer.service.GeminiService - Generated answer for question: Did Lincoln free the slaves?
+, Answer: Lincoln's Emancipation Proclamation freed slaves in Confederate territories only.
+
+2025-06-28 14:42:05.943 [qna-listener-0-C-1] INFO  c.k.c.service.ProcessingService - Successfully processed and saved Q&A. Question: Did Lincoln free the slaves?
+
+2025-06-28 14:42:05.943 [qna-listener-0-C-1] INFO  c.k.c.service.KafkaMessageListener - QnA processed and saved successfully.
+2025-06-28 14:42:05.960 [qna-listener-0-C-1] INFO  c.k.c.service.KafkaMessageListener - Received Message: "Did dinosaurs exist?
+"
+2025-06-28 14:42:05.960 [qna-listener-0-C-1] DEBUG c.k.c.service.ProcessingService - Processing question: Did dinosaurs exist?
+
+2025-06-28 14:42:05.960 [qna-listener-0-C-1] DEBUG c.k.consumer.service.GeminiService - Generating answer for question: Did dinosaurs exist?
+
+2025-06-28 14:42:06.716 [qna-listener-0-C-1] DEBUG c.k.consumer.service.GeminiService - Generated answer for question: Did dinosaurs exist?
+, Answer: Yes, dinosaurs existed.
+
+2025-06-28 14:42:07.097 [qna-listener-0-C-1] INFO  c.k.c.service.ProcessingService - Successfully processed and saved Q&A. Question: Did dinosaurs exist?
+
+2025-06-28 14:42:07.097 [qna-listener-0-C-1] INFO  c.k.c.service.KafkaMessageListener - QnA processed and saved successfully.
+2025-06-28 14:42:07.141 [qna-listener-0-C-1] INFO  c.k.c.service.KafkaMessageListener - Received Message: "Did the dinosaurs die out?
+"
+2025-06-28 14:42:07.143 [qna-listener-0-C-1] DEBUG c.k.c.service.ProcessingService - Processing question: Did the dinosaurs die out?
+
+2025-06-28 14:42:07.145 [qna-listener-0-C-1] DEBUG c.k.consumer.service.GeminiService - Generating answer for question: Did the dinosaurs die out?
+
+2025-06-28 14:42:07.977 [qna-listener-0-C-1] DEBUG c.k.consumer.service.GeminiService - Generated answer for question: Did the dinosaurs die out?
+, Answer: Yes, most non-avian dinosaurs died out.
+
+2025-06-28 14:42:08.319 [qna-listener-0-C-1] INFO  c.k.c.service.ProcessingService - Successfully processed and saved Q&A. Question: Did the dinosaurs die out?
+
+2025-06-28 14:42:08.319 [qna-listener-0-C-1] INFO  c.k.c.service.KafkaMessageListener - QnA processed and saved successfully.
+2025-06-28 14:42:08.321 [qna-listener-0-C-1] INFO  c.k.c.service.KafkaMessageListener - Received Message: "Was Pluto ever a planet?
+"
+2025-06-28 14:42:08.321 [qna-listener-0-C-1] DEBUG c.k.c.service.ProcessingService - Processing question: Was Pluto ever a planet?
+
+2025-06-28 14:42:08.321 [qna-listener-0-C-1] DEBUG c.k.consumer.service.GeminiService - Generating answer for question: Was Pluto ever a planet?
+
+2025-06-28 14:42:09.192 [qna-listener-0-C-1] DEBUG c.k.consumer.service.GeminiService - Generated answer for question: Was Pluto ever a planet?
+, Answer: Yes, Pluto was considered a planet from 1930 to 2006.
+
+2025-06-28 14:42:09.562 [qna-listener-0-C-1] INFO  c.k.c.service.ProcessingService - Successfully processed and saved Q&A. Question: Was Pluto ever a planet?
+
+2025-06-28 14:42:09.565 [qna-listener-0-C-1] INFO  c.k.c.service.KafkaMessageListener - QnA processed and saved successfully.
+2025-06-28 14:42:09.604 [qna-listener-0-C-1] INFO  c.k.c.service.KafkaMessageListener - Received Message: "Did dinosaurs exist?
+"
+2025-06-28 14:42:09.604 [qna-listener-0-C-1] DEBUG c.k.c.service.ProcessingService - Processing question: Did dinosaurs exist?
+
+2025-06-28 14:42:09.604 [qna-listener-0-C-1] DEBUG c.k.consumer.service.GeminiService - Generating answer for question: Did dinosaurs exist?
+
+2025-06-28 14:42:10.356 [qna-listener-0-C-1] DEBUG c.k.consumer.service.GeminiService - Generated answer for question: Did dinosaurs exist?
+, Answer: Yes, dinosaurs existed.
+
+2025-06-28 14:42:10.726 [qna-listener-0-C-1] INFO  c.k.c.service.ProcessingService - Successfully processed and saved Q&A. Question: Did dinosaurs exist?
+
+2025-06-28 14:42:10.726 [qna-listener-0-C-1] INFO  c.k.c.service.KafkaMessageListener - QnA processed and saved successfully.
+2025-06-28 14:42:10.738 [qna-listener-0-C-1] INFO  c.k.c.service.KafkaMessageListener - Received Message: "Did dinosaurs exist?
+"
+2025-06-28 14:42:10.740 [qna-listener-0-C-1] DEBUG c.k.c.service.ProcessingService - Processing question: Did dinosaurs exist?
+
+2025-06-28 14:42:10.740 [qna-listener-0-C-1] DEBUG c.k.consumer.service.GeminiService - Generating answer for question: Did dinosaurs exist?
+
+2025-06-28 14:42:11.553 [qna-listener-0-C-1] DEBUG c.k.consumer.service.GeminiService - Generated answer for question: Did dinosaurs exist?
+, Answer: Yes, dinosaurs existed.
+
+2025-06-28 14:42:11.866 [qna-listener-0-C-1] INFO  c.k.c.service.ProcessingService - Successfully processed and saved Q&A. Question: Did dinosaurs exist?
+
+2025-06-28 14:42:11.869 [qna-listener-0-C-1] INFO  c.k.c.service.KafkaMessageListener - QnA processed and saved successfully.
+2025-06-28 14:42:11.883 [qna-listener-0-C-1] INFO  c.k.c.service.KafkaMessageListener - Received Message: "What element is represented by Au?
+"
+2025-06-28 14:42:11.883 [qna-listener-0-C-1] DEBUG c.k.c.service.ProcessingService - Processing question: What element is represented by Au?
+
+2025-06-28 14:42:11.883 [qna-listener-0-C-1] DEBUG c.k.consumer.service.GeminiService - Generating answer for question: What element is represented by Au?
+
+2025-06-28 14:42:12.721 [qna-listener-0-C-1] DEBUG c.k.consumer.service.GeminiService - Generated answer for question: What element is represented by Au?
+, Answer: Gold.
+
+2025-06-28 14:42:13.146 [qna-listener-0-C-1] INFO  c.k.c.service.ProcessingService - Successfully processed and saved Q&A. Question: What element is represented by Au?
+
+2025-06-28 14:42:13.146 [qna-listener-0-C-1] INFO  c.k.c.service.KafkaMessageListener - QnA processed and saved successfully.
+2025-06-28 14:42:13.146 [qna-listener-0-C-1] INFO  c.k.c.service.KafkaMessageListener - Received Message: "What killed the dinosaurs?
+"
+2025-06-28 14:42:13.146 [qna-listener-0-C-1] DEBUG c.k.c.service.ProcessingService - Processing question: What killed the dinosaurs?
+
+2025-06-28 14:42:13.146 [qna-listener-0-C-1] DEBUG c.k.consumer.service.GeminiService - Generating answer for question: What killed the dinosaurs?
+
+2025-06-28 14:42:13.998 [qna-listener-0-C-1] DEBUG c.k.consumer.service.GeminiService - Generated answer for question: What killed the dinosaurs?
+, Answer: Asteroid impact.
+
+2025-06-28 14:42:14.384 [qna-listener-0-C-1] INFO  c.k.c.service.ProcessingService - Successfully processed and saved Q&A. Question: What killed the dinosaurs?
+
+2025-06-28 14:42:14.384 [qna-listener-0-C-1] INFO  c.k.c.service.KafkaMessageListener - QnA processed and saved successfully.
+2025-06-28 14:42:14.397 [qna-listener-0-C-1] INFO  c.k.c.service.KafkaMessageListener - Received Message: "Did the asteroid kill the dinosaurs?
+"
+2025-06-28 14:42:14.397 [qna-listener-0-C-1] DEBUG c.k.c.service.ProcessingService - Processing question: Did the asteroid kill the dinosaurs?
+
+2025-06-28 14:42:14.397 [qna-listener-0-C-1] DEBUG c.k.consumer.service.GeminiService - Generating answer for question: Did the asteroid kill the dinosaurs?
+
+2025-06-28 14:42:15.174 [qna-listener-0-C-1] DEBUG c.k.consumer.service.GeminiService - Generated answer for question: Did the asteroid kill the dinosaurs?
+, Answer: Most evidence indicates a large asteroid impact significantly contributed to the extinction of non-avian dinosaurs.
+
+2025-06-28 14:42:15.526 [qna-listener-0-C-1] INFO  c.k.c.service.ProcessingService - Successfully processed and saved Q&A. Question: Did the asteroid kill the dinosaurs?
+
+2025-06-28 14:42:15.526 [qna-listener-0-C-1] INFO  c.k.c.service.KafkaMessageListener - QnA processed and saved successfully.
+2025-06-28 14:42:15.538 [qna-listener-0-C-1] INFO  c.k.c.service.KafkaMessageListener - Received Message: "Did dinosaurs exist?
+"
+2025-06-28 14:42:15.538 [qna-listener-0-C-1] DEBUG c.k.c.service.ProcessingService - Processing question: Did dinosaurs exist?
+
+2025-06-28 14:42:15.538 [qna-listener-0-C-1] DEBUG c.k.consumer.service.GeminiService - Generating answer for question: Did dinosaurs exist?
+
+2025-06-28 14:42:16.261 [qna-listener-0-C-1] DEBUG c.k.consumer.service.GeminiService - Generated answer for question: Did dinosaurs exist?
+, Answer: Yes, dinosaurs existed.
+
+2025-06-28 14:42:16.585 [qna-listener-0-C-1] INFO  c.k.c.service.ProcessingService - Successfully processed and saved Q&A. Question: Did dinosaurs exist?
+
+2025-06-28 14:42:16.585 [qna-listener-0-C-1] INFO  c.k.c.service.KafkaMessageListener - QnA processed and saved successfully.
+2025-06-28 14:42:16.603 [qna-listener-0-C-1] INFO  c.k.c.service.KafkaMessageListener - Received Message: "Did the dinosaurs die out?
+"
+2025-06-28 14:42:16.603 [qna-listener-0-C-1] DEBUG c.k.c.service.ProcessingService - Processing question: Did the dinosaurs die out?
+
+2025-06-28 14:42:16.603 [qna-listener-0-C-1] DEBUG c.k.consumer.service.GeminiService - Generating answer for question: Did the dinosaurs die out?
+
+2025-06-28 14:42:17.576 [qna-listener-0-C-1] DEBUG c.k.consumer.service.GeminiService - Generated answer for question: Did the dinosaurs die out?
+, Answer: Yes, most dinosaurs died out.
+
+2025-06-28 14:42:17.949 [qna-listener-0-C-1] INFO  c.k.c.service.ProcessingService - Successfully processed and saved Q&A. Question: Did the dinosaurs die out?
+
+2025-06-28 14:42:17.965 [qna-listener-0-C-1] INFO  c.k.c.service.KafkaMessageListener - QnA processed and saved successfully.
+2025-06-28 14:42:17.977 [qna-listener-0-C-1] INFO  c.k.c.service.KafkaMessageListener - Received Message: "Did dinosaurs exist?
+"
+2025-06-28 14:42:17.978 [qna-listener-0-C-1] DEBUG c.k.c.service.ProcessingService - Processing question: Did dinosaurs exist?
+
+2025-06-28 14:42:17.978 [qna-listener-0-C-1] DEBUG c.k.consumer.service.GeminiService - Generating answer for question: Did dinosaurs exist?
+
+2025-06-28 14:42:18.680 [qna-listener-0-C-1] DEBUG c.k.consumer.service.GeminiService - Generated answer for question: Did dinosaurs exist?
+, Answer: Yes, dinosaurs existed.
+
+2025-06-28 14:42:19.040 [qna-listener-0-C-1] INFO  c.k.c.service.ProcessingService - Successfully processed and saved Q&A. Question: Did dinosaurs exist?
+
+2025-06-28 14:42:19.041 [qna-listener-0-C-1] INFO  c.k.c.service.KafkaMessageListener - QnA processed and saved successfully.
+2025-06-28 14:42:19.053 [qna-listener-0-C-1] INFO  c.k.c.service.KafkaMessageListener - Received Message: "What year was penicillin discovered?
+"
+2025-06-28 14:42:19.053 [qna-listener-0-C-1] DEBUG c.k.c.service.ProcessingService - Processing question: What year was penicillin discovered?
+
+2025-06-28 14:42:19.053 [qna-listener-0-C-1] DEBUG c.k.consumer.service.GeminiService - Generating answer for question: What year was penicillin discovered?
+
+2025-06-28 14:42:19.846 [qna-listener-0-C-1] DEBUG c.k.consumer.service.GeminiService - Generated answer for question: What year was penicillin discovered?
+, Answer: 1928
+
+2025-06-28 14:42:20.241 [qna-listener-0-C-1] INFO  c.k.c.service.ProcessingService - Successfully processed and saved Q&A. Question: What year was penicillin discovered?
+
+2025-06-28 14:42:20.241 [qna-listener-0-C-1] INFO  c.k.c.service.KafkaMessageListener - QnA processed and saved successfully.
+2025-06-28 14:42:20.309 [qna-listener-0-C-1] INFO  c.k.c.service.KafkaMessageListener - Received Message: "What year did World War II end?
+"
+2025-06-28 14:42:20.309 [qna-listener-0-C-1] DEBUG c.k.c.service.ProcessingService - Processing question: What year did World War II end?
+
+2025-06-28 14:42:20.309 [qna-listener-0-C-1] DEBUG c.k.consumer.service.GeminiService - Generating answer for question: What year did World War II end?
+
+2025-06-28 14:42:21.010 [qna-listener-0-C-1] DEBUG c.k.consumer.service.GeminiService - Generated answer for question: What year did World War II end?
+, Answer: 1945
+
+2025-06-28 14:42:21.421 [qna-listener-0-C-1] INFO  c.k.c.service.ProcessingService - Successfully processed and saved Q&A. Question: What year did World War II end?
+
+2025-06-28 14:42:21.421 [qna-listener-0-C-1] INFO  c.k.c.service.KafkaMessageListener - QnA processed and saved successfully.
+2025-06-28 14:43:04.211 [qna-listener-0-C-1] INFO  c.k.c.service.KafkaMessageListener - Received Message: "Was Pluto a planet?
+"
+2025-06-28 14:43:04.211 [qna-listener-0-C-1] DEBUG c.k.c.service.ProcessingService - Processing question: Was Pluto a planet?
+
+2025-06-28 14:43:04.211 [qna-listener-0-C-1] DEBUG c.k.consumer.service.GeminiService - Generating answer for question: Was Pluto a planet?
+
+2025-06-28 14:43:04.984 [qna-listener-0-C-1] DEBUG c.k.consumer.service.GeminiService - Generated answer for question: Was Pluto a planet?
+, Answer: Pluto was considered a planet but is now classified as a dwarf planet.
+
+2025-06-28 14:43:05.371 [qna-listener-0-C-1] INFO  c.k.c.service.ProcessingService - Successfully processed and saved Q&A. Question: Was Pluto a planet?
+
+2025-06-28 14:43:05.371 [qna-listener-0-C-1] INFO  c.k.c.service.KafkaMessageListener - QnA processed and saved successfully.
+2025-06-28 14:43:05.585 [qna-listener-0-C-1] INFO  c.k.c.service.KafkaMessageListener - Received Message: "Who painted the Mona Lisa?
+"
+2025-06-28 14:43:05.586 [qna-listener-0-C-1] DEBUG c.k.c.service.ProcessingService - Processing question: Who painted the Mona Lisa?
+
+2025-06-28 14:43:05.586 [qna-listener-0-C-1] DEBUG c.k.consumer.service.GeminiService - Generating answer for question: Who painted the Mona Lisa?
+
+2025-06-28 14:43:06.278 [qna-listener-0-C-1] DEBUG c.k.consumer.service.GeminiService - Generated answer for question: Who painted the Mona Lisa?
+, Answer: Leonardo da Vinci.
+
+2025-06-28 14:43:06.694 [qna-listener-0-C-1] INFO  c.k.c.service.ProcessingService - Successfully processed and saved Q&A. Question: Who painted the Mona Lisa?
+
+2025-06-28 14:43:06.694 [qna-listener-0-C-1] INFO  c.k.c.service.KafkaMessageListener - QnA processed and saved successfully.
+2025-06-28 14:43:07.916 [qna-listener-0-C-1] INFO  c.k.c.service.KafkaMessageListener - Received Message: "Did dinosaurs exist?
+"
+2025-06-28 14:43:07.916 [qna-listener-0-C-1] DEBUG c.k.c.service.ProcessingService - Processing question: Did dinosaurs exist?
+
+2025-06-28 14:43:07.916 [qna-listener-0-C-1] DEBUG c.k.consumer.service.GeminiService - Generating answer for question: Did dinosaurs exist?
+
+2025-06-28 14:43:08.531 [qna-listener-0-C-1] DEBUG c.k.consumer.service.GeminiService - Generated answer for question: Did dinosaurs exist?
+, Answer: Yes, dinosaurs existed.
+
+2025-06-28 14:43:08.943 [qna-listener-0-C-1] INFO  c.k.c.service.ProcessingService - Successfully processed and saved Q&A. Question: Did dinosaurs exist?
+
+2025-06-28 14:43:08.943 [qna-listener-0-C-1] INFO  c.k.c.service.KafkaMessageListener - QnA processed and saved successfully.
+2025-06-28 14:43:08.970 [qna-listener-0-C-1] INFO  c.k.c.service.KafkaMessageListener - Received Message: "Did humans evolve?
+"
+2025-06-28 14:43:08.970 [qna-listener-0-C-1] DEBUG c.k.c.service.ProcessingService - Processing question: Did humans evolve?
+
+2025-06-28 14:43:08.970 [qna-listener-0-C-1] DEBUG c.k.consumer.service.GeminiService - Generating answer for question: Did humans evolve?
+
+2025-06-28 14:43:09.896 [qna-listener-0-C-1] DEBUG c.k.consumer.service.GeminiService - Generated answer for question: Did humans evolve?
+, Answer: Yes, humans evolved.
+
+2025-06-28 14:43:10.300 [qna-listener-0-C-1] INFO  c.k.c.service.ProcessingService - Successfully processed and saved Q&A. Question: Did humans evolve?
+
+2025-06-28 14:43:10.300 [qna-listener-0-C-1] INFO  c.k.c.service.KafkaMessageListener - QnA processed and saved successfully.
+2025-06-28 14:43:10.317 [qna-listener-0-C-1] INFO  c.k.c.service.KafkaMessageListener - Received Message: "Did the Berlin Wall fall?
+"
+2025-06-28 14:43:10.318 [qna-listener-0-C-1] DEBUG c.k.c.service.ProcessingService - Processing question: Did the Berlin Wall fall?
+
+2025-06-28 14:43:10.318 [qna-listener-0-C-1] DEBUG c.k.consumer.service.GeminiService - Generating answer for question: Did the Berlin Wall fall?
+
+2025-06-28 14:43:10.973 [qna-listener-0-C-1] DEBUG c.k.consumer.service.GeminiService - Generated answer for question: Did the Berlin Wall fall?
+, Answer: Yes.
+
+2025-06-28 14:43:11.346 [qna-listener-0-C-1] INFO  c.k.c.service.ProcessingService - Successfully processed and saved Q&A. Question: Did the Berlin Wall fall?
+
+2025-06-28 14:43:11.346 [qna-listener-0-C-1] INFO  c.k.c.service.KafkaMessageListener - QnA processed and saved successfully.
+2025-06-28 14:43:11.576 [qna-listener-0-C-1] INFO  c.k.c.service.KafkaMessageListener - Received Message: "Who won?
+"
+2025-06-28 14:43:11.576 [qna-listener-0-C-1] DEBUG c.k.c.service.ProcessingService - Processing question: Who won?
+
+2025-06-28 14:43:11.576 [qna-listener-0-C-1] DEBUG c.k.consumer.service.GeminiService - Generating answer for question: Who won?
+
+2025-06-28 14:43:12.291 [qna-listener-0-C-1] DEBUG c.k.consumer.service.GeminiService - Generated answer for question: Who won?
+, Answer: The victor depends on the specific historical event in question.
+
+2025-06-28 14:43:12.650 [qna-listener-0-C-1] INFO  c.k.c.service.ProcessingService - Successfully processed and saved Q&A. Question: Who won?
+
+2025-06-28 14:43:12.650 [qna-listener-0-C-1] INFO  c.k.c.service.KafkaMessageListener - QnA processed and saved successfully.
+2025-06-28 14:43:13.051 [qna-listener-0-C-1] INFO  c.k.c.service.KafkaMessageListener - Received Message: "Did dinosaurs exist?
+"
+2025-06-28 14:43:13.051 [qna-listener-0-C-1] DEBUG c.k.c.service.ProcessingService - Processing question: Did dinosaurs exist?
+
+2025-06-28 14:43:13.051 [qna-listener-0-C-1] DEBUG c.k.consumer.service.GeminiService - Generating answer for question: Did dinosaurs exist?
+
+2025-06-28 14:43:13.646 [qna-listener-0-C-1] DEBUG c.k.consumer.service.GeminiService - Generated answer for question: Did dinosaurs exist?
+, Answer: Yes, dinosaurs existed.
+
+2025-06-28 14:43:14.185 [qna-listener-0-C-1] INFO  c.k.c.service.ProcessingService - Successfully processed and saved Q&A. Question: Did dinosaurs exist?
+
+2025-06-28 14:43:14.185 [qna-listener-0-C-1] INFO  c.k.c.service.KafkaMessageListener - QnA processed and saved successfully.
+2025-06-28 14:43:14.509 [qna-listener-0-C-1] INFO  c.k.c.service.KafkaMessageListener - Received Message: "Did mammals evolve from reptiles?
+"
+2025-06-28 14:43:14.509 [qna-listener-0-C-1] DEBUG c.k.c.service.ProcessingService - Processing question: Did mammals evolve from reptiles?
+
+2025-06-28 14:43:14.511 [qna-listener-0-C-1] DEBUG c.k.consumer.service.GeminiService - Generating answer for question: Did mammals evolve from reptiles?
+
+2025-06-28 14:43:15.246 [qna-listener-0-C-1] DEBUG c.k.consumer.service.GeminiService - Generated answer for question: Did mammals evolve from reptiles?
+, Answer: No, mammals and reptiles share a common ancestor.
+
+2025-06-28 14:43:15.646 [qna-listener-0-C-1] INFO  c.k.c.service.ProcessingService - Successfully processed and saved Q&A. Question: Did mammals evolve from reptiles?
+
+2025-06-28 14:43:15.655 [qna-listener-0-C-1] INFO  c.k.c.service.KafkaMessageListener - QnA processed and saved successfully.
+2025-06-28 14:43:16.029 [qna-listener-0-C-1] INFO  c.k.c.service.KafkaMessageListener - Received Message: "What year did World War II end?
+"
+2025-06-28 14:43:16.029 [qna-listener-0-C-1] DEBUG c.k.c.service.ProcessingService - Processing question: What year did World War II end?
+
+2025-06-28 14:43:16.029 [qna-listener-0-C-1] DEBUG c.k.consumer.service.GeminiService - Generating answer for question: What year did World War II end?
+
+2025-06-28 14:43:16.736 [qna-listener-0-C-1] DEBUG c.k.consumer.service.GeminiService - Generated answer for question: What year did World War II end?
+, Answer: 1945
+
+2025-06-28 14:43:17.084 [qna-listener-0-C-1] INFO  c.k.c.service.ProcessingService - Successfully processed and saved Q&A. Question: What year did World War II end?
+
+2025-06-28 14:43:17.085 [qna-listener-0-C-1] INFO  c.k.c.service.KafkaMessageListener - QnA processed and saved successfully.
+2025-06-28 14:43:17.509 [qna-listener-0-C-1] INFO  c.k.c.service.KafkaMessageListener - Received Message: "What year did World War II end?
+"
+2025-06-28 14:43:17.509 [qna-listener-0-C-1] DEBUG c.k.c.service.ProcessingService - Processing question: What year did World War II end?
+
+2025-06-28 14:43:17.509 [qna-listener-0-C-1] DEBUG c.k.consumer.service.GeminiService - Generating answer for question: What year did World War II end?
+
+2025-06-28 14:43:18.255 [qna-listener-0-C-1] DEBUG c.k.consumer.service.GeminiService - Generated answer for question: What year did World War II end?
+, Answer: 1945
+
+2025-06-28 14:43:18.647 [qna-listener-0-C-1] INFO  c.k.c.service.ProcessingService - Successfully processed and saved Q&A. Question: What year did World War II end?
+
+2025-06-28 14:43:18.647 [qna-listener-0-C-1] INFO  c.k.c.service.KafkaMessageListener - QnA processed and saved successfully.
+2025-06-28 14:43:19.084 [qna-listener-0-C-1] INFO  c.k.c.service.KafkaMessageListener - Received Message: "Was Pluto reclassified?
+"
+2025-06-28 14:43:19.084 [qna-listener-0-C-1] DEBUG c.k.c.service.ProcessingService - Processing question: Was Pluto reclassified?
+
+2025-06-28 14:43:19.084 [qna-listener-0-C-1] DEBUG c.k.consumer.service.GeminiService - Generating answer for question: Was Pluto reclassified?
+
+2025-06-28 14:43:19.852 [qna-listener-0-C-1] DEBUG c.k.consumer.service.GeminiService - Generated answer for question: Was Pluto reclassified?
+, Answer: Yes, to a dwarf planet.
+
+2025-06-28 14:43:20.247 [qna-listener-0-C-1] INFO  c.k.c.service.ProcessingService - Successfully processed and saved Q&A. Question: Was Pluto reclassified?
+
+2025-06-28 14:43:20.247 [qna-listener-0-C-1] INFO  c.k.c.service.KafkaMessageListener - QnA processed and saved successfully.
+2025-06-28 14:43:20.588 [qna-listener-0-C-1] INFO  c.k.c.service.KafkaMessageListener - Received Message: "Did life evolve?
+"
+2025-06-28 14:43:20.588 [qna-listener-0-C-1] DEBUG c.k.c.service.ProcessingService - Processing question: Did life evolve?
+
+2025-06-28 14:43:20.589 [qna-listener-0-C-1] DEBUG c.k.consumer.service.GeminiService - Generating answer for question: Did life evolve?
+
+2025-06-28 14:43:21.237 [qna-listener-0-C-1] DEBUG c.k.consumer.service.GeminiService - Generated answer for question: Did life evolve?
+, Answer: Yes, life evolved.
+
+2025-06-28 14:43:21.598 [qna-listener-0-C-1] INFO  c.k.c.service.ProcessingService - Successfully processed and saved Q&A. Question: Did life evolve?
+
+2025-06-28 14:43:21.599 [qna-listener-0-C-1] INFO  c.k.c.service.KafkaMessageListener - QnA processed and saved successfully.
+2025-06-28 14:43:22.171 [qna-listener-0-C-1] INFO  c.k.c.service.KafkaMessageListener - Received Message: "Did the dinosaurs die out?
+"
+2025-06-28 14:43:22.174 [qna-listener-0-C-1] DEBUG c.k.c.service.ProcessingService - Processing question: Did the dinosaurs die out?
+
+2025-06-28 14:43:22.174 [qna-listener-0-C-1] DEBUG c.k.consumer.service.GeminiService - Generating answer for question: Did the dinosaurs die out?
+
+2025-06-28 14:43:22.848 [qna-listener-0-C-1] DEBUG c.k.consumer.service.GeminiService - Generated answer for question: Did the dinosaurs die out?
+, Answer: Yes, most non-avian dinosaurs died out.
+
+2025-06-28 14:43:23.300 [qna-listener-0-C-1] INFO  c.k.c.service.ProcessingService - Successfully processed and saved Q&A. Question: Did the dinosaurs die out?
+
+2025-06-28 14:43:23.300 [qna-listener-0-C-1] INFO  c.k.c.service.KafkaMessageListener - QnA processed and saved successfully.
+2025-06-28 14:43:23.754 [qna-listener-0-C-1] INFO  c.k.c.service.KafkaMessageListener - Received Message: "Did Rome fall?
+"
+2025-06-28 14:43:23.755 [qna-listener-0-C-1] DEBUG c.k.c.service.ProcessingService - Processing question: Did Rome fall?
+
+2025-06-28 14:43:23.755 [qna-listener-0-C-1] DEBUG c.k.consumer.service.GeminiService - Generating answer for question: Did Rome fall?
+
+2025-06-28 14:43:24.824 [qna-listener-0-C-1] DEBUG c.k.consumer.service.GeminiService - Generated answer for question: Did Rome fall?
+, Answer: The Western Roman Empire fell; the Eastern Roman Empire (Byzantine Empire) continued.
+
+2025-06-28 14:43:25.250 [qna-listener-0-C-1] INFO  c.k.c.service.ProcessingService - Successfully processed and saved Q&A. Question: Did Rome fall?
+
+2025-06-28 14:43:25.250 [qna-listener-0-C-1] INFO  c.k.c.service.KafkaMessageListener - QnA processed and saved successfully.
+2025-06-28 14:43:25.269 [qna-listener-0-C-1] INFO  c.k.c.service.KafkaMessageListener - Received Message: "Was Lincoln assassinated?
+"
+2025-06-28 14:43:25.269 [qna-listener-0-C-1] DEBUG c.k.c.service.ProcessingService - Processing question: Was Lincoln assassinated?
+
+2025-06-28 14:43:25.269 [qna-listener-0-C-1] DEBUG c.k.consumer.service.GeminiService - Generating answer for question: Was Lincoln assassinated?
+
+2025-06-28 14:43:25.950 [qna-listener-0-C-1] DEBUG c.k.consumer.service.GeminiService - Generated answer for question: Was Lincoln assassinated?
+, Answer: Yes.
+
+2025-06-28 14:43:26.378 [qna-listener-0-C-1] INFO  c.k.c.service.ProcessingService - Successfully processed and saved Q&A. Question: Was Lincoln assassinated?
+
+2025-06-28 14:43:26.378 [qna-listener-0-C-1] INFO  c.k.c.service.KafkaMessageListener - QnA processed and saved successfully.
+2025-06-28 14:43:26.506 [qna-listener-0-C-1] INFO  c.k.c.service.KafkaMessageListener - Received Message: "Did the Berlin Wall fall in 1990?"
+2025-06-28 14:43:26.507 [qna-listener-0-C-1] DEBUG c.k.c.service.ProcessingService - Processing question: Did the Berlin Wall fall in 1990?
+
+2025-06-28 14:43:26.507 [qna-listener-0-C-1] DEBUG c.k.consumer.service.GeminiService - Generating answer for question: Did the Berlin Wall fall in 1990?
+
+2025-06-28 14:43:26.821 [reactor-http-nio-2] WARN  c.k.consumer.service.GeminiService - Rate limit response received. Retry after: 36 seconds
+2025-06-28 14:43:26.838 [qna-listener-0-C-1] ERROR c.k.consumer.service.GeminiService - Gemini rate-limited request for question: Did the Berlin Wall fall in 1990?
+
+2025-06-28 14:43:26.838 [qna-listener-0-C-1] WARN  c.k.c.service.KafkaMessageListener - Rate limit hit: Rate limit exceeded
+2025-06-28 14:43:26.838 [qna-listener-0-C-1] INFO  c.k.c.service.KafkaMessageListener - Pausing consumer for 36 seconds...
+2025-06-28 14:43:26.838 [qna-listener-0-C-1] INFO  c.k.c.service.KafkaMessageListener - Kafka consumer paused.
+2025-06-28 14:43:33.304 [Thread-5] INFO  c.k.c.service.KafkaMessageListener - Consumer will resume in 30 seconds
+2025-06-28 14:43:43.541 [Thread-5] INFO  c.k.c.service.KafkaMessageListener - Consumer will resume in 20 seconds
+2025-06-28 14:43:53.634 [Thread-5] INFO  c.k.c.service.KafkaMessageListener - Consumer will resume in 10 seconds
+2025-06-28 14:44:03.717 [Thread-5] INFO  c.k.c.service.KafkaMessageListener - Resuming Kafka consumer now.
+2025-06-28 14:44:03.719 [Thread-5] INFO  c.k.c.service.KafkaMessageListener - Kafka consumer resumed.
+2025-06-28 14:44:05.526 [qna-listener-0-C-1] INFO  c.k.c.service.KafkaMessageListener - Received Message: "What is water's chemical formula?
+"
+2025-06-28 14:44:05.526 [qna-listener-0-C-1] DEBUG c.k.c.service.ProcessingService - Processing question: What is water's chemical formula?
+
+2025-06-28 14:44:05.526 [qna-listener-0-C-1] DEBUG c.k.consumer.service.GeminiService - Generating answer for question: What is water's chemical formula?
+
+2025-06-28 14:44:06.098 [qna-listener-0-C-1] DEBUG c.k.consumer.service.GeminiService - Generated answer for question: What is water's chemical formula?
+, Answer: H₂O
+
+2025-06-28 14:44:06.481 [qna-listener-0-C-1] INFO  c.k.c.service.ProcessingService - Successfully processed and saved Q&A. Question: What is water's chemical formula?
+
+2025-06-28 14:44:06.481 [qna-listener-0-C-1] INFO  c.k.c.service.KafkaMessageListener - QnA processed and saved successfully.
+2025-06-28 14:44:07.057 [qna-listener-0-C-1] INFO  c.k.c.service.KafkaMessageListener - Received Message: "Did Lincoln free slaves?
+"
+2025-06-28 14:44:07.057 [qna-listener-0-C-1] DEBUG c.k.c.service.ProcessingService - Processing question: Did Lincoln free slaves?
+
+2025-06-28 14:44:07.057 [qna-listener-0-C-1] DEBUG c.k.consumer.service.GeminiService - Generating answer for question: Did Lincoln free slaves?
+
+2025-06-28 14:44:07.750 [qna-listener-0-C-1] DEBUG c.k.consumer.service.GeminiService - Generated answer for question: Did Lincoln free slaves?
+, Answer: Lincoln's Emancipation Proclamation freed slaves in Confederate-held territory.
+
+2025-06-28 14:44:08.074 [qna-listener-0-C-1] INFO  c.k.c.service.ProcessingService - Successfully processed and saved Q&A. Question: Did Lincoln free slaves?
+
+2025-06-28 14:44:08.074 [qna-listener-0-C-1] INFO  c.k.c.service.KafkaMessageListener - QnA processed and saved successfully.
+2025-06-28 14:44:08.492 [qna-listener-0-C-1] INFO  c.k.c.service.KafkaMessageListener - Received Message: "Who won?
+"
+2025-06-28 14:44:08.492 [qna-listener-0-C-1] DEBUG c.k.c.service.ProcessingService - Processing question: Who won?
+
+2025-06-28 14:44:08.493 [qna-listener-0-C-1] DEBUG c.k.consumer.service.GeminiService - Generating answer for question: Who won?
+
+2025-06-28 14:44:09.110 [qna-listener-0-C-1] DEBUG c.k.consumer.service.GeminiService - Generated answer for question: Who won?
+, Answer: Depends on the conflict.
+
+2025-06-28 14:44:09.401 [qna-listener-0-C-1] INFO  c.k.c.service.ProcessingService - Successfully processed and saved Q&A. Question: Who won?
+
+2025-06-28 14:44:09.401 [qna-listener-0-C-1] INFO  c.k.c.service.KafkaMessageListener - QnA processed and saved successfully.
+2025-06-28 14:44:10.055 [qna-listener-0-C-1] INFO  c.k.c.service.KafkaMessageListener - Received Message: "Did the dinosaurs go extinct?
+"
+2025-06-28 14:44:10.055 [qna-listener-0-C-1] DEBUG c.k.c.service.ProcessingService - Processing question: Did the dinosaurs go extinct?
+
+2025-06-28 14:44:10.055 [qna-listener-0-C-1] DEBUG c.k.consumer.service.GeminiService - Generating answer for question: Did the dinosaurs go extinct?
+
+2025-06-28 14:44:10.653 [qna-listener-0-C-1] DEBUG c.k.consumer.service.GeminiService - Generated answer for question: Did the dinosaurs go extinct?
+, Answer: Yes, most non-avian dinosaurs went extinct.
+
+2025-06-28 14:44:10.974 [qna-listener-0-C-1] INFO  c.k.c.service.ProcessingService - Successfully processed and saved Q&A. Question: Did the dinosaurs go extinct?
+
+2025-06-28 14:44:10.974 [qna-listener-0-C-1] INFO  c.k.c.service.KafkaMessageListener - QnA processed and saved successfully.
+2025-06-28 14:44:11.609 [qna-listener-0-C-1] INFO  c.k.c.service.KafkaMessageListener - Received Message: "Was Pluto reclassified?
+"
+2025-06-28 14:44:11.609 [qna-listener-0-C-1] DEBUG c.k.c.service.ProcessingService - Processing question: Was Pluto reclassified?
+
+2025-06-28 14:44:11.609 [qna-listener-0-C-1] DEBUG c.k.consumer.service.GeminiService - Generating answer for question: Was Pluto reclassified?
+
+2025-06-28 14:44:12.384 [qna-listener-0-C-1] DEBUG c.k.consumer.service.GeminiService - Generated answer for question: Was Pluto reclassified?
+, Answer: Yes, Pluto was reclassified as a dwarf planet in 2006.
+
+2025-06-28 14:44:12.742 [qna-listener-0-C-1] INFO  c.k.c.service.ProcessingService - Successfully processed and saved Q&A. Question: Was Pluto reclassified?
+
+2025-06-28 14:44:12.742 [qna-listener-0-C-1] INFO  c.k.c.service.KafkaMessageListener - QnA processed and saved successfully.
+2025-06-28 14:44:13.094 [qna-listener-0-C-1] INFO  c.k.c.service.KafkaMessageListener - Received Message: "Did the dinosaurs die out?
+"
+2025-06-28 14:44:13.095 [qna-listener-0-C-1] DEBUG c.k.c.service.ProcessingService - Processing question: Did the dinosaurs die out?
+
+2025-06-28 14:44:13.095 [qna-listener-0-C-1] DEBUG c.k.consumer.service.GeminiService - Generating answer for question: Did the dinosaurs die out?
+
+2025-06-28 14:44:14.090 [qna-listener-0-C-1] DEBUG c.k.consumer.service.GeminiService - Generated answer for question: Did the dinosaurs die out?
+, Answer: Yes, most non-avian dinosaurs died out.
+
+2025-06-28 14:44:14.409 [qna-listener-0-C-1] INFO  c.k.c.service.ProcessingService - Successfully processed and saved Q&A. Question: Did the dinosaurs die out?
+
+2025-06-28 14:44:14.409 [qna-listener-0-C-1] INFO  c.k.c.service.KafkaMessageListener - QnA processed and saved successfully.
+2025-06-28 14:44:14.534 [qna-listener-0-C-1] INFO  c.k.c.service.KafkaMessageListener - Received Message: "Who won WWII?
+"
+2025-06-28 14:44:14.534 [qna-listener-0-C-1] DEBUG c.k.c.service.ProcessingService - Processing question: Who won WWII?
+
+2025-06-28 14:44:14.534 [qna-listener-0-C-1] DEBUG c.k.consumer.service.GeminiService - Generating answer for question: Who won WWII?
+
+2025-06-28 14:44:15.147 [qna-listener-0-C-1] DEBUG c.k.consumer.service.GeminiService - Generated answer for question: Who won WWII?
+, Answer: The Allied Powers won WWII.
+
+2025-06-28 14:44:15.464 [qna-listener-0-C-1] INFO  c.k.c.service.ProcessingService - Successfully processed and saved Q&A. Question: Who won WWII?
+
+2025-06-28 14:44:15.464 [qna-listener-0-C-1] INFO  c.k.c.service.KafkaMessageListener - QnA processed and saved successfully.
+2025-06-28 14:44:16.040 [qna-listener-0-C-1] INFO  c.k.c.service.KafkaMessageListener - Received Message: "Did the dinosaurs survive?
+"
+2025-06-28 14:44:16.040 [qna-listener-0-C-1] DEBUG c.k.c.service.ProcessingService - Processing question: Did the dinosaurs survive?
+
+2025-06-28 14:44:16.040 [qna-listener-0-C-1] DEBUG c.k.consumer.service.GeminiService - Generating answer for question: Did the dinosaurs survive?
+
+2025-06-28 14:44:16.685 [qna-listener-0-C-1] DEBUG c.k.consumer.service.GeminiService - Generated answer for question: Did the dinosaurs survive?
+, Answer: Non-avian dinosaurs did not survive. Birds are avian dinosaurs.
+
+2025-06-28 14:44:17.066 [qna-listener-0-C-1] INFO  c.k.c.service.ProcessingService - Successfully processed and saved Q&A. Question: Did the dinosaurs survive?
+
+2025-06-28 14:44:17.068 [qna-listener-0-C-1] INFO  c.k.c.service.KafkaMessageListener - QnA processed and saved successfully.
+2025-06-28 14:44:17.519 [qna-listener-0-C-1] INFO  c.k.c.service.KafkaMessageListener - Received Message: "Did the dinosaurs survive?
+"
+2025-06-28 14:44:17.520 [qna-listener-0-C-1] DEBUG c.k.c.service.ProcessingService - Processing question: Did the dinosaurs survive?
+
+2025-06-28 14:44:17.520 [qna-listener-0-C-1] DEBUG c.k.consumer.service.GeminiService - Generating answer for question: Did the dinosaurs survive?
+
+2025-06-28 14:44:18.275 [qna-listener-0-C-1] DEBUG c.k.consumer.service.GeminiService - Generated answer for question: Did the dinosaurs survive?
+, Answer: Non-avian dinosaurs went extinct, but birds are their direct descendants.
+
+2025-06-28 14:44:18.633 [qna-listener-0-C-1] INFO  c.k.c.service.ProcessingService - Successfully processed and saved Q&A. Question: Did the dinosaurs survive?
+
+2025-06-28 14:44:18.633 [qna-listener-0-C-1] INFO  c.k.c.service.KafkaMessageListener - QnA processed and saved successfully.
+2025-06-28 14:44:19.177 [qna-listener-0-C-1] INFO  c.k.c.service.KafkaMessageListener - Received Message: "Did Lincoln free slaves?
+"
+2025-06-28 14:44:19.178 [qna-listener-0-C-1] DEBUG c.k.c.service.ProcessingService - Processing question: Did Lincoln free slaves?
+
+2025-06-28 14:44:19.178 [qna-listener-0-C-1] DEBUG c.k.consumer.service.GeminiService - Generating answer for question: Did Lincoln free slaves?
+
+2025-06-28 14:44:19.985 [qna-listener-0-C-1] DEBUG c.k.consumer.service.GeminiService - Generated answer for question: Did Lincoln free slaves?
+, Answer: Lincoln's Emancipation Proclamation freed slaves in Confederate-held territory.
+
+2025-06-28 14:44:20.317 [qna-listener-0-C-1] INFO  c.k.c.service.ProcessingService - Successfully processed and saved Q&A. Question: Did Lincoln free slaves?
+
+2025-06-28 14:44:20.317 [qna-listener-0-C-1] INFO  c.k.c.service.KafkaMessageListener - QnA processed and saved successfully.
+2025-06-28 14:44:20.585 [qna-listener-0-C-1] INFO  c.k.c.service.KafkaMessageListener - Received Message: "Did Rome fall?
+"
+2025-06-28 14:44:20.585 [qna-listener-0-C-1] DEBUG c.k.c.service.ProcessingService - Processing question: Did Rome fall?
+
+2025-06-28 14:44:20.586 [qna-listener-0-C-1] DEBUG c.k.consumer.service.GeminiService - Generating answer for question: Did Rome fall?
+
+2025-06-28 14:44:21.300 [qna-listener-0-C-1] DEBUG c.k.consumer.service.GeminiService - Generated answer for question: Did Rome fall?
+, Answer: The Western Roman Empire fell, the Eastern Roman Empire (Byzantine Empire) persisted.
+
+2025-06-28 14:44:21.687 [qna-listener-0-C-1] INFO  c.k.c.service.ProcessingService - Successfully processed and saved Q&A. Question: Did Rome fall?
+
+2025-06-28 14:44:21.688 [qna-listener-0-C-1] INFO  c.k.c.service.KafkaMessageListener - QnA processed and saved successfully.
+2025-06-28 14:44:22.086 [qna-listener-0-C-1] INFO  c.k.c.service.KafkaMessageListener - Received Message: "Did Lincoln free slaves?
+"
+2025-06-28 14:44:22.087 [qna-listener-0-C-1] DEBUG c.k.c.service.ProcessingService - Processing question: Did Lincoln free slaves?
+
+2025-06-28 14:44:22.087 [qna-listener-0-C-1] DEBUG c.k.consumer.service.GeminiService - Generating answer for question: Did Lincoln free slaves?
+
+2025-06-28 14:44:22.790 [qna-listener-0-C-1] DEBUG c.k.consumer.service.GeminiService - Generated answer for question: Did Lincoln free slaves?
+, Answer: Lincoln's Emancipation Proclamation freed slaves in Confederate-held territory.
+
+2025-06-28 14:44:23.167 [qna-listener-0-C-1] INFO  c.k.c.service.ProcessingService - Successfully processed and saved Q&A. Question: Did Lincoln free slaves?
+
+2025-06-28 14:44:23.168 [qna-listener-0-C-1] INFO  c.k.c.service.KafkaMessageListener - QnA processed and saved successfully.
+2025-06-28 14:44:23.565 [qna-listener-0-C-1] INFO  c.k.c.service.KafkaMessageListener - Received Message: "Did the Berlin Wall fall in 1988?
+"
+2025-06-28 14:44:23.565 [qna-listener-0-C-1] DEBUG c.k.c.service.ProcessingService - Processing question: Did the Berlin Wall fall in 1988?
+
+2025-06-28 14:44:23.565 [qna-listener-0-C-1] DEBUG c.k.consumer.service.GeminiService - Generating answer for question: Did the Berlin Wall fall in 1988?
+
+2025-06-28 14:44:24.182 [qna-listener-0-C-1] DEBUG c.k.consumer.service.GeminiService - Generated answer for question: Did the Berlin Wall fall in 1988?
+, Answer: No.
+
+2025-06-28 14:44:24.566 [qna-listener-0-C-1] INFO  c.k.c.service.ProcessingService - Successfully processed and saved Q&A. Question: Did the Berlin Wall fall in 1988?
+
+2025-06-28 14:44:24.567 [qna-listener-0-C-1] INFO  c.k.c.service.KafkaMessageListener - QnA processed and saved successfully.
+2025-06-28 14:44:24.992 [qna-listener-0-C-1] INFO  c.k.c.service.KafkaMessageListener - Received Message: "Did the Roman Empire fall?
+"
+2025-06-28 14:44:24.993 [qna-listener-0-C-1] DEBUG c.k.c.service.ProcessingService - Processing question: Did the Roman Empire fall?
+
+2025-06-28 14:44:24.993 [qna-listener-0-C-1] DEBUG c.k.consumer.service.GeminiService - Generating answer for question: Did the Roman Empire fall?
+
+2025-06-28 14:44:25.651 [qna-listener-0-C-1] DEBUG c.k.consumer.service.GeminiService - Generated answer for question: Did the Roman Empire fall?
+, Answer: The Western Roman Empire fell; the Eastern Roman Empire (Byzantine Empire) persisted.
+
+2025-06-28 14:44:26.025 [qna-listener-0-C-1] INFO  c.k.c.service.ProcessingService - Successfully processed and saved Q&A. Question: Did the Roman Empire fall?
+
+2025-06-28 14:44:26.025 [qna-listener-0-C-1] INFO  c.k.c.service.KafkaMessageListener - QnA processed and saved successfully.
+2025-06-28 14:44:26.514 [qna-listener-0-C-1] INFO  c.k.c.service.KafkaMessageListener - Received Message: "Did dinosaurs exist?
+"
+2025-06-28 14:44:26.515 [qna-listener-0-C-1] DEBUG c.k.c.service.ProcessingService - Processing question: Did dinosaurs exist?
+
+2025-06-28 14:44:26.515 [qna-listener-0-C-1] DEBUG c.k.consumer.service.GeminiService - Generating answer for question: Did dinosaurs exist?
+
+2025-06-28 14:44:27.114 [qna-listener-0-C-1] DEBUG c.k.consumer.service.GeminiService - Generated answer for question: Did dinosaurs exist?
+, Answer: Yes, dinosaurs existed.
+
+2025-06-28 14:44:27.514 [qna-listener-0-C-1] INFO  c.k.c.service.ProcessingService - Successfully processed and saved Q&A. Question: Did dinosaurs exist?
+
+2025-06-28 14:44:27.514 [qna-listener-0-C-1] INFO  c.k.c.service.KafkaMessageListener - QnA processed and saved successfully.
+2025-06-28 14:44:28.166 [qna-listener-0-C-1] INFO  c.k.c.service.KafkaMessageListener - Received Message: "Did the Berlin Wall fall in 1988?
+"
+2025-06-28 14:44:28.167 [qna-listener-0-C-1] DEBUG c.k.c.service.ProcessingService - Processing question: Did the Berlin Wall fall in 1988?
+
+2025-06-28 14:44:28.167 [qna-listener-0-C-1] DEBUG c.k.consumer.service.GeminiService - Generating answer for question: Did the Berlin Wall fall in 1988?
+
+2025-06-28 14:44:28.897 [qna-listener-0-C-1] DEBUG c.k.consumer.service.GeminiService - Generated answer for question: Did the Berlin Wall fall in 1988?
+, Answer: No.
+
+2025-06-28 14:44:29.283 [qna-listener-0-C-1] INFO  c.k.c.service.ProcessingService - Successfully processed and saved Q&A. Question: Did the Berlin Wall fall in 1988?
+
+2025-06-28 14:44:29.283 [qna-listener-0-C-1] INFO  c.k.c.service.KafkaMessageListener - QnA processed and saved successfully.
+2025-06-28 14:45:04.056 [qna-listener-0-C-1] INFO  c.k.c.service.KafkaMessageListener - Received Message: "What causes tides?
+"
+2025-06-28 14:45:04.057 [qna-listener-0-C-1] DEBUG c.k.c.service.ProcessingService - Processing question: What causes tides?
+
+2025-06-28 14:45:04.057 [qna-listener-0-C-1] DEBUG c.k.consumer.service.GeminiService - Generating answer for question: What causes tides?
+
+2025-06-28 14:45:04.824 [qna-listener-0-C-1] DEBUG c.k.consumer.service.GeminiService - Generated answer for question: What causes tides?
+, Answer: Gravitational pull of the moon and sun on Earth's oceans.
+
+2025-06-28 14:45:05.171 [qna-listener-0-C-1] INFO  c.k.c.service.ProcessingService - Successfully processed and saved Q&A. Question: What causes tides?
+
+2025-06-28 14:45:05.171 [qna-listener-0-C-1] INFO  c.k.c.service.KafkaMessageListener - QnA processed and saved successfully.
+2025-06-28 14:45:05.535 [qna-listener-0-C-1] INFO  c.k.c.service.KafkaMessageListener - Received Message: "Did life exist before Earth?
+"
+2025-06-28 14:45:05.535 [qna-listener-0-C-1] DEBUG c.k.c.service.ProcessingService - Processing question: Did life exist before Earth?
+
+2025-06-28 14:45:05.535 [qna-listener-0-C-1] DEBUG c.k.consumer.service.GeminiService - Generating answer for question: Did life exist before Earth?
+
+2025-06-28 14:45:06.271 [qna-listener-0-C-1] DEBUG c.k.consumer.service.GeminiService - Generated answer for question: Did life exist before Earth?
+, Answer: No definitive scientific evidence supports life before Earth.
+
+2025-06-28 14:45:06.622 [qna-listener-0-C-1] INFO  c.k.c.service.ProcessingService - Successfully processed and saved Q&A. Question: Did life exist before Earth?
+
+2025-06-28 14:45:06.622 [qna-listener-0-C-1] INFO  c.k.c.service.KafkaMessageListener - QnA processed and saved successfully.
+2025-06-28 14:45:07.084 [qna-listener-0-C-1] INFO  c.k.c.service.KafkaMessageListener - Received Message: "What's water's chemical formula?
+"
+2025-06-28 14:45:07.084 [qna-listener-0-C-1] DEBUG c.k.c.service.ProcessingService - Processing question: What's water's chemical formula?
+
+2025-06-28 14:45:07.084 [qna-listener-0-C-1] DEBUG c.k.consumer.service.GeminiService - Generating answer for question: What's water's chemical formula?
+
+2025-06-28 14:45:07.748 [qna-listener-0-C-1] DEBUG c.k.consumer.service.GeminiService - Generated answer for question: What's water's chemical formula?
+, Answer: H₂O
+
+2025-06-28 14:45:08.046 [qna-listener-0-C-1] INFO  c.k.c.service.ProcessingService - Successfully processed and saved Q&A. Question: What's water's chemical formula?
+
+2025-06-28 14:45:08.046 [qna-listener-0-C-1] INFO  c.k.c.service.KafkaMessageListener - QnA processed and saved successfully.
+2025-06-28 14:45:08.539 [qna-listener-0-C-1] INFO  c.k.c.service.KafkaMessageListener - Received Message: "Did Lincoln free slaves?
+"
+2025-06-28 14:45:08.539 [qna-listener-0-C-1] DEBUG c.k.c.service.ProcessingService - Processing question: Did Lincoln free slaves?
+
+2025-06-28 14:45:08.540 [qna-listener-0-C-1] DEBUG c.k.consumer.service.GeminiService - Generating answer for question: Did Lincoln free slaves?
+
+2025-06-28 14:45:09.282 [qna-listener-0-C-1] DEBUG c.k.consumer.service.GeminiService - Generated answer for question: Did Lincoln free slaves?
+, Answer: Lincoln's Emancipation Proclamation freed slaves only in Confederate-held territory.
+
+2025-06-28 14:45:09.635 [qna-listener-0-C-1] INFO  c.k.c.service.ProcessingService - Successfully processed and saved Q&A. Question: Did Lincoln free slaves?
+
+2025-06-28 14:45:09.635 [qna-listener-0-C-1] INFO  c.k.c.service.KafkaMessageListener - QnA processed and saved successfully.
+2025-06-28 14:45:10.041 [qna-listener-0-C-1] INFO  c.k.c.service.KafkaMessageListener - Received Message: "Did the dinosaurs survive?
+"
+2025-06-28 14:45:10.041 [qna-listener-0-C-1] DEBUG c.k.c.service.ProcessingService - Processing question: Did the dinosaurs survive?
+
+2025-06-28 14:45:10.041 [qna-listener-0-C-1] DEBUG c.k.consumer.service.GeminiService - Generating answer for question: Did the dinosaurs survive?
+
+2025-06-28 14:45:10.876 [qna-listener-0-C-1] DEBUG c.k.consumer.service.GeminiService - Generated answer for question: Did the dinosaurs survive?
+, Answer: Non-avian dinosaurs did not survive. Birds are avian dinosaurs.
+
+2025-06-28 14:45:11.215 [qna-listener-0-C-1] INFO  c.k.c.service.ProcessingService - Successfully processed and saved Q&A. Question: Did the dinosaurs survive?
+
+2025-06-28 14:45:11.215 [qna-listener-0-C-1] INFO  c.k.c.service.KafkaMessageListener - QnA processed and saved successfully.
+2025-06-28 14:45:11.556 [qna-listener-0-C-1] INFO  c.k.c.service.KafkaMessageListener - Received Message: "Did dinosaurs exist?
+"
+2025-06-28 14:45:11.557 [qna-listener-0-C-1] DEBUG c.k.c.service.ProcessingService - Processing question: Did dinosaurs exist?
+
+2025-06-28 14:45:11.557 [qna-listener-0-C-1] DEBUG c.k.consumer.service.GeminiService - Generating answer for question: Did dinosaurs exist?
+
+2025-06-28 14:45:12.144 [qna-listener-0-C-1] DEBUG c.k.consumer.service.GeminiService - Generated answer for question: Did dinosaurs exist?
+, Answer: Yes, dinosaurs existed.
+
+2025-06-28 14:45:12.443 [qna-listener-0-C-1] INFO  c.k.c.service.ProcessingService - Successfully processed and saved Q&A. Question: Did dinosaurs exist?
+
+2025-06-28 14:45:12.443 [qna-listener-0-C-1] INFO  c.k.c.service.KafkaMessageListener - QnA processed and saved successfully.
+2025-06-28 14:45:13.066 [qna-listener-0-C-1] INFO  c.k.c.service.KafkaMessageListener - Received Message: "Did the Berlin Wall fall in 1988?
+"
+2025-06-28 14:45:13.066 [qna-listener-0-C-1] DEBUG c.k.c.service.ProcessingService - Processing question: Did the Berlin Wall fall in 1988?
+
+2025-06-28 14:45:13.066 [qna-listener-0-C-1] DEBUG c.k.consumer.service.GeminiService - Generating answer for question: Did the Berlin Wall fall in 1988?
+
+2025-06-28 14:45:13.736 [qna-listener-0-C-1] DEBUG c.k.consumer.service.GeminiService - Generated answer for question: Did the Berlin Wall fall in 1988?
+, Answer: No, it fell in 1989.
+
+2025-06-28 14:45:14.062 [qna-listener-0-C-1] INFO  c.k.c.service.ProcessingService - Successfully processed and saved Q&A. Question: Did the Berlin Wall fall in 1988?
+
+2025-06-28 14:45:14.064 [qna-listener-0-C-1] INFO  c.k.c.service.KafkaMessageListener - QnA processed and saved successfully.
+2025-06-28 14:45:14.491 [qna-listener-0-C-1] INFO  c.k.c.service.KafkaMessageListener - Received Message: "What killed the dinosaurs?
+"
+2025-06-28 14:45:14.491 [qna-listener-0-C-1] DEBUG c.k.c.service.ProcessingService - Processing question: What killed the dinosaurs?
+
+2025-06-28 14:45:14.491 [qna-listener-0-C-1] DEBUG c.k.consumer.service.GeminiService - Generating answer for question: What killed the dinosaurs?
+
+2025-06-28 14:45:15.179 [qna-listener-0-C-1] DEBUG c.k.consumer.service.GeminiService - Generated answer for question: What killed the dinosaurs?
+, Answer: Asteroid impact.
+
+2025-06-28 14:45:15.537 [qna-listener-0-C-1] INFO  c.k.c.service.ProcessingService - Successfully processed and saved Q&A. Question: What killed the dinosaurs?
+
+2025-06-28 14:45:15.537 [qna-listener-0-C-1] INFO  c.k.c.service.KafkaMessageListener - QnA processed and saved successfully.
+2025-06-28 14:45:16.055 [qna-listener-0-C-1] INFO  c.k.c.service.KafkaMessageListener - Received Message: "Who won?
+"
+2025-06-28 14:45:16.055 [qna-listener-0-C-1] DEBUG c.k.c.service.ProcessingService - Processing question: Who won?
+
+2025-06-28 14:45:16.055 [qna-listener-0-C-1] DEBUG c.k.consumer.service.GeminiService - Generating answer for question: Who won?
+
+2025-06-28 14:45:16.823 [qna-listener-0-C-1] DEBUG c.k.consumer.service.GeminiService - Generated answer for question: Who won?
+, Answer: Need context. Winner depends on the event.
+
+2025-06-28 14:45:17.206 [qna-listener-0-C-1] INFO  c.k.c.service.ProcessingService - Successfully processed and saved Q&A. Question: Who won?
+
+2025-06-28 14:45:17.211 [qna-listener-0-C-1] INFO  c.k.c.service.KafkaMessageListener - QnA processed and saved successfully.
+2025-06-28 14:45:17.622 [qna-listener-0-C-1] INFO  c.k.c.service.KafkaMessageListener - Received Message: "Did life exist before oxygen?
+"
+2025-06-28 14:45:17.622 [qna-listener-0-C-1] DEBUG c.k.c.service.ProcessingService - Processing question: Did life exist before oxygen?
+
+2025-06-28 14:45:17.622 [qna-listener-0-C-1] DEBUG c.k.consumer.service.GeminiService - Generating answer for question: Did life exist before oxygen?
+
+2025-06-28 14:45:18.233 [qna-listener-0-C-1] DEBUG c.k.consumer.service.GeminiService - Generated answer for question: Did life exist before oxygen?
+, Answer: Yes, anaerobic life predates oxygen.
+
+2025-06-28 14:45:18.538 [qna-listener-0-C-1] INFO  c.k.c.service.ProcessingService - Successfully processed and saved Q&A. Question: Did life exist before oxygen?
+
+2025-06-28 14:45:18.539 [qna-listener-0-C-1] INFO  c.k.c.service.KafkaMessageListener - QnA processed and saved successfully.
+2025-06-28 14:45:19.026 [qna-listener-0-C-1] INFO  c.k.c.service.KafkaMessageListener - Received Message: "Who won?
+"
+2025-06-28 14:45:19.026 [qna-listener-0-C-1] DEBUG c.k.c.service.ProcessingService - Processing question: Who won?
+
+2025-06-28 14:45:19.026 [qna-listener-0-C-1] DEBUG c.k.consumer.service.GeminiService - Generating answer for question: Who won?
+
+2025-06-28 14:45:19.740 [qna-listener-0-C-1] DEBUG c.k.consumer.service.GeminiService - Generated answer for question: Who won?
+, Answer: It depends on the conflict you're asking about.
+
+2025-06-28 14:45:20.030 [qna-listener-0-C-1] INFO  c.k.c.service.ProcessingService - Successfully processed and saved Q&A. Question: Who won?
+
+2025-06-28 14:45:20.030 [qna-listener-0-C-1] INFO  c.k.c.service.KafkaMessageListener - QnA processed and saved successfully.
+2025-06-28 14:45:20.555 [qna-listener-0-C-1] INFO  c.k.c.service.KafkaMessageListener - Received Message: "Did the US win the Vietnam War?
+"
+2025-06-28 14:45:20.555 [qna-listener-0-C-1] DEBUG c.k.c.service.ProcessingService - Processing question: Did the US win the Vietnam War?
+
+2025-06-28 14:45:20.555 [qna-listener-0-C-1] DEBUG c.k.consumer.service.GeminiService - Generating answer for question: Did the US win the Vietnam War?
+
+2025-06-28 14:45:21.192 [qna-listener-0-C-1] DEBUG c.k.consumer.service.GeminiService - Generated answer for question: Did the US win the Vietnam War?
+, Answer: No.
+
+2025-06-28 14:45:21.500 [qna-listener-0-C-1] INFO  c.k.c.service.ProcessingService - Successfully processed and saved Q&A. Question: Did the US win the Vietnam War?
+
+2025-06-28 14:45:21.500 [qna-listener-0-C-1] INFO  c.k.c.service.KafkaMessageListener - QnA processed and saved successfully.
+2025-06-28 14:45:22.268 [qna-listener-0-C-1] INFO  c.k.c.service.KafkaMessageListener - Received Message: "Who won?
+"
+2025-06-28 14:45:22.268 [qna-listener-0-C-1] DEBUG c.k.c.service.ProcessingService - Processing question: Who won?
+
+2025-06-28 14:45:22.269 [qna-listener-0-C-1] DEBUG c.k.consumer.service.GeminiService - Generating answer for question: Who won?
+
+2025-06-28 14:45:22.988 [qna-listener-0-C-1] DEBUG c.k.consumer.service.GeminiService - Generated answer for question: Who won?
+, Answer: The victor depends on the specific historical event in question.
+
+2025-06-28 14:45:23.372 [qna-listener-0-C-1] INFO  c.k.c.service.ProcessingService - Successfully processed and saved Q&A. Question: Who won?
+
+2025-06-28 14:45:23.372 [qna-listener-0-C-1] INFO  c.k.c.service.KafkaMessageListener - QnA processed and saved successfully.
+2025-06-28 14:45:23.568 [qna-listener-0-C-1] INFO  c.k.c.service.KafkaMessageListener - Received Message: "Was Pluto ever a planet?
+"
+2025-06-28 14:45:23.568 [qna-listener-0-C-1] DEBUG c.k.c.service.ProcessingService - Processing question: Was Pluto ever a planet?
+
+2025-06-28 14:45:23.569 [qna-listener-0-C-1] DEBUG c.k.consumer.service.GeminiService - Generating answer for question: Was Pluto ever a planet?
+
+2025-06-28 14:45:24.294 [qna-listener-0-C-1] DEBUG c.k.consumer.service.GeminiService - Generated answer for question: Was Pluto ever a planet?
+, Answer: Yes, Pluto was considered a planet from 1930 to 2006.
+
+2025-06-28 14:45:24.601 [qna-listener-0-C-1] INFO  c.k.c.service.ProcessingService - Successfully processed and saved Q&A. Question: Was Pluto ever a planet?
+
+2025-06-28 14:45:24.602 [qna-listener-0-C-1] INFO  c.k.c.service.KafkaMessageListener - QnA processed and saved successfully.
+2025-06-28 14:45:25.071 [qna-listener-0-C-1] INFO  c.k.c.service.KafkaMessageListener - Received Message: "Was Pluto demoted?
+"
+2025-06-28 14:45:25.071 [qna-listener-0-C-1] DEBUG c.k.c.service.ProcessingService - Processing question: Was Pluto demoted?
+
+2025-06-28 14:45:25.071 [qna-listener-0-C-1] DEBUG c.k.consumer.service.GeminiService - Generating answer for question: Was Pluto demoted?
+
+2025-06-28 14:45:25.742 [qna-listener-0-C-1] DEBUG c.k.consumer.service.GeminiService - Generated answer for question: Was Pluto demoted?
+, Answer: Yes, reclassified as a dwarf planet.
+
+2025-06-28 14:45:26.057 [qna-listener-0-C-1] INFO  c.k.c.service.ProcessingService - Successfully processed and saved Q&A. Question: Was Pluto demoted?
+
+2025-06-28 14:45:26.057 [qna-listener-0-C-1] INFO  c.k.c.service.KafkaMessageListener - QnA processed and saved successfully.
+2025-06-28 14:45:26.523 [qna-listener-0-C-1] INFO  c.k.c.service.KafkaMessageListener - Received Message: "Did the Berlin Wall fall?
+"
+2025-06-28 14:45:26.523 [qna-listener-0-C-1] DEBUG c.k.c.service.ProcessingService - Processing question: Did the Berlin Wall fall?
+
+2025-06-28 14:45:26.523 [qna-listener-0-C-1] DEBUG c.k.consumer.service.GeminiService - Generating answer for question: Did the Berlin Wall fall?
+
+2025-06-28 14:45:27.211 [qna-listener-0-C-1] DEBUG c.k.consumer.service.GeminiService - Generated answer for question: Did the Berlin Wall fall?
+, Answer: Yes.
+
+2025-06-28 14:45:27.561 [qna-listener-0-C-1] INFO  c.k.c.service.ProcessingService - Successfully processed and saved Q&A. Question: Did the Berlin Wall fall?
+
+2025-06-28 14:45:27.561 [qna-listener-0-C-1] INFO  c.k.c.service.KafkaMessageListener - QnA processed and saved successfully.
+2025-06-28 14:46:04.131 [qna-listener-0-C-1] INFO  c.k.c.service.KafkaMessageListener - Received Message: "Did the South secede?
+"
+2025-06-28 14:46:04.131 [qna-listener-0-C-1] DEBUG c.k.c.service.ProcessingService - Processing question: Did the South secede?
+
+2025-06-28 14:46:04.131 [qna-listener-0-C-1] DEBUG c.k.consumer.service.GeminiService - Generating answer for question: Did the South secede?
+
+2025-06-28 14:46:04.800 [qna-listener-0-C-1] DEBUG c.k.consumer.service.GeminiService - Generated answer for question: Did the South secede?
+, Answer: Yes.
+
+2025-06-28 14:46:05.150 [qna-listener-0-C-1] INFO  c.k.c.service.ProcessingService - Successfully processed and saved Q&A. Question: Did the South secede?
+
+2025-06-28 14:46:05.150 [qna-listener-0-C-1] INFO  c.k.c.service.KafkaMessageListener - QnA processed and saved successfully.
+2025-06-28 14:46:05.573 [qna-listener-0-C-1] INFO  c.k.c.service.KafkaMessageListener - Received Message: "Who won?
+"
+2025-06-28 14:46:05.573 [qna-listener-0-C-1] DEBUG c.k.c.service.ProcessingService - Processing question: Who won?
+
+2025-06-28 14:46:05.573 [qna-listener-0-C-1] DEBUG c.k.consumer.service.GeminiService - Generating answer for question: Who won?
+
+2025-06-28 14:46:06.340 [qna-listener-0-C-1] DEBUG c.k.consumer.service.GeminiService - Generated answer for question: Who won?
+, Answer: It depends on the conflict.
+
+2025-06-28 14:46:06.651 [qna-listener-0-C-1] INFO  c.k.c.service.ProcessingService - Successfully processed and saved Q&A. Question: Who won?
+
+2025-06-28 14:46:06.652 [qna-listener-0-C-1] INFO  c.k.c.service.KafkaMessageListener - QnA processed and saved successfully.
+2025-06-28 14:46:07.024 [qna-listener-0-C-1] INFO  c.k.c.service.KafkaMessageListener - Received Message: "Who discovered penicillin?
+"
+2025-06-28 14:46:07.024 [qna-listener-0-C-1] DEBUG c.k.c.service.ProcessingService - Processing question: Who discovered penicillin?
+
+2025-06-28 14:46:07.024 [qna-listener-0-C-1] DEBUG c.k.consumer.service.GeminiService - Generating answer for question: Who discovered penicillin?
+
+2025-06-28 14:46:07.717 [qna-listener-0-C-1] DEBUG c.k.consumer.service.GeminiService - Generated answer for question: Who discovered penicillin?
+, Answer: Alexander Fleming
+
+2025-06-28 14:46:08.049 [qna-listener-0-C-1] INFO  c.k.c.service.ProcessingService - Successfully processed and saved Q&A. Question: Who discovered penicillin?
+
+2025-06-28 14:46:08.049 [qna-listener-0-C-1] INFO  c.k.c.service.KafkaMessageListener - QnA processed and saved successfully.
+2025-06-28 14:46:08.593 [qna-listener-0-C-1] INFO  c.k.c.service.KafkaMessageListener - Received Message: "Did dinosaurs exist?
+"
+2025-06-28 14:46:08.593 [qna-listener-0-C-1] DEBUG c.k.c.service.ProcessingService - Processing question: Did dinosaurs exist?
+
+2025-06-28 14:46:08.593 [qna-listener-0-C-1] DEBUG c.k.consumer.service.GeminiService - Generating answer for question: Did dinosaurs exist?
+
+2025-06-28 14:46:09.261 [qna-listener-0-C-1] DEBUG c.k.consumer.service.GeminiService - Generated answer for question: Did dinosaurs exist?
+, Answer: Yes, dinosaurs existed.
+
+2025-06-28 14:46:09.592 [qna-listener-0-C-1] INFO  c.k.c.service.ProcessingService - Successfully processed and saved Q&A. Question: Did dinosaurs exist?
+
+2025-06-28 14:46:09.592 [qna-listener-0-C-1] INFO  c.k.c.service.KafkaMessageListener - QnA processed and saved successfully.
+2025-06-28 14:46:10.008 [qna-listener-0-C-1] INFO  c.k.c.service.KafkaMessageListener - Received Message: "Who invented the lightbulb?
+"
+2025-06-28 14:46:10.008 [qna-listener-0-C-1] DEBUG c.k.c.service.ProcessingService - Processing question: Who invented the lightbulb?
+
+2025-06-28 14:46:10.009 [qna-listener-0-C-1] DEBUG c.k.consumer.service.GeminiService - Generating answer for question: Who invented the lightbulb?
+
+2025-06-28 14:46:10.677 [qna-listener-0-C-1] DEBUG c.k.consumer.service.GeminiService - Generated answer for question: Who invented the lightbulb?
+, Answer: Thomas Edison.
+
+2025-06-28 14:46:11.053 [qna-listener-0-C-1] INFO  c.k.c.service.ProcessingService - Successfully processed and saved Q&A. Question: Who invented the lightbulb?
+
+2025-06-28 14:46:11.053 [qna-listener-0-C-1] INFO  c.k.c.service.KafkaMessageListener - QnA processed and saved successfully.
+2025-06-28 14:46:11.724 [qna-listener-0-C-1] INFO  c.k.c.service.KafkaMessageListener - Received Message: "Was Pluto ever a planet?
+"
+2025-06-28 14:46:11.724 [qna-listener-0-C-1] DEBUG c.k.c.service.ProcessingService - Processing question: Was Pluto ever a planet?
+
+2025-06-28 14:46:11.724 [qna-listener-0-C-1] DEBUG c.k.consumer.service.GeminiService - Generating answer for question: Was Pluto ever a planet?
+
+2025-06-28 14:46:12.498 [qna-listener-0-C-1] DEBUG c.k.consumer.service.GeminiService - Generated answer for question: Was Pluto ever a planet?
+, Answer: Yes, from 1930 to 2006.
+
+2025-06-28 14:46:12.920 [qna-listener-0-C-1] INFO  c.k.c.service.ProcessingService - Successfully processed and saved Q&A. Question: Was Pluto ever a planet?
+
+2025-06-28 14:46:12.920 [qna-listener-0-C-1] INFO  c.k.c.service.KafkaMessageListener - QnA processed and saved successfully.
+2025-06-28 14:46:13.072 [qna-listener-0-C-1] INFO  c.k.c.service.KafkaMessageListener - Received Message: "Did the Titanic sink?
+"
+2025-06-28 14:46:13.072 [qna-listener-0-C-1] DEBUG c.k.c.service.ProcessingService - Processing question: Did the Titanic sink?
+
+2025-06-28 14:46:13.073 [qna-listener-0-C-1] DEBUG c.k.consumer.service.GeminiService - Generating answer for question: Did the Titanic sink?
+
+2025-06-28 14:46:13.613 [qna-listener-0-C-1] DEBUG c.k.consumer.service.GeminiService - Generated answer for question: Did the Titanic sink?
+, Answer: Yes.
+
+2025-06-28 14:46:13.911 [qna-listener-0-C-1] INFO  c.k.c.service.ProcessingService - Successfully processed and saved Q&A. Question: Did the Titanic sink?
+
+2025-06-28 14:46:13.912 [qna-listener-0-C-1] INFO  c.k.c.service.KafkaMessageListener - QnA processed and saved successfully.
+2025-06-28 14:46:14.585 [qna-listener-0-C-1] INFO  c.k.c.service.KafkaMessageListener - Received Message: "Did the Berlin Wall fall in 1988?
+"
+2025-06-28 14:46:14.585 [qna-listener-0-C-1] DEBUG c.k.c.service.ProcessingService - Processing question: Did the Berlin Wall fall in 1988?
+
+2025-06-28 14:46:14.585 [qna-listener-0-C-1] DEBUG c.k.consumer.service.GeminiService - Generating answer for question: Did the Berlin Wall fall in 1988?
+
+2025-06-28 14:46:15.298 [qna-listener-0-C-1] DEBUG c.k.consumer.service.GeminiService - Generated answer for question: Did the Berlin Wall fall in 1988?
+, Answer: No.
+
+2025-06-28 14:46:15.633 [qna-listener-0-C-1] INFO  c.k.c.service.ProcessingService - Successfully processed and saved Q&A. Question: Did the Berlin Wall fall in 1988?
+
+2025-06-28 14:46:15.633 [qna-listener-0-C-1] INFO  c.k.c.service.KafkaMessageListener - QnA processed and saved successfully.
+2025-06-28 14:46:16.005 [qna-listener-0-C-1] INFO  c.k.c.service.KafkaMessageListener - Received Message: "Did the South secede?
+"
+2025-06-28 14:46:16.006 [qna-listener-0-C-1] DEBUG c.k.c.service.ProcessingService - Processing question: Did the South secede?
+
+2025-06-28 14:46:16.006 [qna-listener-0-C-1] DEBUG c.k.consumer.service.GeminiService - Generating answer for question: Did the South secede?
+
+2025-06-28 14:46:16.639 [qna-listener-0-C-1] DEBUG c.k.consumer.service.GeminiService - Generated answer for question: Did the South secede?
+, Answer: Yes.
+
+2025-06-28 14:46:16.985 [qna-listener-0-C-1] INFO  c.k.c.service.ProcessingService - Successfully processed and saved Q&A. Question: Did the South secede?
+
+2025-06-28 14:46:16.985 [qna-listener-0-C-1] INFO  c.k.c.service.KafkaMessageListener - QnA processed and saved successfully.
+2025-06-28 14:46:17.486 [qna-listener-0-C-1] INFO  c.k.c.service.KafkaMessageListener - Received Message: "Did dinosaurs exist?
+"
+2025-06-28 14:46:17.486 [qna-listener-0-C-1] DEBUG c.k.c.service.ProcessingService - Processing question: Did dinosaurs exist?
+
+2025-06-28 14:46:17.486 [qna-listener-0-C-1] DEBUG c.k.consumer.service.GeminiService - Generating answer for question: Did dinosaurs exist?
+
+2025-06-28 14:46:18.121 [qna-listener-0-C-1] DEBUG c.k.consumer.service.GeminiService - Generated answer for question: Did dinosaurs exist?
+, Answer: Yes, dinosaurs existed.
+
+2025-06-28 14:46:18.496 [qna-listener-0-C-1] INFO  c.k.c.service.ProcessingService - Successfully processed and saved Q&A. Question: Did dinosaurs exist?
+
+2025-06-28 14:46:18.497 [qna-listener-0-C-1] INFO  c.k.c.service.KafkaMessageListener - QnA processed and saved successfully.
+2025-06-28 14:46:19.049 [qna-listener-0-C-1] INFO  c.k.c.service.KafkaMessageListener - Received Message: "Who invented the telephone?
+"
+2025-06-28 14:46:19.051 [qna-listener-0-C-1] DEBUG c.k.c.service.ProcessingService - Processing question: Who invented the telephone?
+
+2025-06-28 14:46:19.051 [qna-listener-0-C-1] DEBUG c.k.consumer.service.GeminiService - Generating answer for question: Who invented the telephone?
+
+2025-06-28 14:46:19.680 [qna-listener-0-C-1] DEBUG c.k.consumer.service.GeminiService - Generated answer for question: Who invented the telephone?
+, Answer: Alexander Graham Bell.
+
+2025-06-28 14:46:20.013 [qna-listener-0-C-1] INFO  c.k.c.service.ProcessingService - Successfully processed and saved Q&A. Question: Who invented the telephone?
+
+2025-06-28 14:46:20.157 [qna-listener-0-C-1] INFO  c.k.c.service.KafkaMessageListener - QnA processed and saved successfully.
+2025-06-28 14:46:20.530 [qna-listener-0-C-1] INFO  c.k.c.service.KafkaMessageListener - Received Message: "Who won?
+"
+2025-06-28 14:46:20.530 [qna-listener-0-C-1] DEBUG c.k.c.service.ProcessingService - Processing question: Who won?
+
+2025-06-28 14:46:20.530 [qna-listener-0-C-1] DEBUG c.k.consumer.service.GeminiService - Generating answer for question: Who won?
+
+2025-06-28 14:46:21.251 [qna-listener-0-C-1] DEBUG c.k.consumer.service.GeminiService - Generated answer for question: Who won?
+, Answer: It depends on the event.
+
+2025-06-28 14:46:21.553 [qna-listener-0-C-1] INFO  c.k.c.service.ProcessingService - Successfully processed and saved Q&A. Question: Who won?
+
+2025-06-28 14:46:21.553 [qna-listener-0-C-1] INFO  c.k.c.service.KafkaMessageListener - QnA processed and saved successfully.
+2025-06-28 14:46:22.094 [qna-listener-0-C-1] INFO  c.k.c.service.KafkaMessageListener - Received Message: "Did dinosaurs fly?
+"
+2025-06-28 14:46:22.094 [qna-listener-0-C-1] DEBUG c.k.c.service.ProcessingService - Processing question: Did dinosaurs fly?
+
+2025-06-28 14:46:22.094 [qna-listener-0-C-1] DEBUG c.k.consumer.service.GeminiService - Generating answer for question: Did dinosaurs fly?
+
+2025-06-28 14:46:22.765 [qna-listener-0-C-1] DEBUG c.k.consumer.service.GeminiService - Generated answer for question: Did dinosaurs fly?
+, Answer: Some dinosaurs evolved into birds and flew.
+
+2025-06-28 14:46:23.173 [qna-listener-0-C-1] INFO  c.k.c.service.ProcessingService - Successfully processed and saved Q&A. Question: Did dinosaurs fly?
+
+2025-06-28 14:46:23.173 [qna-listener-0-C-1] INFO  c.k.c.service.KafkaMessageListener - QnA processed and saved successfully.
+2025-06-28 14:46:23.804 [qna-listener-0-C-1] INFO  c.k.c.service.KafkaMessageListener - Received Message: "Was Pluto ever a planet?
+"
+2025-06-28 14:46:23.804 [qna-listener-0-C-1] DEBUG c.k.c.service.ProcessingService - Processing question: Was Pluto ever a planet?
+
+2025-06-28 14:46:23.804 [qna-listener-0-C-1] DEBUG c.k.consumer.service.GeminiService - Generating answer for question: Was Pluto ever a planet?
+
+2025-06-28 14:46:24.498 [qna-listener-0-C-1] DEBUG c.k.consumer.service.GeminiService - Generated answer for question: Was Pluto ever a planet?
+, Answer: Yes, Pluto was formerly classified as a planet.
+
+2025-06-28 14:46:24.874 [qna-listener-0-C-1] INFO  c.k.c.service.ProcessingService - Successfully processed and saved Q&A. Question: Was Pluto ever a planet?
+
+2025-06-28 14:46:24.874 [qna-listener-0-C-1] INFO  c.k.c.service.KafkaMessageListener - QnA processed and saved successfully.
+2025-06-28 14:46:25.134 [qna-listener-0-C-1] INFO  c.k.c.service.KafkaMessageListener - Received Message: "Did Nixon resign?
+"
+2025-06-28 14:46:25.134 [qna-listener-0-C-1] DEBUG c.k.c.service.ProcessingService - Processing question: Did Nixon resign?
+
+2025-06-28 14:46:25.134 [qna-listener-0-C-1] DEBUG c.k.consumer.service.GeminiService - Generating answer for question: Did Nixon resign?
+
+2025-06-28 14:46:25.783 [qna-listener-0-C-1] DEBUG c.k.consumer.service.GeminiService - Generated answer for question: Did Nixon resign?
+, Answer: Yes.
+
+2025-06-28 14:46:26.147 [qna-listener-0-C-1] INFO  c.k.c.service.ProcessingService - Successfully processed and saved Q&A. Question: Did Nixon resign?
+
+2025-06-28 14:46:26.147 [qna-listener-0-C-1] INFO  c.k.c.service.KafkaMessageListener - QnA processed and saved successfully.
+2025-06-28 14:46:26.627 [qna-listener-0-C-1] INFO  c.k.c.service.KafkaMessageListener - Received Message: "Did the Berlin Wall fall in 1988?
+"
+2025-06-28 14:46:26.627 [qna-listener-0-C-1] DEBUG c.k.c.service.ProcessingService - Processing question: Did the Berlin Wall fall in 1988?
+
+2025-06-28 14:46:26.627 [qna-listener-0-C-1] DEBUG c.k.consumer.service.GeminiService - Generating answer for question: Did the Berlin Wall fall in 1988?
+
+2025-06-28 14:46:26.918 [reactor-http-nio-2] WARN  c.k.consumer.service.GeminiService - Rate limit response received. Retry after: 36 seconds
+2025-06-28 14:46:26.921 [qna-listener-0-C-1] ERROR c.k.consumer.service.GeminiService - Gemini rate-limited request for question: Did the Berlin Wall fall in 1988?
+
+2025-06-28 14:46:26.921 [qna-listener-0-C-1] WARN  c.k.c.service.KafkaMessageListener - Rate limit hit: Rate limit exceeded
+2025-06-28 14:46:26.921 [qna-listener-0-C-1] INFO  c.k.c.service.KafkaMessageListener - Pausing consumer for 36 seconds...
+2025-06-28 14:46:26.922 [qna-listener-0-C-1] INFO  c.k.c.service.KafkaMessageListener - Kafka consumer paused.
+2025-06-28 14:46:33.079 [Thread-6] INFO  c.k.c.service.KafkaMessageListener - Consumer will resume in 30 seconds
+2025-06-28 14:46:43.176 [Thread-6] INFO  c.k.c.service.KafkaMessageListener - Consumer will resume in 20 seconds
+2025-06-28 14:46:53.286 [Thread-6] INFO  c.k.c.service.KafkaMessageListener - Consumer will resume in 10 seconds
+2025-06-28 14:47:03.365 [Thread-6] INFO  c.k.c.service.KafkaMessageListener - Resuming Kafka consumer now.
+2025-06-28 14:47:03.365 [Thread-6] INFO  c.k.c.service.KafkaMessageListener - Kafka consumer resumed.
+2025-06-28 14:47:04.100 [qna-listener-0-C-1] INFO  c.k.c.service.KafkaMessageListener - Received Message: "Did Rome fall?
+"
+2025-06-28 14:47:04.100 [qna-listener-0-C-1] DEBUG c.k.c.service.ProcessingService - Processing question: Did Rome fall?
+
+2025-06-28 14:47:04.100 [qna-listener-0-C-1] DEBUG c.k.consumer.service.GeminiService - Generating answer for question: Did Rome fall?
+
+2025-06-28 14:47:04.830 [qna-listener-0-C-1] DEBUG c.k.consumer.service.GeminiService - Generated answer for question: Did Rome fall?
+, Answer: The Western Roman Empire fell; the Eastern Roman Empire (Byzantine Empire) continued.
+
+2025-06-28 14:47:05.199 [qna-listener-0-C-1] INFO  c.k.c.service.ProcessingService - Successfully processed and saved Q&A. Question: Did Rome fall?
+
+2025-06-28 14:47:05.199 [qna-listener-0-C-1] INFO  c.k.c.service.KafkaMessageListener - QnA processed and saved successfully.
+2025-06-28 14:47:05.533 [qna-listener-0-C-1] INFO  c.k.c.service.KafkaMessageListener - Received Message: "Did the Allies win?
+"
+2025-06-28 14:47:05.533 [qna-listener-0-C-1] DEBUG c.k.c.service.ProcessingService - Processing question: Did the Allies win?
+
+2025-06-28 14:47:05.533 [qna-listener-0-C-1] DEBUG c.k.consumer.service.GeminiService - Generating answer for question: Did the Allies win?
+
+2025-06-28 14:47:06.208 [qna-listener-0-C-1] DEBUG c.k.consumer.service.GeminiService - Generated answer for question: Did the Allies win?
+, Answer: Yes.
+
+2025-06-28 14:47:06.605 [qna-listener-0-C-1] INFO  c.k.c.service.ProcessingService - Successfully processed and saved Q&A. Question: Did the Allies win?
+
+2025-06-28 14:47:06.605 [qna-listener-0-C-1] INFO  c.k.c.service.KafkaMessageListener - QnA processed and saved successfully.
+2025-06-28 14:47:07.074 [qna-listener-0-C-1] INFO  c.k.c.service.KafkaMessageListener - Received Message: "Did dinosaurs roam Earth?
+"
+2025-06-28 14:47:07.074 [qna-listener-0-C-1] DEBUG c.k.c.service.ProcessingService - Processing question: Did dinosaurs roam Earth?
+
+2025-06-28 14:47:07.074 [qna-listener-0-C-1] DEBUG c.k.consumer.service.GeminiService - Generating answer for question: Did dinosaurs roam Earth?
+
+2025-06-28 14:47:07.709 [qna-listener-0-C-1] DEBUG c.k.consumer.service.GeminiService - Generated answer for question: Did dinosaurs roam Earth?
+, Answer: Yes, dinosaurs roamed Earth.
+
+2025-06-28 14:47:08.109 [qna-listener-0-C-1] INFO  c.k.c.service.ProcessingService - Successfully processed and saved Q&A. Question: Did dinosaurs roam Earth?
+
+2025-06-28 14:47:08.109 [qna-listener-0-C-1] INFO  c.k.c.service.KafkaMessageListener - QnA processed and saved successfully.
+2025-06-28 14:47:08.485 [qna-listener-0-C-1] INFO  c.k.c.service.KafkaMessageListener - Received Message: "Who won?
+"
+2025-06-28 14:47:08.485 [qna-listener-0-C-1] DEBUG c.k.c.service.ProcessingService - Processing question: Who won?
+
+2025-06-28 14:47:08.485 [qna-listener-0-C-1] DEBUG c.k.consumer.service.GeminiService - Generating answer for question: Who won?
+
+2025-06-28 14:47:09.135 [qna-listener-0-C-1] DEBUG c.k.consumer.service.GeminiService - Generated answer for question: Who won?
+, Answer: Please provide context. Who won what?
+
+2025-06-28 14:47:09.442 [qna-listener-0-C-1] INFO  c.k.c.service.ProcessingService - Successfully processed and saved Q&A. Question: Who won?
+
+2025-06-28 14:47:09.442 [qna-listener-0-C-1] INFO  c.k.c.service.KafkaMessageListener - QnA processed and saved successfully.
+2025-06-28 14:47:10.151 [qna-listener-0-C-1] INFO  c.k.c.service.KafkaMessageListener - Received Message: "Did the Berlin Wall fall in 1988?
+"
+2025-06-28 14:47:10.151 [qna-listener-0-C-1] DEBUG c.k.c.service.ProcessingService - Processing question: Did the Berlin Wall fall in 1988?
+
+2025-06-28 14:47:10.151 [qna-listener-0-C-1] DEBUG c.k.consumer.service.GeminiService - Generating answer for question: Did the Berlin Wall fall in 1988?
+
+2025-06-28 14:47:10.740 [qna-listener-0-C-1] DEBUG c.k.consumer.service.GeminiService - Generated answer for question: Did the Berlin Wall fall in 1988?
+, Answer: No.
+
+2025-06-28 14:47:11.155 [qna-listener-0-C-1] INFO  c.k.c.service.ProcessingService - Successfully processed and saved Q&A. Question: Did the Berlin Wall fall in 1988?
+
+2025-06-28 14:47:11.155 [qna-listener-0-C-1] INFO  c.k.c.service.KafkaMessageListener - QnA processed and saved successfully.
+2025-06-28 14:47:11.520 [qna-listener-0-C-1] INFO  c.k.c.service.KafkaMessageListener - Received Message: "Did life originate on Earth?
+"
+2025-06-28 14:47:11.520 [qna-listener-0-C-1] DEBUG c.k.c.service.ProcessingService - Processing question: Did life originate on Earth?
+
+2025-06-28 14:47:11.520 [qna-listener-0-C-1] DEBUG c.k.consumer.service.GeminiService - Generating answer for question: Did life originate on Earth?
+
+2025-06-28 14:47:12.220 [qna-listener-0-C-1] DEBUG c.k.consumer.service.GeminiService - Generated answer for question: Did life originate on Earth?
+, Answer: The prevailing scientific theory suggests life originated on Earth.
+
+2025-06-28 14:47:12.611 [qna-listener-0-C-1] INFO  c.k.c.service.ProcessingService - Successfully processed and saved Q&A. Question: Did life originate on Earth?
+
+2025-06-28 14:47:12.611 [qna-listener-0-C-1] INFO  c.k.c.service.KafkaMessageListener - QnA processed and saved successfully.
+2025-06-28 14:47:13.077 [qna-listener-0-C-1] INFO  c.k.c.service.KafkaMessageListener - Received Message: "Was Pluto ever considered a planet?
+"
+2025-06-28 14:47:13.077 [qna-listener-0-C-1] DEBUG c.k.c.service.ProcessingService - Processing question: Was Pluto ever considered a planet?
+
+2025-06-28 14:47:13.083 [qna-listener-0-C-1] DEBUG c.k.consumer.service.GeminiService - Generating answer for question: Was Pluto ever considered a planet?
+
+2025-06-28 14:47:13.750 [qna-listener-0-C-1] DEBUG c.k.consumer.service.GeminiService - Generated answer for question: Was Pluto ever considered a planet?
+, Answer: Yes, for 76 years.
+
+2025-06-28 14:47:14.102 [qna-listener-0-C-1] INFO  c.k.c.service.ProcessingService - Successfully processed and saved Q&A. Question: Was Pluto ever considered a planet?
+
+2025-06-28 14:47:14.102 [qna-listener-0-C-1] INFO  c.k.c.service.KafkaMessageListener - QnA processed and saved successfully.
+2025-06-28 14:47:14.541 [qna-listener-0-C-1] INFO  c.k.c.service.KafkaMessageListener - Received Message: "Did the dinosaurs die out suddenly?
+"
+2025-06-28 14:47:14.542 [qna-listener-0-C-1] DEBUG c.k.c.service.ProcessingService - Processing question: Did the dinosaurs die out suddenly?
+
+2025-06-28 14:47:14.542 [qna-listener-0-C-1] DEBUG c.k.consumer.service.GeminiService - Generating answer for question: Did the dinosaurs die out suddenly?
+
+2025-06-28 14:47:15.346 [qna-listener-0-C-1] DEBUG c.k.consumer.service.GeminiService - Generated answer for question: Did the dinosaurs die out suddenly?
+, Answer: Evidence suggests a sudden die-off, likely due to an asteroid impact.
+
+2025-06-28 14:47:15.727 [qna-listener-0-C-1] INFO  c.k.c.service.ProcessingService - Successfully processed and saved Q&A. Question: Did the dinosaurs die out suddenly?
+
+2025-06-28 14:47:15.727 [qna-listener-0-C-1] INFO  c.k.c.service.KafkaMessageListener - QnA processed and saved successfully.
+2025-06-28 14:47:16.008 [qna-listener-0-C-1] INFO  c.k.c.service.KafkaMessageListener - Received Message: "Was Pluto ever a planet?
+"
+2025-06-28 14:47:16.009 [qna-listener-0-C-1] DEBUG c.k.c.service.ProcessingService - Processing question: Was Pluto ever a planet?
+
+2025-06-28 14:47:16.009 [qna-listener-0-C-1] DEBUG c.k.consumer.service.GeminiService - Generating answer for question: Was Pluto ever a planet?
+
+2025-06-28 14:47:16.697 [qna-listener-0-C-1] DEBUG c.k.consumer.service.GeminiService - Generated answer for question: Was Pluto ever a planet?
+, Answer: Yes, Pluto was considered a planet from 1930 to 2006.
+
+2025-06-28 14:47:17.071 [qna-listener-0-C-1] INFO  c.k.c.service.ProcessingService - Successfully processed and saved Q&A. Question: Was Pluto ever a planet?
+
+2025-06-28 14:47:17.071 [qna-listener-0-C-1] INFO  c.k.c.service.KafkaMessageListener - QnA processed and saved successfully.
+2025-06-28 14:47:17.501 [qna-listener-0-C-1] INFO  c.k.c.service.KafkaMessageListener - Received Message: "Did the Titanic sink?
+"
+2025-06-28 14:47:17.501 [qna-listener-0-C-1] DEBUG c.k.c.service.ProcessingService - Processing question: Did the Titanic sink?
+
+2025-06-28 14:47:17.501 [qna-listener-0-C-1] DEBUG c.k.consumer.service.GeminiService - Generating answer for question: Did the Titanic sink?
+
+2025-06-28 14:47:18.095 [qna-listener-0-C-1] DEBUG c.k.consumer.service.GeminiService - Generated answer for question: Did the Titanic sink?
+, Answer: Yes.
+
+2025-06-28 14:47:18.543 [qna-listener-0-C-1] INFO  c.k.c.service.ProcessingService - Successfully processed and saved Q&A. Question: Did the Titanic sink?
+
+2025-06-28 14:47:18.543 [qna-listener-0-C-1] INFO  c.k.c.service.KafkaMessageListener - QnA processed and saved successfully.
+2025-06-28 14:47:19.123 [qna-listener-0-C-1] INFO  c.k.c.service.KafkaMessageListener - Received Message: "Did dinosaurs have feathers?
+"
+2025-06-28 14:47:19.124 [qna-listener-0-C-1] DEBUG c.k.c.service.ProcessingService - Processing question: Did dinosaurs have feathers?
+
+2025-06-28 14:47:19.124 [qna-listener-0-C-1] DEBUG c.k.consumer.service.GeminiService - Generating answer for question: Did dinosaurs have feathers?
+
+2025-06-28 14:47:19.804 [qna-listener-0-C-1] DEBUG c.k.consumer.service.GeminiService - Generated answer for question: Did dinosaurs have feathers?
+, Answer: Some dinosaurs did have feathers.
+
+2025-06-28 14:47:20.116 [qna-listener-0-C-1] INFO  c.k.c.service.ProcessingService - Successfully processed and saved Q&A. Question: Did dinosaurs have feathers?
+
+2025-06-28 14:47:20.116 [qna-listener-0-C-1] INFO  c.k.c.service.KafkaMessageListener - QnA processed and saved successfully.
+2025-06-28 14:47:20.509 [qna-listener-0-C-1] INFO  c.k.c.service.KafkaMessageListener - Received Message: "Did the dinosaurs become extinct?
+"
+2025-06-28 14:47:20.509 [qna-listener-0-C-1] DEBUG c.k.c.service.ProcessingService - Processing question: Did the dinosaurs become extinct?
+
+2025-06-28 14:47:20.509 [qna-listener-0-C-1] DEBUG c.k.consumer.service.GeminiService - Generating answer for question: Did the dinosaurs become extinct?
+
+2025-06-28 14:47:21.126 [qna-listener-0-C-1] DEBUG c.k.consumer.service.GeminiService - Generated answer for question: Did the dinosaurs become extinct?
+, Answer: Yes.
+
+2025-06-28 14:47:21.408 [qna-listener-0-C-1] INFO  c.k.c.service.ProcessingService - Successfully processed and saved Q&A. Question: Did the dinosaurs become extinct?
+
+2025-06-28 14:47:21.408 [qna-listener-0-C-1] INFO  c.k.c.service.KafkaMessageListener - QnA processed and saved successfully.
+2025-06-28 14:47:22.023 [qna-listener-0-C-1] INFO  c.k.c.service.KafkaMessageListener - Received Message: "Did the U.S. win the Vietnam War?
+"
+2025-06-28 14:47:22.024 [qna-listener-0-C-1] DEBUG c.k.c.service.ProcessingService - Processing question: Did the U.S. win the Vietnam War?
+
+2025-06-28 14:47:22.024 [qna-listener-0-C-1] DEBUG c.k.consumer.service.GeminiService - Generating answer for question: Did the U.S. win the Vietnam War?
+
+2025-06-28 14:47:22.667 [qna-listener-0-C-1] DEBUG c.k.consumer.service.GeminiService - Generated answer for question: Did the U.S. win the Vietnam War?
+, Answer: No.
+
+2025-06-28 14:47:23.033 [qna-listener-0-C-1] INFO  c.k.c.service.ProcessingService - Successfully processed and saved Q&A. Question: Did the U.S. win the Vietnam War?
+
+2025-06-28 14:47:23.033 [qna-listener-0-C-1] INFO  c.k.c.service.KafkaMessageListener - QnA processed and saved successfully.
+2025-06-28 14:47:23.451 [qna-listener-0-C-1] INFO  c.k.c.service.KafkaMessageListener - Received Message: "Who discovered penicillin?
+"
+2025-06-28 14:47:23.452 [qna-listener-0-C-1] DEBUG c.k.c.service.ProcessingService - Processing question: Who discovered penicillin?
+
+2025-06-28 14:47:23.452 [qna-listener-0-C-1] DEBUG c.k.consumer.service.GeminiService - Generating answer for question: Who discovered penicillin?
+
+2025-06-28 14:47:24.121 [qna-listener-0-C-1] DEBUG c.k.consumer.service.GeminiService - Generated answer for question: Who discovered penicillin?
+, Answer: Alexander Fleming.
+
+2025-06-28 14:47:24.460 [qna-listener-0-C-1] INFO  c.k.c.service.ProcessingService - Successfully processed and saved Q&A. Question: Who discovered penicillin?
+
+2025-06-28 14:47:24.460 [qna-listener-0-C-1] INFO  c.k.c.service.KafkaMessageListener - QnA processed and saved successfully.
+2025-06-28 14:47:25.094 [qna-listener-0-C-1] INFO  c.k.c.service.KafkaMessageListener - Received Message: "Did mammals evolve from reptiles?
+"
+2025-06-28 14:47:25.095 [qna-listener-0-C-1] DEBUG c.k.c.service.ProcessingService - Processing question: Did mammals evolve from reptiles?
+
+2025-06-28 14:47:25.095 [qna-listener-0-C-1] DEBUG c.k.consumer.service.GeminiService - Generating answer for question: Did mammals evolve from reptiles?
+
+2025-06-28 14:47:25.810 [qna-listener-0-C-1] DEBUG c.k.consumer.service.GeminiService - Generated answer for question: Did mammals evolve from reptiles?
+, Answer: No, mammals and reptiles share a common amniote ancestor.
+
+2025-06-28 14:47:26.207 [qna-listener-0-C-1] INFO  c.k.c.service.ProcessingService - Successfully processed and saved Q&A. Question: Did mammals evolve from reptiles?
+
+2025-06-28 14:47:26.207 [qna-listener-0-C-1] INFO  c.k.c.service.KafkaMessageListener - QnA processed and saved successfully.
+2025-06-28 14:47:26.482 [qna-listener-0-C-1] INFO  c.k.c.service.KafkaMessageListener - Received Message: "Who won?
+"
+2025-06-28 14:47:26.482 [qna-listener-0-C-1] DEBUG c.k.c.service.ProcessingService - Processing question: Who won?
+
+2025-06-28 14:47:26.483 [qna-listener-0-C-1] DEBUG c.k.consumer.service.GeminiService - Generating answer for question: Who won?
+
+2025-06-28 14:47:27.244 [qna-listener-0-C-1] DEBUG c.k.consumer.service.GeminiService - Generated answer for question: Who won?
+, Answer: Need more context. What event/conflict are you asking about?
+
+2025-06-28 14:47:27.604 [qna-listener-0-C-1] INFO  c.k.c.service.ProcessingService - Successfully processed and saved Q&A. Question: Who won?
+
+2025-06-28 14:47:27.604 [qna-listener-0-C-1] INFO  c.k.c.service.KafkaMessageListener - QnA processed and saved successfully.
+2025-06-28 14:47:27.978 [qna-listener-0-C-1] INFO  c.k.c.service.KafkaMessageListener - Received Message: "Did Pluto get reclassified?
+"
+2025-06-28 14:47:27.978 [qna-listener-0-C-1] DEBUG c.k.c.service.ProcessingService - Processing question: Did Pluto get reclassified?
+
+2025-06-28 14:47:27.978 [qna-listener-0-C-1] DEBUG c.k.consumer.service.GeminiService - Generating answer for question: Did Pluto get reclassified?
+
+2025-06-28 14:47:28.669 [qna-listener-0-C-1] DEBUG c.k.consumer.service.GeminiService - Generated answer for question: Did Pluto get reclassified?
+, Answer: Yes, reclassified as a dwarf planet in 2006.
+
+2025-06-28 14:47:29.036 [qna-listener-0-C-1] INFO  c.k.c.service.ProcessingService - Successfully processed and saved Q&A. Question: Did Pluto get reclassified?
+
+2025-06-28 14:47:29.036 [qna-listener-0-C-1] INFO  c.k.c.service.KafkaMessageListener - QnA processed and saved successfully.
+2025-06-28 14:47:29.516 [qna-listener-0-C-1] INFO  c.k.c.service.KafkaMessageListener - Received Message: "Did the dinosaurs go extinct?
+"
+2025-06-28 14:47:29.516 [qna-listener-0-C-1] DEBUG c.k.c.service.ProcessingService - Processing question: Did the dinosaurs go extinct?
+
+2025-06-28 14:47:29.516 [qna-listener-0-C-1] DEBUG c.k.consumer.service.GeminiService - Generating answer for question: Did the dinosaurs go extinct?
+
+2025-06-28 14:47:29.808 [reactor-http-nio-2] WARN  c.k.consumer.service.GeminiService - Rate limit response received. Retry after: 33 seconds
+2025-06-28 14:47:29.808 [qna-listener-0-C-1] ERROR c.k.consumer.service.GeminiService - Gemini rate-limited request for question: Did the dinosaurs go extinct?
+
+2025-06-28 14:47:29.808 [qna-listener-0-C-1] WARN  c.k.c.service.KafkaMessageListener - Rate limit hit: Rate limit exceeded
+2025-06-28 14:47:29.808 [qna-listener-0-C-1] INFO  c.k.c.service.KafkaMessageListener - Pausing consumer for 33 seconds...
+2025-06-28 14:47:29.808 [qna-listener-0-C-1] INFO  c.k.c.service.KafkaMessageListener - Kafka consumer paused.
+2025-06-28 14:47:32.835 [Thread-7] INFO  c.k.c.service.KafkaMessageListener - Consumer will resume in 30 seconds
+2025-06-28 14:47:42.929 [Thread-7] INFO  c.k.c.service.KafkaMessageListener - Consumer will resume in 20 seconds
+2025-06-28 14:47:52.981 [Thread-7] INFO  c.k.c.service.KafkaMessageListener - Consumer will resume in 10 seconds
+2025-06-28 14:48:03.074 [Thread-7] INFO  c.k.c.service.KafkaMessageListener - Resuming Kafka consumer now.
+2025-06-28 14:48:03.075 [Thread-7] INFO  c.k.c.service.KafkaMessageListener - Kafka consumer resumed.
+2025-06-28 14:50:19.273 [qna-listener-0-C-1] INFO  o.s.k.l.KafkaMessageListenerContainer - qna-consumer-group-auto: partitions revoked: [practice5-0]
+2025-06-28 14:50:19.722 [qna-listener-0-C-1] INFO  o.s.k.l.KafkaMessageListenerContainer - qna-consumer-group-auto: Consumer stopped
+2025-06-28 14:50:19.722 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-06-28 14:50:19.757 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-06-28 14:50:21.799 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-06-28 14:50:21.821 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-06-28 14:50:22.622 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
